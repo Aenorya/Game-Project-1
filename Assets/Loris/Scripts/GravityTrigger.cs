@@ -8,7 +8,7 @@ public class GravityTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        rb.gravityScale = -1;
+        rb.gravityScale = 0.25f;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

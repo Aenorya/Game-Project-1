@@ -3308,7 +3308,6 @@ GameObject:
   - component: {fileID: 240358927797078097}
   - component: {fileID: 240358927797078094}
   - component: {fileID: 240358927797078084}
-  - component: {fileID: 240358927797078096}
   - component: {fileID: 240358927797078095}
   m_Layer: 8
   m_Name: Player
@@ -3351,27 +3350,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  invincibilityTimeAfterHit: 3
-  invincibilityFlashDelay: 0.2
+  invincibilityTimeAfterHit: 0.3
+  invincibilityFlashDelay: 0.1
   isInvincible: 0
   graphics: {fileID: 240358927797078083}
   healthBar: {fileID: 8371043219392502032}
---- !u!114 &240358927797078096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240358927797078087}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01e577b41a28e040ad5797006d123b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 240358927797078085}
-  playerCollider: {fileID: 240358927797078084}
-  animator: {fileID: 240358927797078094}
-  turnedLeft: 0
 --- !u!114 &240358927797078097
 MonoBehaviour:
   m_ObjectHideFlags: 0

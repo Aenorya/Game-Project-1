@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer graphics;
     public HealthBar healthBar;
 
-    public AudioClip hitSound;
+    //public AudioClip hitSound;
 
     public static PlayerHealth instance;
 

@@ -35,6 +35,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -43,7 +44,7 @@ public class PlayerScript : MonoBehaviour
         
         if (horizontal > 0)
         {
-            GetComponent<Animator>().Play("RunR");
+            GetComponent<Animator>().Play("PlayerRun");
         }
         else if (horizontal < 0)
         {
@@ -52,7 +53,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if (horizontal == 0)
         {
-            GetComponent<Animator>().Play("Idle");
+            GetComponent<Animator>().Play("PlayerIdle");
         }
         
         /*if (Input.GetKeyDown(KeyCode.C) && !turnedLeft)

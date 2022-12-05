@@ -84,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerScript.instance.rb.bodyType = RigidbodyType2D.Kinematic;
         PlayerScript.instance.rb.velocity = Vector3.zero;
         PlayerScript.instance.playerCollider.enabled = false;
-        GameOverManager.instance.OnPlayerDeath();
+        //GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
     }
 

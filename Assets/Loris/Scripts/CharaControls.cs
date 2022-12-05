@@ -38,10 +38,10 @@ public class CharaControls : MonoBehaviour
             isGrounded = false;
         }
         mx = Input.GetAxis("Horizontal");
-        if(Input.GetKeyDown(KeyCode.Escape))
+        /*if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
-        }
+        }*/
 
     }
     private void FixedUpdate()

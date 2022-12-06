@@ -4667,7 +4667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1647786257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5086,7 +5086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1876444995
 Rigidbody2D:
   serializedVersion: 4
@@ -5203,6 +5203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589f2714551d2a64b846793afc1f7f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDistance: 7
   health: 5
   deathSprite: {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
   sprites:
@@ -6187,7 +6188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240358927797078087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.12, y: 1.19, z: 0}
+  m_LocalPosition: {x: -1.13, y: 1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6522,7 +6523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 240358927797078085}
-  jumpSpeed: 10
+  jumpSpeed: 6
   speed: 5
   menuPanel: {fileID: 1420034868}
   collisionAttack: {fileID: 0}

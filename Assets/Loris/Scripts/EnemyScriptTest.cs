@@ -6,7 +6,7 @@ public class EnemyScriptTest : MonoBehaviour
 {
     private float range;
     private Transform target;
-    private float minDistance = 5.0f;
+    public float minDistance = 5.0f;
     private bool targetCollision = false;
     private float speed = 2.0f;
     private float thrust = 1.5f;

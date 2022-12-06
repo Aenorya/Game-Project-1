@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    //public int maxHealth = 100;
+    //public int currentHealth;
 
     public float invincibilityTimeAfterHit = 3f;
     public float invincibilityFlashDelay = 0.2f;
     public bool isInvincible = false;
 
     public SpriteRenderer graphics;
-    public HealthBar healthBar;
+    public HealthHearts healthBar;
 
-    //public AudioClip hitSound;
-
+    public AudioClip hitSound;
+    
     public static PlayerHealth instance;
 
     private void Awake()
@@ -31,19 +31,18 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage(25);
+            TakeDamage();
         }
     }
 
-    public void HealPlayer(int amount)
+    /*public void HealPlayer(int amount)
     {
         if((currentHealth + amount) > maxHealth)
         {
@@ -55,17 +54,16 @@ public class PlayerHealth : MonoBehaviour
         }
 
         healthBar.SetHealth(currentHealth);
-    }
+    }*/
 
-    public void TakeDamage(int damage)
+    public void TakeDamage()
     {
         if (!isInvincible)
         {
-            //AudioManager.instance.PlayClipAt(hitSound, transform.position);
-            currentHealth -= damage;
-            healthBar.SetHealth(currentHealth);
+            AudioManager.instance.PlayClipAt(hitSound, transform.position);
+            healthBar.Hurt();
 
-            if(currentHealth <= 0)
+            if(healthBar.hp <= 0)
             {
                 Die();
                 return;
@@ -84,7 +82,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
         PlayerMovement.instance.rb.velocity = Vector3.zero;
         PlayerMovement.instance.playerCollider.enabled = false;
-        //GameOverManager.instance.OnPlayerDeath();
+        GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
     }
 
@@ -94,8 +92,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerScript.instance.animator.SetTrigger("Respawn");
         PlayerScript.instance.rb.bodyType = RigidbodyType2D.Dynamic;
         PlayerScript.instance.playerCollider.enabled = true;
-        currentHealth = maxHealth;
-        healthBar.SetHealth(currentHealth);
+        healthBar.Respawn();
         
     }
 

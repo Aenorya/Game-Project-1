@@ -6,7 +6,7 @@ public class Life : MonoBehaviour
 {
     public List<GameObject> hearts;
     public static int hp = 3;
-    public ChangeScene changeScene;
+    //public ChangeScene changeScene;
     public AudioClip pigHurt;
     public AudioClip gameOver;
     
@@ -24,19 +24,17 @@ public class Life : MonoBehaviour
 
     public void Hurt()
     {
-        AudioManager.instance.PlayClipAt(pigHurt, transform.position);
         hp--;
         hearts[hp].SetActive(false);
         if (hp == 0)
         {
-            AudioManager.instance.PlayClipAt(gameOver, transform.position);
             Invoke("GoDeathScene", 1);
         }
     } 
 
     public void GoDeathScene()
     {
-        changeScene.LoadDeath();
+        //changeScene.LoadDeath();
     }
 
 }

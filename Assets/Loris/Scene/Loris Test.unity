@@ -1534,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &554855047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4681,6 +4681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 240358927797078085}
+  grav: -1
 --- !u!61 &1647786258
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,7 +13,13 @@ public class PlayerController : MonoBehaviour
     public GameObject menuPanel;
     public static bool gameIsPaused = false;
 
-    
+    public HealthHearts healthBar;
+
+    private void Start()
+    {
+        healthBar = GetComponent<HealthHearts>();
+    }
+
     void Update()
     {
         transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
@@ -74,5 +80,10 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
+    }
+
+    public void HealthTest(InputAction.CallbackContext context)
+    {
+        healthBar.Hurt();
     }
 }

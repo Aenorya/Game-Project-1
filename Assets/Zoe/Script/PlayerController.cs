@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
     public Animator animator;
     public float timeAttack;
-    public static float damage;
+    public static float damage = 1;
 
     public HealthHearts healthBar;
 
@@ -51,7 +51,12 @@ public class PlayerController : MonoBehaviour
         {
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
-        }
+        } 
+        /*else if (contexte.canceled)
+        {
+            collisionAttack.SetActive(false);
+
+        }*/
     }
 
     private void ResetAttack()

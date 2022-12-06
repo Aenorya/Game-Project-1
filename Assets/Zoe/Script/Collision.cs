@@ -13,7 +13,8 @@ public class Collision : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            EnemyScriptTest.health = -PlayerController.damage;
+            EnemyScriptTest.instance.TakeDamage(PlayerController.damage);
+            Debug.Log(EnemyScriptTest.health);
         }
     }
 }

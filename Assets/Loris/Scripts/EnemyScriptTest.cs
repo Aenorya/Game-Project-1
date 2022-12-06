@@ -42,7 +42,7 @@ public class EnemyScriptTest : MonoBehaviour
 
     void Update()
     {
-        instance.range = Vector2.Distance(transform.position, target.position);
+        range = Vector2.Distance(transform.position, target.position);
         if (range < minDistance && !isDead)
         {
             if (!targetCollision)
@@ -96,25 +96,14 @@ public class EnemyScriptTest : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = deathSprite;
             GetComponent<SpriteRenderer>().sortingOrder = -1;
             GetComponent<Collider2D>().enabled = false;
-            transform.GetChild(0).gameObject.SetActive(false);
-            //target.GetComponent<PlayerScript>().GainExperience(100);
             Invoke("EnemyDeath", 1.5f);
         }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-            Invoke("HideBlood", 0.25f); //to remove (maybe)
-        }
-    }
-
-    void HideBlood()
-    {
-        transform.GetChild(0).gameObject.SetActive(false);  //to remove (maybe)
+        
     }
 
     void EnemyDeath()
     {
-        gameManager.SetMobCount(-1);
+        //gameManager.SetMobCount(-1);
         Destroy(gameObject);
     }
 

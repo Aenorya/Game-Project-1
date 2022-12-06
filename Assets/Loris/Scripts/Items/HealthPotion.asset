@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1fa38ad546c2f40a166d312e2cb939, type: 3}
+  m_Script: {fileID: 11500000, guid: 0363d6fc195e1b443949de34601a67eb, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
   id: 1
-  name: Health Potion
-  description: A potion restoring 20 hp.
-  price: 5
+  name: HealthPotion
+  description: More Health
+  price: 0
   image: {fileID: 21300000, guid: 35e30cf2d9b4b6c428c12ee465d8c269, type: 3}
-  hpGiven: 20
+  hpGiven: 1
   speedGiven: 0
   speedDuration: 0

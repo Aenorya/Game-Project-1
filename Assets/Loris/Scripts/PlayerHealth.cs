@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        healthBar = GameObject.Find("HealthBar").GetComponent<HealthHearts>();
+        healthBar = GetComponent<HealthHearts>();
     }
 
     void Update()

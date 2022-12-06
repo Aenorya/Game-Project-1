@@ -10,7 +10,7 @@ public class EnemyScriptTest : MonoBehaviour
     private bool targetCollision = false;
     private float speed = 2.0f;
     private float thrust = 1.5f;
-    public float health = 5;
+    public static float health = 5;
     private int hitStrength = 10;
 
     public Sprite deathSprite;

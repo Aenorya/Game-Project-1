@@ -5,7 +5,7 @@ using UnityEngine;
 public class GravityTrigger : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public int grav;
+    public float grav;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

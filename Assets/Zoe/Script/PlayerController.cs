@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
     public Animator animator;
-    public float attackCollider, timeAttack;
+    public float timeAttack;
+    public static float damage;
 
     public HealthHearts healthBar;
 
@@ -48,27 +49,28 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
-            Vector3 mouvement = new Vector3(attackCollider, 0, 0);
-            collisionAttack.transform.position += mouvement;
+            collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
         }
     }
 
     private void ResetAttack()
     {
-        Vector3 mouvement = new Vector3(attackCollider, 0, 0);
-        collisionAttack.transform.position -= mouvement;
+        collisionAttack.SetActive(false);
     }
 
     public void PauseMenu(InputAction.CallbackContext context)
     {
-        if (gameIsPaused)
+        if (context.performed)
         {
-            Resume();
-        }
-        else
-        {
-            Paused();
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Paused();
+            }
         }
     }
 

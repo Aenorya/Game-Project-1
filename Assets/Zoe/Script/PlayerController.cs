@@ -1,23 +1,78 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D rb;
+    private bool isGrounded = false;
+    public float jumpSpeed = 5;
+    public float speed = 5;
+    private Vector2 direction;
+    public GameObject menuPanel;
+    public static bool gameIsPaused = false;
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
     }
 
-    public void Interact()
+    public void Interact(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {   
+            Debug.Log("La touche action à été activé");
 
+        } else if (context.canceled)
+        {
+            Debug.Log("La touche action a été relaché");
+        }
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        direction = context.ReadValue<Vector2>();
+    }
+
+    public void PauseMenu(InputAction.CallbackContext context)
+    {
+        if (gameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Paused();
+        }
+    }
+
+    void Resume()
+    {
+        menuPanel.SetActive(false);
+        Time.timeScale = 1;
+        gameIsPaused = false;
+    }
+
+    void Paused()
+    {
+        menuPanel.SetActive(true);
+        Time.timeScale = 0;
+        gameIsPaused = true;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && isGrounded == true)
+        {
+            rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
+            isGrounded = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = true;
     }
 }

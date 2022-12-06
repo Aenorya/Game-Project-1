@@ -19,7 +19,7 @@ public class EnemyScriptTest : MonoBehaviour
     //private GameManager gameManager;
 
     private bool isDead = false;
-    void Start()
+    /*void Start()
     {
         //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         int rnd = Random.Range(0, sprites.Length);
@@ -109,6 +109,6 @@ public class EnemyScriptTest : MonoBehaviour
     public int GetHitStrength()
     {
         return hitStrength;
-    }
+    }*/
 }
 

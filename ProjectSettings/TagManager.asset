@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FadeSystem
   - InteractUI
+  - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX

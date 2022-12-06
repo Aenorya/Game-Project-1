@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        
+        healthBar = GameObject.Find("HealthBar").GetComponent<HealthHearts>();
     }
 
     void Update()
@@ -42,19 +42,19 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    /*public void HealPlayer(int amount)
+    public void HealPlayer(int amount)
     {
-        if((currentHealth + amount) > maxHealth)
+        if((healthBar.hp + amount) > 3)
         {
-            currentHealth = maxHealth;
+            healthBar.hp = 3;
         }
         else
         {
-            currentHealth += amount;
+            healthBar.hp += amount;
         }
 
-        healthBar.SetHealth(currentHealth);
-    }*/
+        //healthBar.SetHealth(currentHealth);
+    }
 
     public void TakeDamage()
     {

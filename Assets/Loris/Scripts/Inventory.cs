@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    /*public int coinsCount;
+    public int coinsCount;
     public Text coinsCountText;
 
     public List<Item> content = new List<Item>();
@@ -93,7 +93,7 @@ public class Inventory : MonoBehaviour
         
     }
 
-    public void AddCoins(int count)
+    /*public void AddCoins(int count)
     {
         coinsCount += count;
         UpdateTextUI();

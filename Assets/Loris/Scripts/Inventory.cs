@@ -93,7 +93,7 @@ public class Inventory : MonoBehaviour
         
     }
 
-    /*public void AddCoins(int count)
+    public void AddCoins(int count)
     {
         coinsCount += count;
         UpdateTextUI();
@@ -108,5 +108,5 @@ public class Inventory : MonoBehaviour
     public void UpdateTextUI()
     {
         coinsCountText.text = coinsCount.ToString();
-    }*/
+    }
 }

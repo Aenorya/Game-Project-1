@@ -7,6 +7,9 @@ public class CurrentSceneManager : MonoBehaviour
     public int levelToUnlock;
 
     public static CurrentSceneManager instance;
+    
+    private int MobCount = 0;
+    private int MobLimit = 25;
 
     private void Awake()
     {
@@ -19,5 +22,20 @@ public class CurrentSceneManager : MonoBehaviour
         instance = this;
 
         respawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
+
+    public void SetMobCount(int amount)
+    {
+        MobCount += amount;
+    }
+
+    public int GetMobCount()
+    {
+        return MobCount;
+    }
+
+    public int GetMobLimit()
+    {
+        return MobLimit;
     }
 }

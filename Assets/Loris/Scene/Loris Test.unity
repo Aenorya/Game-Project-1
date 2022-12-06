@@ -5205,7 +5205,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   deathSprite: {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  sprites: []
+  sprites:
+  - {fileID: -4365678376696325385, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
+  - {fileID: 3696329424477584276, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
+  - {fileID: 2924033600936126985, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
+  - {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
 --- !u!1 &1876582210
 GameObject:
   m_ObjectHideFlags: 0

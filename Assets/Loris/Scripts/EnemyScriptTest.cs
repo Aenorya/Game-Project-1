@@ -16,21 +16,33 @@ public class EnemyScriptTest : MonoBehaviour
     public Sprite deathSprite;
     public Sprite[] sprites;
 
-    //private GameManager gameManager;
+    private CurrentSceneManager gameManager;
 
     private bool isDead = false;
-    /*void Start()
+
+    public static EnemyScriptTest instance;
+
+    private void Awake()
     {
-        //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de EnemyScript dans la scène");
+            return;
+        }
+        instance = this;
+    }
+
+    void Start()
+    {
+        gameManager = GetComponent<CurrentSceneManager>();
         int rnd = Random.Range(0, sprites.Length);
         GetComponent<SpriteRenderer>().sprite = sprites[rnd];
         target = GameObject.Find("Player").transform;
-        //health += (0.1f * gameManager.GetLevel());
     }
 
     void Update()
     {
-        range = Vector2.Distance(transform.position, target.position);
+        instance.range = Vector2.Distance(transform.position, target.position);
         if (range < minDistance && !isDead)
         {
             if (!targetCollision)
@@ -102,13 +114,13 @@ public class EnemyScriptTest : MonoBehaviour
 
     void EnemyDeath()
     {
-        //gameManager.SetMobCount(-1);
+        gameManager.SetMobCount(-1);
         Destroy(gameObject);
     }
 
     public int GetHitStrength()
     {
         return hitStrength;
-    }*/
+    }
 }
 

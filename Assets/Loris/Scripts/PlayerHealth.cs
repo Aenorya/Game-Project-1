@@ -42,15 +42,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void HealPlayer(int amount)
+    public void HealPlayer()
     {
-        if((healthBar.hp + amount) > 3)
+        if((healthBar.hp ++) > 3)
         {
             healthBar.hp = 3;
         }
         else
         {
-            healthBar.hp += amount;
+            healthBar.hp ++;
         }
 
         //healthBar.SetHealth(currentHealth);

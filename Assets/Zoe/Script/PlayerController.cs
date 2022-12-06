@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 5;
     public float speed = 5;
     private Vector2 direction;
-    public GameObject menuPanel;
+    public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
+    public Animator animator;
+    public float attackCollider, timeAttack;
 
     public HealthHearts healthBar;
 
@@ -40,6 +42,22 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
+    }
+
+    public void Attack(InputAction.CallbackContext contexte)
+    {
+        if (contexte.performed)
+        {
+            Vector3 mouvement = new Vector3(attackCollider, 0, 0);
+            collisionAttack.transform.position += mouvement;
+            Invoke("ResetAttack", timeAttack);
+        }
+    }
+
+    private void ResetAttack()
+    {
+        Vector3 mouvement = new Vector3(attackCollider, 0, 0);
+        collisionAttack.transform.position -= mouvement;
     }
 
     public void PauseMenu(InputAction.CallbackContext context)

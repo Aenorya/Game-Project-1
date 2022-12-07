@@ -27,7 +27,7 @@ public class GameOverManager : MonoBehaviour
     {
         //Inventory.instance.RemoveCoins(CurrentSceneManager.instance.coinsPickedUpInThisSceneCount);
 
-        SceneManager.LoadScene("LevelFull");
+        SceneManager.LoadScene("Loris Test");
         //PlayerHealth.instance.Respawn();
         gameOverUI.SetActive(false);
     }

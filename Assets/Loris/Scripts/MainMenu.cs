@@ -31,8 +31,8 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void TutorialScene()
+    /*public void TutorialScene()
     {
         SceneManager.LoadScene("TutorialScene");
-    }
+    }*/
 }

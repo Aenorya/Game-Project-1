@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Syringe
   m_EditorClassIdentifier: 
   id: 0
-  nameItem: syringe
+  nameItem: Syringe
   description: 
   image: {fileID: 0}
-  hpGiven: 0
+  hpGiven: 1
   speedGiven: 0
   speedDuration: 0
   damageGiven: 0

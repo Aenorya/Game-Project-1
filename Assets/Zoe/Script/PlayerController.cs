@@ -16,11 +16,9 @@ public class PlayerController : MonoBehaviour
     public float timeAttack;
     public static float damage = 1;
 
-    public HealthHearts healthBar;
-
     private void Start()
     {
-        healthBar = GetComponent<HealthHearts>();
+
     }
 
     void Update()
@@ -105,10 +103,5 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
-    }
-
-    public void HealthTest(InputAction.CallbackContext context)
-    {
-        healthBar.Hurt();
     }
 }

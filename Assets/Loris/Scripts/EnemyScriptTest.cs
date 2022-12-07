@@ -11,7 +11,7 @@ public class EnemyScriptTest : MonoBehaviour
     private float speed = 2.0f;
     private float thrust = 1.5f;
     public static float health = 5;
-    private int hitStrength = 10;
+    private int hitStrength = 1;
 
     public Sprite deathSprite;
     public Sprite[] sprites;
@@ -77,6 +77,8 @@ public class EnemyScriptTest : MonoBehaviour
             if (top) GetComponent<Rigidbody2D>().AddForce(transform.up * thrust, ForceMode2D.Impulse);
             if (bottom) GetComponent<Rigidbody2D>().AddForce(-transform.up * thrust, ForceMode2D.Impulse);
             Invoke("FalseCollision", 0.5f);
+
+            collision.gameObject.GetComponent<PlayerHealth>().Hurt();
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public static int hp;
+    public int hp;
 
     public AudioClip hitSound;
     
@@ -58,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     public void Hurt()
     {
         hp--;
-        hearts[hp].GetComponent<SpriteRenderer>().color = Color.black;
+        hearts[hp].GetComponent<Image>().color = Color.black;
         if (hp == 0)
         {
             Invoke("Respawn", 1);

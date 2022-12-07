@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
     public void Hurt()
     {
         hp--;
-        hearts[hp].SetActive(false);
+        hearts[hp].GetComponent<SpriteRenderer>().color = Color.black;
         if (hp == 0)
         {
             Invoke("Respawn", 1);

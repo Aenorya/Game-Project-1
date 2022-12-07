@@ -9,7 +9,7 @@ public class PickUpCoin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             AudioManager.instance.PlayClipAt(sound, transform.position);
-            Inventory.instance.AddCoins(1);
+            InventoryPickObj.instance.AddCoins(1);
             CurrentSceneManager.instance.coinsPickedUpInThisSceneCount++;
             Destroy(gameObject);
         }

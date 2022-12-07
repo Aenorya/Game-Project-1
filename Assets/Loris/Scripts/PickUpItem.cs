@@ -24,8 +24,8 @@ public class PickUpItem : MonoBehaviour
 
     void TakeItem()
     {
-        Inventory.instance.content.Add(item);
-        Inventory.instance.UpdateInventoryUI();
+        InventoryPickObj.instance.content.Add(item);
+        InventoryPickObj.instance.UpdateInventoryUI();
         AudioManager.instance.PlayClipAt(soundToPlay, transform.position);
         interactUI.enabled = false;
         Destroy(gameObject);

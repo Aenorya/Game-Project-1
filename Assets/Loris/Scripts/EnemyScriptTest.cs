@@ -105,7 +105,13 @@ public class EnemyScriptTest : MonoBehaviour
 
     void EnemyDeath()
     {
+        GetComponent<Inventory>().InstantiateLoot(transform.position);
         //gameManager.SetMobCount(-1);
+        Invoke("Destroy", 0.5f);
+    }
+
+    public void Destroy()
+    {
         Destroy(gameObject);
     }
 

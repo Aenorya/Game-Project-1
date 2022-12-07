@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour
+public class InventoryPickObj : MonoBehaviour
 {
     public int coinsCount;
     public Text coinsCountText;
@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
 
     public PlayerEffects playerEffects;
 
-    public static Inventory instance;
+    public static InventoryPickObj instance;
 
     private void Awake()
     {

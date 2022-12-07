@@ -11,4 +11,5 @@ public class Item : ScriptableObject
     public int speedGiven;
     public float speedDuration;
     public int damageGiven;
+    public GameObject itemPrefab;
 }

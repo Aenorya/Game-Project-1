@@ -45,7 +45,9 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            PlayerHealth.instance.Die();
+            PlayerHealth.instance.Hurt();
+            PlayerHealth.instance.Hurt();
+            PlayerHealth.instance.Hurt();
             Debug.Log("Player is Kablewy");
         }
     }

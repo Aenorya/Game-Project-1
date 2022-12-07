@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("000.0");
+        countdownText.text = currentTime.ToString("000.00");
 
 
         /*if (currentTime <= 14)

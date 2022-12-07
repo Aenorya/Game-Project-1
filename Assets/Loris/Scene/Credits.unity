@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00036621, y: -540}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 0, y: -6585}
+  m_SizeDelta: {x: 1920, y: 1400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259042892
 MonoBehaviour:
@@ -285,7 +285,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b9a928a9c9d956a468fc76aa555caac8, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -489,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -3631}
-  m_SizeDelta: {x: 0, y: 7262.2847}
+  m_AnchoredPosition: {x: 0, y: -7284}
+  m_SizeDelta: {x: 0, y: 14570}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1446187205
 Animator:
@@ -557,10 +557,10 @@ RectTransform:
   m_Father: {fileID: 1446187204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00037003, y: -3631}
-  m_SizeDelta: {x: 1617.9722, y: 7262.035}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021327299
 MonoBehaviour:
@@ -583,7 +583,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5e63515167650a541b309ba3bfd4db3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 30dc370b164eefc43b95744fc796dad0, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -595,19 +595,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<SIZE=200><B>PLATFORMER  2D</B>\r</SIZE>\r\n<SIZE=70>CREER  UN  JEU  EN 
-    2D  FACILEMENT  SUR  UNITY</SIZE>\r\n\r\n\r\n<SIZE=160><B>ASSETS  USED</B>\r</SIZE>\r\n\r\n<SIZE=120>-
-    GRAPHICS -</SIZE>\r\n\r\n<SIZE=60>A  PLATFORMER  IN  THE  FOREST\r\n<I>BY  BUTCH</I></SIZE>\r\n\r\n<SIZE=60>HEALTHBAR\r\n<I>BY 
-    BRACKEYS  TEAM</I></SIZE>\r\n\r\n<SIZE=60>PROPS\r\n<I>BY  ZEF  (TUTOUNITYFR)</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    AUDIO -</SIZE>\r\n\r\n<SIZE=60>HERO  IMMORTAL\r\n<I>BY  TREVOR  LENTZ</I></SIZE>\r\n\r\n<SIZE=60>BOB'S 
-    ADVENTURES  -  BACK34\r\n<I>BY  TOM  PETER</I></SIZE>\r\n\r\n<SIZE=60>8-BIT 
-    SOUND  EFFECTS  LIBRARY\r\n<I>BY  LITTLE  ROBOT  SOUND  FACTORY</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    FONT -</SIZE>\r\n\r\n<SIZE=60>PIXELATED\r\n<I>BY  SKYLAR  PARK</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    SPECIAL  THANKS -</SIZE>\r\n\r\n<SIZE=60>TIPEURS\r\n\r\n<I>PIRGOSTH, DINGELA,
-    GATITO, RS_CHOPS, STEEVE, NICOLAS TRIBOULT, THEDRAGONIGHT69, ELRUMBIS, LE JO
-    CARRY, CUMU, GN\xC9, ARROWBAZ, GORDIAN, ALEC, FIREHANDS, CAPTAIN GERVAIS, CRISTOBALGOONZALEZ,
-    COUASNARD RONAN, ROB0888, L3T1, SPYPROG, VINCENT, MATTHIEU DUPONT</I></SIZE>\r\n\r\n\r\n<SIZE=60><I>TUTO 
-    UNITY  FR  COMMUNITY  <3</I></SIZE>"
+  m_Text: "<SIZE=200><B>Game Project 1</B>\r</SIZE>\r\n<SIZE=70>Done by the 2-Game
+    class in ArtFx</SIZE>\r\n\r\n\r<SIZE=160><B> The Team</B></SIZE>\n\n<SIZE=120>-
+    Game Designers -</SIZE>\r\n\r\n<SIZE=60>\r<I>Thomas A.\nAllan R.</I></SIZE>\r\n\n<SIZE=120>-
+    Gameplay Programmers -</SIZE>\r\n\r\n<SIZE=60>\r<I>Zoe C.\nLoris M..</I></SIZE>\r\n\n<SIZE=120>-
+    Level Designer -</SIZE>\r\n\r\n<SIZE=60>\r<I>Robin M.</I></SIZE>\r\n\n<SIZE=120>-
+    Animator -</SIZE>\r\n\r\n<SIZE=60>\r<I>Gaelle</I></SIZE>\r\n\n<SIZE=120>- Concept
+    Artist -</SIZE>\r\n\r\n<SIZE=60>\r<I>Victor</I></SIZE>\r\n\n<SIZE=120>- Prop
+    Artists -</SIZE>\r\n\r\n<SIZE=60>\r<I>Sacha\nAmbre</I></SIZE>\r\n\n<SIZE=120>-
+    Environement Artist -</SIZE>\r\n\r\n<SIZE=60>\r<I>Emmalie</I></SIZE>\r\n\n<SIZE=120>-
+    Character Design -</SIZE>\r\n\r\n<SIZE=60>\r<I>Linh\nLuka\nErwan</I></SIZE>\r\n\n<SIZE=120>-
+    FX Artists -</SIZE>\r\n\r\n<SIZE=60>\r<I>Teodora\nLine</I></SIZE>\r\n\n\n<SIZE=160><B>ASSETS 
+    USED</B>\r</SIZE>\r\n\r\n<SIZE=120>- GRAPHICS -</SIZE>\r\n\r\n<SIZE=60>A  PLATFORMER 
+    IN  THE  FOREST\r\n<I>BY  BUTCH</I></SIZE>\r\n\r\n\n<SIZE=120>- SPECIAL  THANKS
+    -</SIZE>\r\n\r\n<SIZE=60>Play Testers\n\r\n<I>Name Here</I></SIZE>\r\n\r\n\r\n<SIZE=80><I>Thank
+    you for playing  <3</I></SIZE>"
 --- !u!222 &2021327300
 CanvasRenderer:
   m_ObjectHideFlags: 0

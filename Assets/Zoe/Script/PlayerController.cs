@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,9 +14,12 @@ public class PlayerController : MonoBehaviour
     public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
     public Animator animator;
+    public Animator CamAnimator;
     public float timeAttack;
     public static float damage = 1;
 
+    public CameraFollow cameraFollow;
+    
     private void Start()
     {
 
@@ -41,6 +45,24 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
+        GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
+        //GetComponent<Camera>().flipX = (direction.y < 0);
+        if (direction.x == 0)
+        {
+            CamAnimator.SetTrigger("Idle");
+            cameraFollow.posOffset.x = direction.x;
+        }
+        else if (direction.x < 0)
+        {
+            CamAnimator.SetTrigger("CamSlideLeft");
+            cameraFollow.posOffset.x = direction.x - 6f;
+
+        }else if (direction.x > 0)
+        {
+            CamAnimator.SetTrigger("CamSlideRight");
+            cameraFollow.posOffset.x = direction.x + 6f;
+
+        }
     }
 
     public void Attack(InputAction.CallbackContext contexte)

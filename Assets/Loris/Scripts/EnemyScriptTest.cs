@@ -89,7 +89,7 @@ public class EnemyScriptTest : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        if (health < 0)
+        if (health <= 0)
         {
             isDead = true;
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;

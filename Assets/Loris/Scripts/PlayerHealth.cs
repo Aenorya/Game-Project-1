@@ -12,7 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public bool isInvincible = false;
 
     public SpriteRenderer graphics;
-    public HealthHearts healthBar;
+    public List<GameObject> hearts;
+    public static int hp;
 
     public AudioClip hitSound;
     
@@ -31,32 +32,41 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        healthBar = GetComponent<HealthHearts>();
+        hp = 3;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage();
+            Hurt();
         }
     }
 
     public void HealPlayer()
     {
-        if((healthBar.hp ++) > 3)
+        if(hp == 3)
         {
-            healthBar.hp = 3;
+            hp = 3;
         }
         else
         {
-            healthBar.hp ++;
+            hp ++;
         }
 
-        //healthBar.SetHealth(currentHealth);
+    }
+    public void Hurt()
+    {
+        hp--;
+        hearts[hp].SetActive(false);
+        if (hp == 0)
+        {
+            Invoke("Respawn", 1);
+        }
     }
 
-    public void TakeDamage()
+
+    /*public void TakeDamage()
     {
         if (!isInvincible)
         {
@@ -73,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvincibilityDelay());
         }
-    }
+    }*/
 
     public void Die()
     {
@@ -92,8 +102,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerScript.instance.animator.SetTrigger("Respawn");
         PlayerScript.instance.rb.bodyType = RigidbodyType2D.Dynamic;
         PlayerScript.instance.playerCollider.enabled = true;
-        healthBar.Respawn();
-        
+        hp = 3;        
     }
 
     public IEnumerator InvincibilityFlash()

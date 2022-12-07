@@ -9,9 +9,9 @@ public class Collision : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Enemy")
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             EnemyScriptTest.instance.TakeDamage(PlayerController.damage);
             Debug.Log(EnemyScriptTest.health);

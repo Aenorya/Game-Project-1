@@ -7,19 +7,41 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
+
     private bool isGrounded = false;
+
     public float jumpSpeed = 5;
     public float speed = 5;
     private Vector2 direction;
+
     public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
+
     public Animator animator;
     public Animator CamAnimator;
+
     public float timeAttack;
     public static float damage = 1;
+
     public int syringeCount = 0;
 
     public bool Changed = false;
+    
+    public PlayerHealth playerHealth;
+
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
+            return;
+        }
+
+        instance = this;
+    }
 
     private void Start()
     {
@@ -29,6 +51,28 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
+    }
+
+    public void Die()
+    {
+        enabled = false;
+        animator.SetTrigger("Die");
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.velocity = Vector3.zero;
+        playerCollider.enabled = false;
+        GameOverManager.instance.OnPlayerDeath();
+        Debug.Log("Player eliminated");
+        Respawn();
+        Debug.Log("PlayerRespawned");
+    }
+
+    public void Respawn()
+    {
+        instance.enabled = true;
+        animator.SetTrigger("Respawn");
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        playerCollider.enabled = true;
+        playerHealth.hp = 3;
     }
 
     public void Interact(InputAction.CallbackContext context)

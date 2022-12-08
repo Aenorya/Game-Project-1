@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     public AudioClip hitSound;
 
-    public PlayerMovement playerMovement;
+    public PlayerController playerController;
     
     public static PlayerHealth instance;
 
@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer()
     {
-        if(hp == 3)
+        if(hp >= 3)
         {
             hp = 3;
         }
@@ -66,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
         {
             hp = 0;
             //Invoke("Die", 1);
-            playerMovement.Die();
+            playerController.Die();
         }
     }
 

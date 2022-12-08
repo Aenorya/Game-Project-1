@@ -4913,13 +4913,14 @@ GameObject:
   - component: {fileID: 1876444996}
   - component: {fileID: 1876444995}
   - component: {fileID: 1876444999}
+  - component: {fileID: 1876445000}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1876444995
 Rigidbody2D:
   serializedVersion: 4
@@ -5043,6 +5044,26 @@ MonoBehaviour:
   - {fileID: 3696329424477584276, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
   - {fileID: 2924033600936126985, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
   - {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
+--- !u!95 &1876445000
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876444994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1150db0431b0fcf4cb7ab89b115d316f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1876582210
 GameObject:
   m_ObjectHideFlags: 0
@@ -5416,7 +5437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1912626716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6736,7 +6757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 10
+  startingTime: 120
   countdownText: {fileID: 1912626717}
 --- !u!1 &8371043219748680448
 GameObject:

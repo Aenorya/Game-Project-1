@@ -73,7 +73,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""UseObject"",
+                    ""name"": ""UseSyringe"",
                     ""type"": ""Button"",
                     ""id"": ""4c6cb595-d9db-4f92-bfcb-af390cf279fd"",
                     ""expectedControlType"": ""Button"",
@@ -104,7 +104,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""0df79792-ad0e-4337-a66a-e2be10d1859d"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -126,7 +126,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""9c2fae7e-7431-44be-ab5a-d9edaf0a80da"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -148,7 +148,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""ec86691d-ea9b-4c52-91be-ea8a377c9c72"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -169,8 +169,8 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c76181f6-a888-444e-9c0e-77836262674a"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""3a2b9337-39ae-43a9-b869-fe616e9911eb"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -180,8 +180,8 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3a2b9337-39ae-43a9-b869-fe616e9911eb"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""id"": ""c76181f6-a888-444e-9c0e-77836262674a"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -262,7 +262,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""UseObject"",
+                    ""action"": ""UseSyringe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -273,7 +273,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""UseObject"",
+                    ""action"": ""UseSyringe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -392,7 +392,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Attack01 = m_Player.FindAction("Attack01", throwIfNotFound: true);
         m_Player_PauseMenu = m_Player.FindAction("Pause Menu", throwIfNotFound: true);
-        m_Player_UseObject = m_Player.FindAction("UseObject", throwIfNotFound: true);
+        m_Player_UseSyringe = m_Player.FindAction("UseSyringe", throwIfNotFound: true);
         m_Player_HealthTest = m_Player.FindAction("HealthTest", throwIfNotFound: true);
         m_Player_Change = m_Player.FindAction("Change", throwIfNotFound: true);
         // Menu
@@ -463,7 +463,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Attack01;
     private readonly InputAction m_Player_PauseMenu;
-    private readonly InputAction m_Player_UseObject;
+    private readonly InputAction m_Player_UseSyringe;
     private readonly InputAction m_Player_HealthTest;
     private readonly InputAction m_Player_Change;
     public struct PlayerActions
@@ -475,7 +475,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Attack01 => m_Wrapper.m_Player_Attack01;
         public InputAction @PauseMenu => m_Wrapper.m_Player_PauseMenu;
-        public InputAction @UseObject => m_Wrapper.m_Player_UseObject;
+        public InputAction @UseSyringe => m_Wrapper.m_Player_UseSyringe;
         public InputAction @HealthTest => m_Wrapper.m_Player_HealthTest;
         public InputAction @Change => m_Wrapper.m_Player_Change;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -502,9 +502,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @PauseMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
-                @UseObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseObject;
-                @UseObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseObject;
-                @UseObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseObject;
+                @UseSyringe.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
+                @UseSyringe.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
+                @UseSyringe.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
                 @HealthTest.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
                 @HealthTest.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
                 @HealthTest.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
@@ -530,9 +530,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @PauseMenu.started += instance.OnPauseMenu;
                 @PauseMenu.performed += instance.OnPauseMenu;
                 @PauseMenu.canceled += instance.OnPauseMenu;
-                @UseObject.started += instance.OnUseObject;
-                @UseObject.performed += instance.OnUseObject;
-                @UseObject.canceled += instance.OnUseObject;
+                @UseSyringe.started += instance.OnUseSyringe;
+                @UseSyringe.performed += instance.OnUseSyringe;
+                @UseSyringe.canceled += instance.OnUseSyringe;
                 @HealthTest.started += instance.OnHealthTest;
                 @HealthTest.performed += instance.OnHealthTest;
                 @HealthTest.canceled += instance.OnHealthTest;
@@ -591,7 +591,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         void OnJump(InputAction.CallbackContext context);
         void OnAttack01(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
-        void OnUseObject(InputAction.CallbackContext context);
+        void OnUseSyringe(InputAction.CallbackContext context);
         void OnHealthTest(InputAction.CallbackContext context);
         void OnChange(InputAction.CallbackContext context);
     }

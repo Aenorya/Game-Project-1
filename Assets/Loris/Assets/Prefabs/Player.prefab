@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7162353122720565124}
   - component: {fileID: 7162353122720565135}
   - component: {fileID: 7162353122720565125}
+  - component: {fileID: 6561381074695958289}
   - component: {fileID: 3956691026185460818}
   - component: {fileID: 1319551524759585978}
   m_Layer: 8
@@ -147,6 +148,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0.027704597, y: -0.29768634}
   m_Size: {x: 0.9656954, y: 1.4046273}
   m_Direction: 0
+--- !u!114 &6561381074695958289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7162353122720565126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2feac15c4c231ca46919245e000a3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityTimeAfterHit: 1
+  invincibilityFlashDelay: 0.2
+  isInvincible: 0
+  graphics: {fileID: 7162353122720565122}
+  hearts: []
+  hp: 3
+  hitSound: {fileID: 8300000, guid: ab0975610a78d0e44b9e18439635b2cf, type: 3}
 --- !u!114 &3956691026185460818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  jumpSpeed: 5
+  speed: 5
+  menuPanel: {fileID: 0}
+  collisionAttack: {fileID: 0}
+  animator: {fileID: 0}
+  CamAnimator: {fileID: 0}
+  timeAttack: 0
+  cameraFollow: {fileID: 0}
 --- !u!114 &1319551524759585978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,10 +213,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 59a1fffe-7962-485f-98e4-d32daf83e39c
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/a,/Keyboard/s,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3956691026185460818}
@@ -224,6 +249,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 34bea90a-71bb-4521-8444-4fc060e2c689
     m_ActionName: Menu/Nope/Return[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9ba6a773-6839-43cf-9ab7-6ae5ca6fed9c
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4c6cb595-d9db-4f92-bfcb-af390cf279fd
+    m_ActionName: Player/UseObject[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8c69997a-22fc-43ac-b555-8e27d38e5e58
+    m_ActionName: Player/HealthTest[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -14,7 +14,8 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public HealthHearts healthHearts;
+    public int hp = 3;
+    
 
     public AudioClip hitSound;
 
@@ -74,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Died()
     {
-        playerController.Die();
+        PlayerController.instance.Die();
     }
     /*public void TakeDamage()
     {

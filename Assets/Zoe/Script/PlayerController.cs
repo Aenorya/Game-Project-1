@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (contexte.performed)
         {
             Changed = true;
-            animator.SetTrigger("Changed");
+            animator.SetBool("Changing", true);
         }
     }
 

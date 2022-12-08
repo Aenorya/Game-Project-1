@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
     public float timeAttack;
     public static float damage = 1;
 
-    public CameraFollow cameraFollow;
-
     public bool Changed = false;
 
     private void Start()
@@ -48,21 +46,13 @@ public class PlayerController : MonoBehaviour
     {
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
-        //GetComponent<Camera>().flipX = (direction.y < 0);
-        if (direction.x == 0)
-        {
-            //CamAnimator.SetTrigger("Idle");
-            //cameraFollow.posOffset.x = direction.x;
-        }
         else if (direction.x < 0)
         {
             CamAnimator.SetBool("CamSlide", true);
-            //cameraFollow.posOffset.x = direction.x - 6f;
 
         }else if (direction.x > 0)
         {
             CamAnimator.SetBool("CamSlide", false);
-            //cameraFollow.posOffset.x = direction.x + 6f;
 
         }
     }

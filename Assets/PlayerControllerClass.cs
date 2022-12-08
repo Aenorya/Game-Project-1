@@ -104,7 +104,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""0df79792-ad0e-4337-a66a-e2be10d1859d"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -126,7 +126,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""9c2fae7e-7431-44be-ab5a-d9edaf0a80da"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -148,7 +148,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""ec86691d-ea9b-4c52-91be-ea8a377c9c72"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -169,8 +169,8 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c76181f6-a888-444e-9c0e-77836262674a"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""3a2b9337-39ae-43a9-b869-fe616e9911eb"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -180,8 +180,8 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3a2b9337-39ae-43a9-b869-fe616e9911eb"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""id"": ""c76181f6-a888-444e-9c0e-77836262674a"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

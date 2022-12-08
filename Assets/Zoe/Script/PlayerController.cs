@@ -6,28 +6,36 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Physique Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 
     private bool isGrounded = false;
 
+    [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
+    public float speedPU;
     private Vector2 direction;
 
     public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
 
+    [Header("Animation")]
     public Animator animator;
     public Animator CamAnimator;
 
+    [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
+    public float damagePU;
+    public float timePU;
 
+    [Header("Syringe")]
     public int syringeCount = 0;
 
     public bool Changed = false;
-    
+
     public PlayerHealth playerHealth;
 
     public static PlayerController instance;
@@ -155,6 +163,22 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
             isGrounded = false;
         }
+    }
+
+    public void UseSyringe(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            speed = speed * speedPU;
+            damage = damage * damagePU;
+            Invoke("ResetPower", timePU);
+        }
+    }
+
+    private void ResetPower()
+    {
+        speed = speed / speedPU;
+        damage = damage / damagePU;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

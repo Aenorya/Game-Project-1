@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public static int hp = 3;
+    public int hp = 3;
     
 
     public AudioClip hitSound;
@@ -56,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             hp ++;
+            hearts[hp-1].GetComponent<Image>().color = Color.white;
         }
 
     }
@@ -67,16 +68,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Died();
         }
-        /*if (hp == 0)
-        {
-            //hp = 0;
-            Died();
-        }
-        else
-        {
-            hp--;
-            
-        }*/
+        
     }
 
     public void Died()

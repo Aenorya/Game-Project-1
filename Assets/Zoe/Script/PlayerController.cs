@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        playerHealth = GetComponent<PlayerHealth>();
+        syringeCount = 3;
         Changed = false;
     }
 
@@ -188,15 +190,15 @@ public class PlayerController : MonoBehaviour
         {
             if (syringeCount > 0)
             {
-                if (PlayerHealth.hp <= 2)
+                if (playerHealth.hp <= 2)
                 {
-                    PlayerHealth.hp++;
+                    playerHealth.HealPlayer();
                     syringeCount--;
                     syringe[syringeCount].SetActive(false);
                     playerSprite.sprite = newPlayerSprite;
                     Invoke("ResetPower", timePU);
                 }
-                else if (PlayerHealth.hp == 3)
+                else if (playerHealth.hp == 3)
                 {
                     noNeedHeal.SetActive(true);
                     Invoke("TextHealHide", 3);

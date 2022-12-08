@@ -97,6 +97,7 @@ public class PlayerHealth : MonoBehaviour
         GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
         Respawn();
+        Debug.Log("PlayerRespawned");
     }
 
     public void Respawn()

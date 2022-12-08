@@ -129,6 +129,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         if (collision.gameObject.CompareTag("PickableObject"))
         {
+            PickUpSyringe();
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
         }

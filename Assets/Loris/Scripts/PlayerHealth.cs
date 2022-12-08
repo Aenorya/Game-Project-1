@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            Invoke("Respawn", 1);
+            Invoke("Die", 1);
         }
     }
 
@@ -96,7 +96,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.playerCollider.enabled = false;
         GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
-        //if ()
+        Respawn();
     }
 
     public void Respawn()

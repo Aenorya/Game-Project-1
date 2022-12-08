@@ -97,15 +97,16 @@ public class EnemyScriptTest : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             GetComponent<SpriteRenderer>().sprite = deathSprite;
             GetComponent<SpriteRenderer>().sortingOrder = -1;
-            GetComponent<Collider2D>().enabled = false;
-            Invoke("EnemyDeath", 1.5f);
+            //GetComponent<Collider2D>().enabled = false;
+            Invoke("EnemyDeath", 0.5f);
         }
         
     }
 
     void EnemyDeath()
     {
-        GetComponent<Inventory>().InstantiateLoot(transform.position);
+        Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        GetComponent<Inventory>().InstantiateLoot(dropPos);
         //gameManager.SetMobCount(-1);
         Invoke("Destroy", 0.5f);
     }

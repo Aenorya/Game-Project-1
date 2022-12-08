@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+//Code Loris
 public class InventoryPickObj : MonoBehaviour
 {
     public int coinsCount;

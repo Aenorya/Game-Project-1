@@ -7,27 +7,72 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
+
     private bool isGrounded = false;
+
     public float jumpSpeed = 5;
     public float speed = 5;
     private Vector2 direction;
+
     public GameObject menuPanel, collisionAttack;
     public static bool gameIsPaused = false;
+
     public Animator animator;
     public Animator CamAnimator;
+
     public float timeAttack;
     public static float damage = 1;
 
-    public CameraFollow cameraFollow;
+    public int syringeCount = 0;
+
+    public bool Changed = false;
     
+    public PlayerHealth playerHealth;
+
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
+            return;
+        }
+
+        instance = this;
+    }
+
     private void Start()
     {
-
+        Changed = false;
     }
 
     void Update()
     {
         transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
+    }
+
+    public void Die()
+    {
+        enabled = false;
+        animator.SetTrigger("Die");
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.velocity = Vector3.zero;
+        playerCollider.enabled = false;
+        GameOverManager.instance.OnPlayerDeath();
+        Debug.Log("Player eliminated");
+        Respawn();
+        Debug.Log("PlayerRespawned");
+    }
+
+    public void Respawn()
+    {
+        instance.enabled = true;
+        animator.SetTrigger("Respawn");
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        playerCollider.enabled = true;
+        playerHealth.hp = 3;
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -46,22 +91,33 @@ public class PlayerController : MonoBehaviour
     {
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
-        //GetComponent<Camera>().flipX = (direction.y < 0);
+<<<<<<< HEAD
+
         if (direction.x == 0)
         {
             //CamAnimator.SetTrigger("Idle");
             //cameraFollow.posOffset.x = direction.x;
         }
         else if (direction.x < 0)
+=======
+        if (direction.x < 0)
+>>>>>>> 585f6ad031dc0a5a291415a2830f59803d93a6db
         {
             CamAnimator.SetBool("CamSlide", true);
-            //cameraFollow.posOffset.x = direction.x - 6f;
 
         }else if (direction.x > 0)
         {
             CamAnimator.SetBool("CamSlide", false);
-            //cameraFollow.posOffset.x = direction.x + 6f;
 
+        }
+    }
+
+    public void Change(InputAction.CallbackContext contexte)
+    {
+        if (contexte.performed)
+        {
+            Changed = true;
+            animator.SetBool("Changing", true);
         }
     }
 
@@ -127,6 +183,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         if (collision.gameObject.CompareTag("PickableObject"))
         {
+            PickUpSyringe();
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
         }
@@ -134,6 +191,7 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpSyringe()
     {
-
+        syringeCount++;
+        Debug.Log("Seringue = " + syringeCount);
     }
 }

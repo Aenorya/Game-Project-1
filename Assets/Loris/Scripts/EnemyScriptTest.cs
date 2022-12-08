@@ -20,6 +20,8 @@ public class EnemyScriptTest : MonoBehaviour
 
     private bool isDead = false;
 
+    //public PlayerHealth playerHealth;
+
     public static EnemyScriptTest instance;
 
     private void Awake()
@@ -78,7 +80,7 @@ public class EnemyScriptTest : MonoBehaviour
             if (bottom) GetComponent<Rigidbody2D>().AddForce(-transform.up * thrust, ForceMode2D.Impulse);
             Invoke("FalseCollision", 0.5f);
 
-            collision.gameObject.GetComponent<PlayerHealth>().Hurt();
+            PlayerHealth.instance.Hurt();
         }
     }
 
@@ -106,7 +108,7 @@ public class EnemyScriptTest : MonoBehaviour
     void EnemyDeath()
     {
         Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-        GetComponent<Inventory>().InstantiateLoot(dropPos);
+        GetComponent<InventoryFinalVersion>().InstantiateLoot(dropPos);
         //gameManager.SetMobCount(-1);
         Invoke("Destroy", 0.5f);
     }

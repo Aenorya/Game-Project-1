@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public int hp = 3;
+    public static int hp = 3;
     
 
     public AudioClip hitSound;

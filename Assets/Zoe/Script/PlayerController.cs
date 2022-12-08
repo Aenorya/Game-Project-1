@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,17 +11,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 
-    private bool isGrounded = false;
-
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
     
-    private Vector2 direction;
-
-    public GameObject menuPanel, collisionAttack;
-    public static bool gameIsPaused = false;
-
     [Header("Animation")]
     public Animator animator;
     public Animator CamAnimator;
@@ -28,7 +22,6 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
-    
 
     [Header("PowerUP")]
     public float damagePU;
@@ -38,12 +31,19 @@ public class PlayerController : MonoBehaviour
     public Sprite newPlayerSprite;
 
     [Header("Syringe")]
-    public int syringeCount = 0;
+    public int syringeCount = 3;
+    public List<GameObject> syringe;
+    public int syringeScore;
+    public GameObject noSyringe;
+    public GameObject noNeedHeal;
 
+    [Header("Other")]
+    private bool isGrounded = false;
     public bool Changed = false;
-
+    private Vector2 direction;
     public PlayerHealth playerHealth;
-
+    public GameObject menuPanel, collisionAttack;
+    public static bool gameIsPaused = false;
     public static PlayerController instance;
 
     private void Awake()
@@ -186,22 +186,37 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            ActivePower();
-            playerSprite.sprite = newPlayerSprite;
-            Invoke("ResetPower", timePU);
+            if (syringeCount > 0)
+            {
+                if (PlayerHealth.hp <= 2)
+                {
+                    PlayerHealth.hp++;
+                    syringeCount--;
+                    syringe[syringeCount].SetActive(false);
+                    playerSprite.sprite = newPlayerSprite;
+                    Invoke("ResetPower", timePU);
+                }
+                else if (PlayerHealth.hp == 3)
+                {
+                    noNeedHeal.SetActive(true);
+                    Invoke("TextHealHide", 3);
+                }
+            }
+            else if (syringeCount == 0)
+            { 
+                noSyringe.SetActive(true);
+                Invoke("TextSyringeHide", 3);
+            }
         }
     }
 
-    private void ActivePower()
+    private void TextHealHide()
     {
-        speed = speed * speedPU;
-        damage = damage * damagePU;
+        noNeedHeal.SetActive(false);
     }
-
-    private void ResetPower()
+    private void TextSyringeHide()
     {
-        speed = speed / speedPU;
-        damage = damage / damagePU;
+        noSyringe.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -217,7 +232,15 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpSyringe()
     {
-        syringeCount++;
+        
+        if(syringeCount <= 2)
+        {
+            syringeCount++;
+        }
+        else if (syringeCount == 3)
+        {
+            Score.score = Score.score + syringeScore;
+        }
         Debug.Log("Seringue = " + syringeCount);
     }
 }

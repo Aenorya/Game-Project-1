@@ -55,24 +55,13 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        enabled = false;
+        instance.enabled = false;
         animator.SetTrigger("Die");
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
         playerCollider.enabled = false;
         GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
-        Respawn();
-        Debug.Log("PlayerRespawned");
-    }
-
-    public void Respawn()
-    {
-        instance.enabled = true;
-        animator.SetTrigger("Respawn");
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        playerCollider.enabled = true;
-        playerHealth.hp = 3;
     }
 
     public void Interact(InputAction.CallbackContext context)

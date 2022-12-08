@@ -64,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            Invoke("Died", 1);
+            Died();
         }
         else
         {

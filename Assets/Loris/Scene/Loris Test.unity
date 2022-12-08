@@ -6902,10 +6902,10 @@ GameObject:
   - component: {fileID: 240358927797078080}
   - component: {fileID: 240358927797078083}
   - component: {fileID: 240358927797078085}
-  - component: {fileID: 240358927797078100}
-  - component: {fileID: 240358927797078094}
   - component: {fileID: 240358927797078084}
+  - component: {fileID: 240358927797078100}
   - component: {fileID: 240358927797078095}
+  - component: {fileID: 240358927797078094}
   - component: {fileID: 240358927797078099}
   m_Layer: 8
   m_Name: Player
@@ -7293,7 +7293,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -7337,8 +7337,6 @@ MonoBehaviour:
   - {fileID: 8371043219748680448}
   - {fileID: 1691009058}
   - {fileID: 1983088321}
-  pigHurt: {fileID: 0}
-  gameOver: {fileID: 0}
 --- !u!114 &8371043219416861441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7351,7 +7349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 20
+  startingTime: 10
   countdownText: {fileID: 1912626717}
 --- !u!1 &8371043219748680448
 GameObject:

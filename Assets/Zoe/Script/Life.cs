@@ -7,8 +7,8 @@ public class Life : MonoBehaviour
     public List<GameObject> hearts;
     public static int hp = 3;
     //public ChangeScene changeScene;
-    public AudioClip pigHurt;
-    public AudioClip gameOver;
+    //public AudioClip pigHurt;
+    //public AudioClip gameOver;
     
     // Start is called before the first frame update
     void Start()

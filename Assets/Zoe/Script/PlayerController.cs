@@ -69,8 +69,15 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
+        if (Changed)
+        {
+        animator.SetTrigger("ChangedDie");
+        }
+        else
+        {
+            animator.SetTrigger("Die");
+        }
         instance.enabled = false;
-        animator.SetTrigger("Die");
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
         playerCollider.enabled = false;

@@ -5,30 +5,10 @@ using UnityEngine.InputSystem;
 
 public class TestOnePlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float jumpHeight = 5;
-    public float walkSpeed = 5;
-    public InputAction playerControls;
+    public Animator animator;
 
-    private Vector2 moveDirection;
-
-    private void OnEnable()
+    public void Punch()
     {
-        playerControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerControls.Disable();
-    }
-
-    void Update()
-    {
-        moveDirection = playerControls.ReadValue<Vector2>();
-    }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(moveDirection.x * walkSpeed, moveDirection.y * walkSpeed);
+        animator.SetTrigger("Punch");
     }
 }

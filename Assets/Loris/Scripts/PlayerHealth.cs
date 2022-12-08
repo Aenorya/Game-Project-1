@@ -60,13 +60,16 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Hurt()
     {
-        hp--;
-        hearts[hp].GetComponent<Image>().color = Color.black;
         if (hp <= 0)
         {
             hp = 0;
             //Invoke("Die", 1);
             playerController.Die();
+        }
+        else
+        {
+            hp--;
+            hearts[hp].GetComponent<Image>().color = Color.black;
         }
     }
 

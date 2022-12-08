@@ -20,7 +20,7 @@ public class EnemyScriptTest : MonoBehaviour
 
     private bool isDead = false;
 
-    public PlayerHealth playerHealth;
+    //public PlayerHealth playerHealth;
 
     public static EnemyScriptTest instance;
 
@@ -80,7 +80,7 @@ public class EnemyScriptTest : MonoBehaviour
             if (bottom) GetComponent<Rigidbody2D>().AddForce(-transform.up * thrust, ForceMode2D.Impulse);
             Invoke("FalseCollision", 0.5f);
 
-            playerHealth.Hurt();
+            PlayerHealth.instance.Hurt();
         }
     }
 

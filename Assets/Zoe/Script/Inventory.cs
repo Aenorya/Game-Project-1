@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
+//Code Zoe
 public class Inventory : MonoBehaviour
 {
     public List<PickableObject> pickables = new List<PickableObject>();

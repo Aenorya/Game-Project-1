@@ -122,6 +122,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision pickObjCollision)
+    {
+        if (pickObjCollision.gameObject.CompareTag("PickableObject"))
+        {
+            Destroy(pickObjCollision.gameObject);
+
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;

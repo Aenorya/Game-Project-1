@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
-    public float speedPU;
+    
     private Vector2 direction;
 
     public GameObject menuPanel, collisionAttack;
@@ -28,8 +28,14 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
+    
+
+    [Header("PowerUP")]
     public float damagePU;
     public float timePU;
+    public float speedPU;
+    public SpriteRenderer playerSprite;
+    public Sprite newPlayerSprite;
 
     [Header("Syringe")]
     public int syringeCount = 0;
@@ -169,10 +175,16 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            speed = speed * speedPU;
-            damage = damage * damagePU;
+            ActivePower();
+            playerSprite.sprite = newPlayerSprite;
             Invoke("ResetPower", timePU);
         }
+    }
+
+    private void ActivePower()
+    {
+        speed = speed * speedPU;
+        damage = damage * damagePU;
     }
 
     private void ResetPower()

@@ -19,10 +19,12 @@ public class PlayerController : MonoBehaviour
     public static float damage = 1;
 
     public CameraFollow cameraFollow;
-    
+
+    public bool Changed = false;
+
     private void Start()
     {
-
+        Changed = false;
     }
 
     void Update()
@@ -62,6 +64,15 @@ public class PlayerController : MonoBehaviour
             CamAnimator.SetBool("CamSlide", false);
             //cameraFollow.posOffset.x = direction.x + 6f;
 
+        }
+    }
+
+    public void Change(InputAction.CallbackContext contexte)
+    {
+        if (contexte.performed)
+        {
+            Changed = true;
+            animator.SetTrigger("Changed");
         }
     }
 

@@ -287,8 +287,8 @@ GameObject:
   - component: {fileID: 139488283}
   - component: {fileID: 139488281}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Destroyable Test
+  m_TagString: Detroyables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.7159182}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -317,7 +317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.4318364}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &139488283
 MonoBehaviour:
@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destroyable: {fileID: 139488280}
+  boxCollider: {fileID: 0}
 --- !u!212 &139488284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1439,7 +1440,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.48975, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1450,7 +1451,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.948792, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &476549585
 GameObject:

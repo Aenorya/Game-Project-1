@@ -125,5 +125,15 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
+        if (collision.gameObject.CompareTag("PickableObject"))
+        {
+            Debug.Log("Seringue");
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public void PickUpSyringe()
+    {
+
     }
 }

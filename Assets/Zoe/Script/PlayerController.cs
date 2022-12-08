@@ -118,6 +118,10 @@ public class PlayerController : MonoBehaviour
         {
             Changed = true;
             animator.SetBool("Changing", true);
+           /* if()
+            { 
+            animator.SetBool("Changing", false);
+            }*/
         }
     }
 

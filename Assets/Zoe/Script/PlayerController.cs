@@ -1,35 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Physique Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 
-    private bool isGrounded = false;
-
+    [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
-    private Vector2 direction;
-
-    public GameObject menuPanel, collisionAttack;
-    public static bool gameIsPaused = false;
-
+    
+    [Header("Animation")]
     public Animator animator;
     public Animator CamAnimator;
 
+    [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
 
-    public int syringeCount = 0;
+    [Header("PowerUP")]
+    public float damagePU;
+    public float timePU;
+    public float speedPU;
+    public SpriteRenderer playerSprite;
+    public Sprite newPlayerSprite;
 
+    [Header("Syringe")]
+    public int syringeCount = 3;
+    public List<GameObject> syringe;
+    public int syringeScore;
+    public GameObject noSyringe;
+    public GameObject noNeedHeal;
+
+    [Header("Other")]
+    private bool isGrounded = false;
     public bool Changed = false;
-    
+    private Vector2 direction;
     public PlayerHealth playerHealth;
-
+    public GameObject menuPanel, collisionAttack;
+    public static bool gameIsPaused = false;
     public static PlayerController instance;
 
     private void Awake()
@@ -45,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        playerHealth = GetComponent<PlayerHealth>();
+        syringeCount = 3;
         Changed = false;
     }
 
@@ -55,24 +71,20 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        enabled = false;
-        animator.SetTrigger("Die");
+        if (Changed)
+        {
+        animator.SetTrigger("ChangedDie");
+        }
+        else
+        {
+            animator.SetTrigger("Die");
+        }
+        instance.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
         playerCollider.enabled = false;
         GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
-        Respawn();
-        Debug.Log("PlayerRespawned");
-    }
-
-    public void Respawn()
-    {
-        instance.enabled = true;
-        animator.SetTrigger("Respawn");
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        playerCollider.enabled = true;
-        playerHealth.hp = 3;
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -92,23 +104,13 @@ public class PlayerController : MonoBehaviour
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
 
-
-        if (direction.x == 0)
-        {
-            //CamAnimator.SetTrigger("Idle");
-            //cameraFollow.posOffset.x = direction.x;
-        }
-        else if (direction.x < 0)
-
         if (direction.x < 0)
-
         {
             CamAnimator.SetBool("CamSlide", true);
-
-        }else if (direction.x > 0)
+        }
+        else if (direction.x > 0)
         {
             CamAnimator.SetBool("CamSlide", false);
-
         }
     }
 
@@ -118,6 +120,10 @@ public class PlayerController : MonoBehaviour
         {
             Changed = true;
             animator.SetBool("Changing", true);
+           /* if()
+            { 
+            animator.SetBool("Changing", false);
+            }*/
         }
     }
 
@@ -178,6 +184,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void UseSyringe(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (syringeCount > 0)
+            {
+                if (playerHealth.hp <= 2)
+                {
+                    playerHealth.HealPlayer();
+                    syringeCount--;
+                    syringe[syringeCount].SetActive(false);
+                    playerSprite.sprite = newPlayerSprite;
+                    Invoke("ResetPower", timePU);
+                }
+                else if (playerHealth.hp == 3)
+                {
+                    noNeedHeal.SetActive(true);
+                    Invoke("TextHealHide", 3);
+                }
+            }
+            else if (syringeCount == 0)
+            { 
+                noSyringe.SetActive(true);
+                Invoke("TextSyringeHide", 3);
+            }
+        }
+    }
+
+    private void TextHealHide()
+    {
+        noNeedHeal.SetActive(false);
+    }
+    private void TextSyringeHide()
+    {
+        noSyringe.SetActive(false);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
@@ -191,7 +234,15 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpSyringe()
     {
-        syringeCount++;
+        
+        if(syringeCount <= 2)
+        {
+            syringeCount++;
+        }
+        else if (syringeCount == 3)
+        {
+            Score.score = Score.score + syringeScore;
+        }
         Debug.Log("Seringue = " + syringeCount);
     }
 }

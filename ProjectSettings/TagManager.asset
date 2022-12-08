@@ -8,6 +8,7 @@ TagManager:
   - InteractUI
   - Enemy
   - Weapon
+  - PickableObject
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - Water
   - UI
   - Floor
-  - 
-  - 
-  - 
+  - Weapon
+  - Player
+  - Enemy
   - 
   - 
   - 

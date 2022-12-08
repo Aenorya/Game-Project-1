@@ -56,21 +56,19 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             hp ++;
+            hearts[hp-1].GetComponent<Image>().color = Color.white;
         }
 
     }
     public void Hurt()
     {
-        if (hp <= 0)
+        hp--;
+        hearts[hp].GetComponent<Image>().color = Color.black;
+        if(hp == 0)
         {
-            hp = 0;
-            Invoke("Died", 1);
+            Died();
         }
-        else
-        {
-            hp--;
-            hearts[hp].GetComponent<Image>().color = Color.black;
-        }
+        
     }
 
     public void Died()

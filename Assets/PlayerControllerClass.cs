@@ -89,6 +89,15 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Change"",
+                    ""type"": ""Button"",
+                    ""id"": ""9f1a6b38-406b-47b0-b6c8-fc26e8c75e91"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -278,6 +287,17 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""action"": ""HealthTest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""672faea4-2f42-4ad5-8ef9-8d80ea1a4045"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Change"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -374,6 +394,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         m_Player_PauseMenu = m_Player.FindAction("Pause Menu", throwIfNotFound: true);
         m_Player_UseObject = m_Player.FindAction("UseObject", throwIfNotFound: true);
         m_Player_HealthTest = m_Player.FindAction("HealthTest", throwIfNotFound: true);
+        m_Player_Change = m_Player.FindAction("Change", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Validation = m_Menu.FindAction("Validation", throwIfNotFound: true);
@@ -444,6 +465,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
     private readonly InputAction m_Player_PauseMenu;
     private readonly InputAction m_Player_UseObject;
     private readonly InputAction m_Player_HealthTest;
+    private readonly InputAction m_Player_Change;
     public struct PlayerActions
     {
         private @PlayerControllerClass m_Wrapper;
@@ -455,6 +477,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         public InputAction @PauseMenu => m_Wrapper.m_Player_PauseMenu;
         public InputAction @UseObject => m_Wrapper.m_Player_UseObject;
         public InputAction @HealthTest => m_Wrapper.m_Player_HealthTest;
+        public InputAction @Change => m_Wrapper.m_Player_Change;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -485,6 +508,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @HealthTest.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
                 @HealthTest.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
                 @HealthTest.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
+                @Change.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChange;
+                @Change.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChange;
+                @Change.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChange;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -510,6 +536,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @HealthTest.started += instance.OnHealthTest;
                 @HealthTest.performed += instance.OnHealthTest;
                 @HealthTest.canceled += instance.OnHealthTest;
+                @Change.started += instance.OnChange;
+                @Change.performed += instance.OnChange;
+                @Change.canceled += instance.OnChange;
             }
         }
     }
@@ -564,6 +593,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnUseObject(InputAction.CallbackContext context);
         void OnHealthTest(InputAction.CallbackContext context);
+        void OnChange(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

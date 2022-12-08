@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,10 +20,12 @@ public class PlayerController : MonoBehaviour
     public static float damage = 1;
 
     public CameraFollow cameraFollow;
+
+    public bool Changed = false;
     
     private void Start()
     {
-
+        Changed = false;
     }
 
     void Update()
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
         //GetComponent<Camera>().flipX = (direction.y < 0);
-        if (direction.x == 0)
+        if (direction.x == 0 /*&& !Changed*/)
         {
             CamAnimator.SetTrigger("Idle");
             cameraFollow.posOffset.x = direction.x;
@@ -61,10 +64,17 @@ public class PlayerController : MonoBehaviour
         {
             CamAnimator.SetTrigger("CamSlideRight");
             cameraFollow.posOffset.x = direction.x + 6f;
-
         }
     }
 
+    public void Change(InputAction.CallbackContext contexte)
+    {
+        if (contexte.performed)
+        {
+            Changed=true;
+            animator.SetTrigger("Changed");
+        }
+    }
     public void Attack(InputAction.CallbackContext contexte)
     {
         if (contexte.performed)

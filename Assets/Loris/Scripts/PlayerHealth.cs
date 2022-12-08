@@ -95,6 +95,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.playerCollider.enabled = false;
         GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
+        //if ()
     }
 
     public void Respawn()

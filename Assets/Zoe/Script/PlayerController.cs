@@ -65,11 +65,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Changed)
         {
-        animator.SetTrigger("Die");
+        animator.SetTrigger("ChangedDie");
         }
         else
         {
-            animator.SetTrigger("ChangedDie");
+            animator.SetTrigger("Die");
         }
         instance.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
         if (contexte.performed)
         {
             Changed = true;
-            animator.SetBool("Change", true);
+            animator.SetBool("Changing", true);
         }
     }
 

@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public int hp;
+    public HealthHearts healthHearts;
 
     public AudioClip hitSound;
 
@@ -63,8 +63,7 @@ public class PlayerHealth : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            //Invoke("Die", 1);
-            playerController.Die();
+            Invoke("Died", 1);
         }
         else
         {
@@ -73,7 +72,10 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
+    public void Died()
+    {
+        playerController.Die();
+    }
     /*public void TakeDamage()
     {
         if (!isInvincible)

@@ -5058,7 +5058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1876444995
 Rigidbody2D:
   serializedVersion: 4
@@ -6454,6 +6454,7 @@ MonoBehaviour:
   hearts: []
   hp: 0
   hitSound: {fileID: 8300000, guid: ab0975610a78d0e44b9e18439635b2cf, type: 3}
+  playerController: {fileID: 0}
 --- !u!114 &240358927797078099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6621,6 +6622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 240358927797078085}
+  playerCollider: {fileID: 0}
   jumpSpeed: 6
   speed: 5
   menuPanel: {fileID: 1420034868}
@@ -6630,6 +6632,7 @@ MonoBehaviour:
   timeAttack: 0
   syringeCount: 0
   Changed: 0
+  playerHealth: {fileID: 0}
 --- !u!1001 &263701675436998148
 PrefabInstance:
   m_ObjectHideFlags: 0

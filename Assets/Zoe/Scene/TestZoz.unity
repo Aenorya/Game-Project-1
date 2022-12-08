@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 346416025}
   - component: {fileID: 346416027}
   m_Layer: 0
-  m_Name: characters_69
+  m_Name: Snake
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -49,18 +49,18 @@ public class PlayerController : MonoBehaviour
         //GetComponent<Camera>().flipX = (direction.y < 0);
         if (direction.x == 0)
         {
-            CamAnimator.SetTrigger("Idle");
-            cameraFollow.posOffset.x = direction.x;
+            //CamAnimator.SetTrigger("Idle");
+            //cameraFollow.posOffset.x = direction.x;
         }
         else if (direction.x < 0)
         {
-            CamAnimator.SetTrigger("CamSlideLeft");
-            cameraFollow.posOffset.x = direction.x - 6f;
+            CamAnimator.SetBool("CamSlide", true);
+            //cameraFollow.posOffset.x = direction.x - 6f;
 
         }else if (direction.x > 0)
         {
-            CamAnimator.SetTrigger("CamSlideRight");
-            cameraFollow.posOffset.x = direction.x + 6f;
+            CamAnimator.SetBool("CamSlide", false);
+            //cameraFollow.posOffset.x = direction.x + 6f;
 
         }
     }

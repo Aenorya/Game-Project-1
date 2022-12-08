@@ -60,8 +60,9 @@ public class PlayerHealth : MonoBehaviour
     {
         hp--;
         hearts[hp].GetComponent<Image>().color = Color.black;
-        if (hp == 0)
+        if (hp <= 0)
         {
+            hp = 0;
             Invoke("Respawn", 1);
         }
     }

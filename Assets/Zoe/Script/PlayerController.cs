@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (contexte.performed)
         {
             Changed = true;
-            animator.SetBool("Changing", true);
+            animator.SetBool("Change", true);
         }
     }
 

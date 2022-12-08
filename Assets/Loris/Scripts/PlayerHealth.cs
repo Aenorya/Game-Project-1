@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     public int hp;
 
     public AudioClip hitSound;
+
+    public PlayerMovement playerMovement;
     
     public static PlayerHealth instance;
 
@@ -63,7 +65,8 @@ public class PlayerHealth : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            Invoke("Die", 1);
+            //Invoke("Die", 1);
+            playerMovement.Die();
         }
     }
 
@@ -86,28 +89,6 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(HandleInvincibilityDelay());
         }
     }*/
-
-    public void Die()
-    {
-        PlayerMovement.instance.enabled = false;
-        PlayerMovement.instance.animator.SetTrigger("Die");
-        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
-        PlayerMovement.instance.rb.velocity = Vector3.zero;
-        PlayerMovement.instance.playerCollider.enabled = false;
-        GameOverManager.instance.OnPlayerDeath();
-        Debug.Log("Player eliminated");
-        Respawn();
-        Debug.Log("PlayerRespawned");
-    }
-
-    public void Respawn()
-    {
-        PlayerScript.instance.enabled = true;
-        PlayerScript.instance.animator.SetTrigger("Respawn");
-        PlayerScript.instance.rb.bodyType = RigidbodyType2D.Dynamic;
-        PlayerScript.instance.playerCollider.enabled = true;
-        hp = 3;        
-    }
 
     public IEnumerator InvincibilityFlash()
     {

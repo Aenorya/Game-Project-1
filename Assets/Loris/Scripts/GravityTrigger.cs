@@ -9,7 +9,10 @@ public class GravityTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        rb.gravityScale = grav;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            rb.gravityScale = grav;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

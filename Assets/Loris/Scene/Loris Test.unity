@@ -4725,7 +4725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 105.348206, y: 498.39987}
+  m_AnchoredPosition: {x: 105.348206, y: 401.99997}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691009060
@@ -5708,7 +5708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 174.27008, y: 498.39987}
+  m_AnchoredPosition: {x: 174.27008, y: 401.99997}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983088323
@@ -6451,7 +6451,10 @@ MonoBehaviour:
   invincibilityFlashDelay: 0.1
   isInvincible: 0
   graphics: {fileID: 240358927797078083}
-  hearts: []
+  hearts:
+  - {fileID: 8371043219748680448}
+  - {fileID: 1691009058}
+  - {fileID: 1983088321}
   hp: 0
   hitSound: {fileID: 8300000, guid: ab0975610a78d0e44b9e18439635b2cf, type: 3}
   playerController: {fileID: 0}
@@ -6622,7 +6625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 240358927797078085}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 240358927797078084}
   jumpSpeed: 6
   speed: 5
   menuPanel: {fileID: 1420034868}
@@ -7236,7 +7239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 41.399902, y: 498.39987}
+  m_AnchoredPosition: {x: 41.399902, y: 402}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8371043219748680461

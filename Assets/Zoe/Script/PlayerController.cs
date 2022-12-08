@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
-<<<<<<< HEAD
+
 
         if (direction.x == 0)
         {
@@ -99,9 +99,9 @@ public class PlayerController : MonoBehaviour
             //cameraFollow.posOffset.x = direction.x;
         }
         else if (direction.x < 0)
-=======
+
         if (direction.x < 0)
->>>>>>> 585f6ad031dc0a5a291415a2830f59803d93a6db
+
         {
             CamAnimator.SetBool("CamSlide", true);
 

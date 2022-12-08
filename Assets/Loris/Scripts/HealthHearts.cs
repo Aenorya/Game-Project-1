@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthHearts : MonoBehaviour
 {
-    public List<GameObject> hearts;
+    /*public List<GameObject> hearts;
     public int hp = 3;
     public LoadSpecificScene changeScene;
     
@@ -22,5 +22,5 @@ public class HealthHearts : MonoBehaviour
     public void Respawn()
     {
         hearts[hp].SetActive(true);
-    }
+    }*/
 }

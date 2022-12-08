@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destroyable: {fileID: 139488280}
-  boxCollider: {fileID: 0}
+  boxCollider: {fileID: 139488281}
 --- !u!212 &139488284
 SpriteRenderer:
   m_ObjectHideFlags: 0

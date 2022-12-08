@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public Animator CamAnimator;
     public float timeAttack;
     public static float damage = 1;
+    public int syringeCount = 0;
 
     public bool Changed = false;
 
@@ -128,6 +129,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         if (collision.gameObject.CompareTag("PickableObject"))
         {
+            PickUpSyringe();
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
         }
@@ -135,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpSyringe()
     {
-
+        syringeCount++;
+        Debug.Log("Seringue = " + syringeCount);
     }
 }

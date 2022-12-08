@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 //Code Zoe
-public class Inventory : MonoBehaviour
+public class InventoryFinalVersion : MonoBehaviour
 {
     public List<PickableObject> pickables = new List<PickableObject>();
+    public int countSyringe;
 
     PickableObject GetDroppedPickObj()
     {
@@ -37,5 +38,14 @@ public class Inventory : MonoBehaviour
             GameObject pickObjGameObject = Instantiate(droppedPickObjs.poPrefab, PickObjSpawnPosition, Quaternion.identity);
             pickObjGameObject.GetComponent<SpriteRenderer>().sprite = droppedPickObjs.poSprite;
         }
+    }
+    public void AddSyringe(int count)
+    {
+        countSyringe += count;
+    }
+
+    public void RemoveCoins(int count)
+    {
+        countSyringe -= count;
     }
 }

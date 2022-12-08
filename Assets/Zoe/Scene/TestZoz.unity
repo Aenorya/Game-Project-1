@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 130960615}
   - component: {fileID: 130960614}
   - component: {fileID: 130960617}
+  - component: {fileID: 130960619}
+  - component: {fileID: 130960618}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -241,6 +243,41 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &130960618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130960613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2029810d5890018428d9a1248089c6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1198550527}
+  timeOffset: 0
+  posOffset: {x: 0, y: 0, z: 0}
+--- !u!95 &130960619
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130960613}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 277423decf3f79a479664a91d4637f65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &270145023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1064,14 @@ PrefabInstance:
       propertyPath: timeAttack
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3956691026185460818, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+      propertyPath: CamAnimator
+      value: 
+      objectReference: {fileID: 130960619}
+    - target: {fileID: 3956691026185460818, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+      propertyPath: cameraFollow
+      value: 
+      objectReference: {fileID: 130960618}
     - target: {fileID: 3956691026185460818, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: attackCollider
       value: 0.35

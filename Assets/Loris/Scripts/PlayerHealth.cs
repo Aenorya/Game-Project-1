@@ -14,9 +14,11 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public int hp;
+    public HealthHearts healthHearts;
 
     public AudioClip hitSound;
+
+    public PlayerController playerController;
     
     public static PlayerHealth instance;
 
@@ -46,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer()
     {
-        if(hp == 3)
+        if(hp >= 3)
         {
             hp = 3;
         }
@@ -58,15 +60,22 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Hurt()
     {
-        hp--;
-        hearts[hp].GetComponent<Image>().color = Color.black;
-        if (hp == 0)
+        if (hp <= 0)
         {
-            Invoke("Respawn", 1);
+            hp = 0;
+            Invoke("Died", 1);
+        }
+        else
+        {
+            hp--;
+            hearts[hp].GetComponent<Image>().color = Color.black;
         }
     }
 
-
+    public void Died()
+    {
+        playerController.Die();
+    }
     /*public void TakeDamage()
     {
         if (!isInvincible)
@@ -85,26 +94,6 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(HandleInvincibilityDelay());
         }
     }*/
-
-    public void Die()
-    {
-        PlayerMovement.instance.enabled = false;
-        PlayerMovement.instance.animator.SetTrigger("Die");
-        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
-        PlayerMovement.instance.rb.velocity = Vector3.zero;
-        PlayerMovement.instance.playerCollider.enabled = false;
-        GameOverManager.instance.OnPlayerDeath();
-        Debug.Log("Player eliminated");
-    }
-
-    public void Respawn()
-    {
-        PlayerScript.instance.enabled = true;
-        PlayerScript.instance.animator.SetTrigger("Respawn");
-        PlayerScript.instance.rb.bodyType = RigidbodyType2D.Dynamic;
-        PlayerScript.instance.playerCollider.enabled = true;
-        hp = 3;        
-    }
 
     public IEnumerator InvincibilityFlash()
     {

@@ -9,11 +9,15 @@ TagManager:
   - Enemy
   - Weapon
   - PickableObject
+  - Button Respawn
+  - ReBox
+  - Detroyables
+  - BackGround
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BackGround
   - Water
   - UI
   - Floor

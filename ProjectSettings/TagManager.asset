@@ -9,11 +9,15 @@ TagManager:
   - Enemy
   - Weapon
   - PickableObject
+  - ReBox
+  - Button Respawn
+  - Detroyables
+  - CollisionZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BackGround
   - Water
   - UI
   - Floor

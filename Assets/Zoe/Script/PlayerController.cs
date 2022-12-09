@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 
+    [Header("PopMess")]
+    public TextMeshProUGUI popUpMessage;
+    public GameObject goMessage;
+
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
@@ -22,14 +26,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
-
-    [Header("PowerUP")]
-    public float damagePU;
-    public float timePU;
-    public float speedPU;
-    public SpriteRenderer playerSprite;
-    public Sprite newPlayerSprite;
-
+    
     [Header("Syringe")]
     public int syringeCount = 3;
     public List<GameObject> syringe;
@@ -39,11 +36,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Other")]
     private bool isGrounded = false;
-    public bool Changed = false;
+
     private Vector2 direction;
     public PlayerHealth playerHealth;
-    public GameObject menuPanel, collisionAttack;
+    public GameObject pauseMenu, collisionAttack;
     public static bool gameIsPaused = false;
+
     public static PlayerController instance;
 
     private void Awake()
@@ -53,7 +51,6 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
             return;
         }
-
         instance = this;
     }
 
@@ -61,7 +58,6 @@ public class PlayerController : MonoBehaviour
     {
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
-        Changed = false;
     }
 
     void Update()
@@ -71,14 +67,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        if (Changed)
-        {
-        animator.SetTrigger("ChangedDie");
-        }
-        else
-        {
-            animator.SetTrigger("Die");
-        }
+        animator.SetTrigger("Die");
         instance.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
@@ -90,11 +79,13 @@ public class PlayerController : MonoBehaviour
     public void Interact(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {   
-            Debug.Log("La touche action à été activé");
-
-        } else if (context.canceled)
         {
+            WallButtonScript.instance.OnInteraction();
+            Debug.Log("La touche action à été activé");
+        } 
+        else if (context.canceled)
+        {
+
             Debug.Log("La touche action a été relaché");
         }
     }
@@ -104,26 +95,14 @@ public class PlayerController : MonoBehaviour
         direction = context.ReadValue<Vector2>();
         GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
 
-        if (direction.x < 0)
+        if (direction.x < 0.2)
         {
+            
             CamAnimator.SetBool("CamSlide", true);
         }
-        else if (direction.x > 0)
+        else if (direction.x > 0.2)
         {
             CamAnimator.SetBool("CamSlide", false);
-        }
-    }
-
-    public void Change(InputAction.CallbackContext contexte)
-    {
-        if (contexte.performed)
-        {
-            Changed = true;
-            animator.SetBool("Changing", true);
-           /* if()
-            { 
-            animator.SetBool("Changing", false);
-            }*/
         }
     }
 
@@ -131,14 +110,16 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
+            animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
         } 
-        /*else if (contexte.canceled)
+        else if (contexte.canceled)
         {
+            animator.SetBool("IsAttacking", false);
             collisionAttack.SetActive(false);
 
-        }*/
+        }
     }
 
     private void ResetAttack()
@@ -163,14 +144,14 @@ public class PlayerController : MonoBehaviour
 
     void Resume()
     {
-        menuPanel.SetActive(false);
+        pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
     }
 
     void Paused()
     {
-        menuPanel.SetActive(true);
+        pauseMenu.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;
     }
@@ -195,8 +176,6 @@ public class PlayerController : MonoBehaviour
                     playerHealth.HealPlayer();
                     syringeCount--;
                     syringe[syringeCount].SetActive(false);
-                    playerSprite.sprite = newPlayerSprite;
-                    Invoke("ResetPower", timePU);
                 }
                 else if (playerHealth.hp == 3)
                 {
@@ -237,12 +216,30 @@ public class PlayerController : MonoBehaviour
         
         if(syringeCount <= 2)
         {
+            
             syringeCount++;
+            syringe[syringeCount-1].SetActive(true);
         }
         else if (syringeCount == 3)
         {
             Score.score = Score.score + syringeScore;
         }
         Debug.Log("Seringue = " + syringeCount);
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionZone")
+        {
+            Debug.Log("Dans la zone");
+            goMessage.SetActive(true);
+            popUpMessage.text = ("Ok ?");
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionZone")
+        {
+            goMessage.SetActive(false);
+        }
     }
 }

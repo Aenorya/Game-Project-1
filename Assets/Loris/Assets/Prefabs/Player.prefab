@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1440634358}
   - component: {fileID: 1440634357}
   - component: {fileID: 1440634356}
-  m_Layer: 0
+  - component: {fileID: 1440634359}
+  m_Layer: 7
   m_Name: Point
   m_TagString: Weapon
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440634358
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440634355}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.96, y: -0.43299997, z: 0}
+  m_LocalPosition: {x: 1, y: -0.44, z: 0}
   m_LocalScale: {x: 0.39080003, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,6 +102,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &1440634359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440634355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b8ce849fe2ef748a5f98718fe77d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7570479761144074561
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,12 +124,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7570479761144074566}
   - component: {fileID: 7570479761144074565}
-  - component: {fileID: 7570479761144074563}
-  - component: {fileID: 7570479761144074562}
   - component: {fileID: 7570479761144074578}
   - component: {fileID: 7570479761144074569}
   - component: {fileID: 7570479761144074568}
   - component: {fileID: 7570479761144074581}
+  - component: {fileID: 896012653444283199}
+  - component: {fileID: 3287670832660143022}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -140,7 +153,7 @@ Transform:
   - {fileID: 7570479762081479601}
   - {fileID: 7663527945589957805}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7570479761144074565
 SpriteRenderer:
@@ -194,43 +207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7570479761144074563
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570479761144074561}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 2
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &7570479761144074562
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570479761144074561}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.027704597, y: -0.29768634}
-  m_Size: {x: 0.9656954, y: 1.4046273}
-  m_Direction: 0
 --- !u!114 &7570479761144074578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,21 +219,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7570479761144074563}
-  playerCollider: {fileID: 7570479761144074562}
+  rb: {fileID: 0}
+  playerCollider: {fileID: 0}
   jumpSpeed: 6
   speed: 5
-  speedPU: 2
-  menuPanel: {fileID: 0}
-  collisionAttack: {fileID: 1440634355}
   animator: {fileID: 7570479761144074568}
   CamAnimator: {fileID: 7663527945589957800}
   timeAttack: 0.2
   damagePU: 5
   timePU: 10
+  speedPU: 2
+  playerSprite: {fileID: 7570479761144074565}
+  newPlayerSprite: {fileID: 3083089168873209362, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
   syringeCount: 0
-  Changed: 0
+  syringe:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  syringeScore: 100
+  noSyringe: {fileID: 0}
+  noNeedHeal: {fileID: 0}
+  popUpMessage: {fileID: 0}
+  goMessage: {fileID: 0}
   playerHealth: {fileID: 7570479761144074569}
+  pauseMenu: {fileID: 0}
+  collisionAttack: {fileID: 1440634355}
 --- !u!114 &7570479761144074569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,27 +432,48 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 34bea90a-71bb-4521-8444-4fc060e2c689
     m_ActionName: Menu/Nope/Return[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9f1a6b38-406b-47b0-b6c8-fc26e8c75e91
-    m_ActionName: Player/Change[/Keyboard/v]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 7663527945589957804}
+--- !u!70 &896012653444283199
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027704597, y: -0.29768634}
+  m_Size: {x: 0.9656954, y: 1.4046273}
+  m_Direction: 0
+--- !u!50 &3287670832660143022
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 2
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &7570479762081479600
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 
+    [Header("PopMess")]
+    public TextMeshProUGUI popUpMessage;
+    public GameObject goMessage;
+
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
@@ -226,5 +230,21 @@ public class PlayerController : MonoBehaviour
             Score.score = Score.score + syringeScore;
         }
         Debug.Log("Seringue = " + syringeCount);
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionZone")
+        {
+            Debug.Log("Dans la zone");
+            goMessage.SetActive(true);
+            popUpMessage.text = ("Ok ?");
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionZone")
+        {
+            goMessage.SetActive(false);
+        }
     }
 }

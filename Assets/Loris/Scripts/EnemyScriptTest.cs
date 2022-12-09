@@ -60,7 +60,7 @@ public class EnemyScriptTest : MonoBehaviour
         transform.rotation = Quaternion.identity;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !targetCollision)
         {
@@ -79,9 +79,20 @@ public class EnemyScriptTest : MonoBehaviour
             if (top) GetComponent<Rigidbody2D>().AddForce(transform.up * thrust, ForceMode2D.Impulse);
             if (bottom) GetComponent<Rigidbody2D>().AddForce(-transform.up * thrust, ForceMode2D.Impulse);
             Invoke("FalseCollision", 0.5f);
+        }
+    }*/
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Vector3 difference = transform.position - collision.transform.position;
+            if (difference.x < 0) GetComponent<Rigidbody2D>().AddForce(transform.right * thrust, ForceMode2D.Impulse);
+            if (difference.x > 0) GetComponent<Rigidbody2D>().AddForce(-transform.right * thrust, ForceMode2D.Impulse);
+            Invoke("FalseCollision", 0.5f);
             PlayerHealth.instance.Hurt();
         }
+        
     }
 
     void FalseCollision()

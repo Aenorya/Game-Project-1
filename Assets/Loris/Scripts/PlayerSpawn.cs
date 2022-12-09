@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class PlayerSpawn : MonoBehaviour
 {
+    public GameObject player;
     private void Awake()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.position = transform.position;
+        player.transform.position = transform.position;
     }
 }

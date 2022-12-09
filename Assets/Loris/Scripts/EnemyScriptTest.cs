@@ -121,7 +121,7 @@ public class EnemyScriptTest : MonoBehaviour
         Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
         GetComponent<InventoryFinalVersion>().InstantiateLoot(dropPos);
         //gameManager.SetMobCount(-1);
-        Invoke("Destroy", 0.5f);
+        Invoke("Destroy", 0.1f);
     }
 
     public void Destroy()

@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9e246ec1844eb524791fb64429e93822, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &108738456
 Canvas:
   m_ObjectHideFlags: 0
@@ -197,6 +200,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -210,6 +214,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1446187204}
   m_Father: {fileID: 0}
@@ -248,14 +253,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446187204}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00036621, y: -540}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -0.000061035, y: -3785.7}
+  m_SizeDelta: {x: 1920, y: 1625.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259042892
 MonoBehaviour:
@@ -272,13 +278,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b9a928a9c9d956a468fc76aa555caac8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf6bc585f7f9a6344b283332ed815b9b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -356,6 +363,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -439,6 +447,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -471,6 +480,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2021327298}
   - {fileID: 259042891}
@@ -479,12 +489,12 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -3631}
-  m_SizeDelta: {x: 0, y: 7262.2847}
+  m_AnchoredPosition: {x: 0, y: -4598.466}
+  m_SizeDelta: {x: 0, y: 9196.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1446187205
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -497,6 +507,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -541,14 +552,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1446187204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00037003, y: -3631}
-  m_SizeDelta: {x: 1617.9722, y: 7262.035}
+  m_AnchoredPosition: {x: 0.00037003, y: -4598.5}
+  m_SizeDelta: {x: 1617.97, y: 9196.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021327299
 MonoBehaviour:
@@ -565,12 +577,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ccac30ab54818094b93c23be5ea42b52, type: 3}
+    m_Font: {fileID: 12800000, guid: 752d4116a819d7a468a12ee67477a94d, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -582,19 +595,153 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<SIZE=200><B>PLATFORMER  2D</B>\r</SIZE>\r\n<SIZE=70>CREER  UN  JEU  EN 
-    2D  FACILEMENT  SUR  UNITY</SIZE>\r\n\r\n\r\n<SIZE=160><B>ASSETS  USED</B>\r</SIZE>\r\n\r\n<SIZE=120>-
-    GRAPHICS -</SIZE>\r\n\r\n<SIZE=60>A  PLATFORMER  IN  THE  FOREST\r\n<I>BY  BUTCH</I></SIZE>\r\n\r\n<SIZE=60>HEALTHBAR\r\n<I>BY 
-    BRACKEYS  TEAM</I></SIZE>\r\n\r\n<SIZE=60>PROPS\r\n<I>BY  ZEF  (TUTOUNITYFR)</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    AUDIO -</SIZE>\r\n\r\n<SIZE=60>HERO  IMMORTAL\r\n<I>BY  TREVOR  LENTZ</I></SIZE>\r\n\r\n<SIZE=60>BOB'S 
-    ADVENTURES  -  BACK34\r\n<I>BY  TOM  PETER</I></SIZE>\r\n\r\n<SIZE=60>8-BIT 
-    SOUND  EFFECTS  LIBRARY\r\n<I>BY  LITTLE  ROBOT  SOUND  FACTORY</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    FONT -</SIZE>\r\n\r\n<SIZE=60>PIXELATED\r\n<I>BY  SKYLAR  PARK</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
-    SPECIAL  THANKS -</SIZE>\r\n\r\n<SIZE=60>TIPEURS\r\n\r\n<I>PIRGOSTH, DINGELA,
-    GATITO, RS_CHOPS, STEEVE, NICOLAS TRIBOULT, THEDRAGONIGHT69, ELRUMBIS, LE JO
-    CARRY, CUMU, GN\xC9, ARROWBAZ, GORDIAN, ALEC, FIREHANDS, CAPTAIN GERVAIS, CRISTOBALGOONZALEZ,
-    COUASNARD RONAN, ROB0888, L3T1, SPYPROG, VINCENT, MATTHIEU DUPONT</I></SIZE>\r\n\r\n\r\n<SIZE=60><I>TUTO 
-    UNITY  FR  COMMUNITY  <3</I></SIZE>"
+  m_Text: '<SIZE=180><B>Game Project 1</B></SIZE>
+
+    <SIZE=65>Done by the 2-Game
+    class in ArtFx</SIZE>
+
+    
+
+    
+
+    <SIZE=160><B> The Team</B></SIZE>
+
+    
+
+    <SIZE=120>-
+    Game Designers -</SIZE>
+
+    
+
+    <SIZE=60><I>Thomas A.
+
+    Allan R.</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Gameplay Programmers -</SIZE>
+
+    
+
+    <SIZE=60><I>Zoe C.
+
+    Loris M..</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Level Designer -</SIZE>
+
+    
+
+    <SIZE=60><I>Robin M.</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Animator -</SIZE>
+
+    
+
+    <SIZE=60><I>Gaelle</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Concept Artist -</SIZE>
+
+    
+
+    <SIZE=60><I>Victor</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Prop Artists -</SIZE>
+
+    
+
+    <SIZE=60><I>Sacha
+
+    Ambre</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Environment Artist -</SIZE>
+
+    
+
+    <SIZE=60><I>Emmalie</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    Character Design -</SIZE>
+
+    
+
+    <SIZE=60><I>Linh
+
+    Luka
+
+    Erwan</I></SIZE>
+
+    
+
+    <SIZE=120>-
+    FX Artists -</SIZE>
+
+    
+
+    <SIZE=60><I>Teodora
+
+    Line</I></SIZE>
+
+    
+
+    
+
+    <SIZE=160><B>ASSETS 
+    USED</B></SIZE>
+
+    
+
+    <SIZE=120>- GRAPHICS -</SIZE>
+
+    
+
+    <SIZE=60>A 
+    PLATFORMER  IN  THE  FOREST
+
+    <I>BY  BUTCH</I></SIZE>
+
+    
+
+    
+
+    <SIZE=120>-
+    SPECIAL  THANKS -</SIZE>
+
+    
+
+    <SIZE=60>Play Testers
+
+    
+
+    <I>Name
+    Here</I></SIZE>
+
+    
+
+    
+
+    <SIZE=75><I>Thank you for playing  <3</I></SIZE>
+
+    
+
+'
 --- !u!222 &2021327300
 CanvasRenderer:
   m_ObjectHideFlags: 0

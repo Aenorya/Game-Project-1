@@ -131,14 +131,16 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
+            animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
         } 
-        /*else if (contexte.canceled)
+        else if (contexte.canceled)
         {
+            animator.SetBool("IsAttacking", false);
             collisionAttack.SetActive(false);
 
-        }*/
+        }
     }
 
     private void ResetAttack()

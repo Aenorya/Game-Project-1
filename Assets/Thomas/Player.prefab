@@ -459,16 +459,11 @@ MonoBehaviour:
   playerCollider: {fileID: 472735451096321850}
   popUpMessage: {fileID: 0}
   goMessage: {fileID: 0}
-  jumpSpeed: 6
+  jumpSpeed: 7
   speed: 5
   animator: {fileID: 472735451096321852}
   CamAnimator: {fileID: 0}
   timeAttack: 0.1
-  damagePU: 0
-  timePU: 0
-  speedPU: 0
-  playerSprite: {fileID: 472735451096321854}
-  newPlayerSprite: {fileID: 0}
   syringeCount: 0
   syringe: []
   syringeScore: 0

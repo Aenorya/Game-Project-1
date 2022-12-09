@@ -22,11 +22,6 @@ public class WallButtonScript : MonoBehaviour
         instance = this;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        playerController.Interact();
-    }*/
-
     public virtual void OnInteraction()
     {
         BoxSpawn.instance.SpawnBox();

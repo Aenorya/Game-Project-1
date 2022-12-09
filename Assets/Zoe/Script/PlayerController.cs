@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public bool Changed = false;
     private Vector2 direction;
     public PlayerHealth playerHealth;
-    public GameObject menuPanel, collisionAttack;
+    public GameObject pauseMenu, collisionAttack;
     public static bool gameIsPaused = false;
     public static PlayerController instance;
 
@@ -71,14 +71,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        if (Changed)
-        {
-        animator.SetTrigger("ChangedDie");
-        }
-        else
-        {
-            animator.SetTrigger("Die");
-        }
+        animator.SetTrigger("Die");
         instance.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
@@ -111,19 +104,6 @@ public class PlayerController : MonoBehaviour
         else if (direction.x > 0)
         {
             CamAnimator.SetBool("CamSlide", false);
-        }
-    }
-
-    public void Change(InputAction.CallbackContext contexte)
-    {
-        if (contexte.performed)
-        {
-            Changed = true;
-            animator.SetBool("Changing", true);
-           /* if()
-            { 
-            animator.SetBool("Changing", false);
-            }*/
         }
     }
 
@@ -163,14 +143,14 @@ public class PlayerController : MonoBehaviour
 
     void Resume()
     {
-        menuPanel.SetActive(false);
+        pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
     }
 
     void Paused()
     {
-        menuPanel.SetActive(true);
+        pauseMenu.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;
     }

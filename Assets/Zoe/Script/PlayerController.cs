@@ -26,14 +26,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static float damage = 1;
-
-    [Header("PowerUP")]
-    public float damagePU;
-    public float timePU;
-    public float speedPU;
-    public SpriteRenderer playerSprite;
-    public Sprite newPlayerSprite;
-
+    
     [Header("Syringe")]
     public int syringeCount = 3;
     public List<GameObject> syringe;
@@ -183,8 +176,6 @@ public class PlayerController : MonoBehaviour
                     playerHealth.HealPlayer();
                     syringeCount--;
                     syringe[syringeCount].SetActive(false);
-                    playerSprite.sprite = newPlayerSprite;
-                    Invoke("ResetPower", timePU);
                 }
                 else if (playerHealth.hp == 3)
                 {
@@ -225,7 +216,9 @@ public class PlayerController : MonoBehaviour
         
         if(syringeCount <= 2)
         {
+            
             syringeCount++;
+            syringe[syringeCount-1].SetActive(true);
         }
         else if (syringeCount == 3)
         {

@@ -9,10 +9,10 @@ TagManager:
   - Enemy
   - Weapon
   - PickableObject
-  - Button Respawn
   - ReBox
+  - Button Respawn
   - Detroyables
-  - BackGround
+  - CollisionZone
   layers:
   - Default
   - TransparentFX

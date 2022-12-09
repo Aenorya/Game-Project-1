@@ -44,9 +44,8 @@ public class PlayerController : MonoBehaviour
     public PlayerHealth playerHealth;
     public GameObject pauseMenu, collisionAttack;
     public static bool gameIsPaused = false;
-    public static PlayerController instance;
 
-    public BoxSpawn boxSpawn;
+    public static PlayerController instance;
 
     private void Awake()
     {
@@ -55,7 +54,6 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
             return;
         }
-
         instance = this;
     }
 
@@ -85,12 +83,12 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            boxSpawn.SpawnBox();
-         
+            WallButtonScript.instance.OnInteraction();
             Debug.Log("La touche action à été activé");
         } 
         else if (context.canceled)
         {
+
             Debug.Log("La touche action a été relaché");
         }
     }

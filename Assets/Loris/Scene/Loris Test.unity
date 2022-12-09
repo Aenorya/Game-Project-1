@@ -2660,7 +2660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b46deb1ced84b4c9dc4d3c49c15fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSpawn: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!212 &663137579
 SpriteRenderer:
@@ -5438,7 +5437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57355b57a8b83124e93a7792bc0fd8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 240358927797078085}
+  rb: {fileID: 0}
   grav: 0.5
 --- !u!61 &1647786258
 BoxCollider2D:
@@ -7261,11 +7260,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &240358927797078085 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7570479761144074563, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-  m_PrefabInstance: {fileID: 7663527946001750278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263701675436998148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7522,6 +7516,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1440634355, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074561, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Name
       value: Player

@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
     public static PlayerController instance;
 
+    public BoxSpawn boxSpawn;
+
     private void Awake()
     {
         if (instance != null)
@@ -82,10 +84,12 @@ public class PlayerController : MonoBehaviour
     public void Interact(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {   
+        {
+            boxSpawn.SpawnBox();
+         
             Debug.Log("La touche action à été activé");
-
-        } else if (context.canceled)
+        } 
+        else if (context.canceled)
         {
             Debug.Log("La touche action a été relaché");
         }

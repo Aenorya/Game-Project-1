@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Other")]
     private bool isGrounded = false;
-    public bool Changed = false;
+
     private Vector2 direction;
     public PlayerHealth playerHealth;
     public GameObject pauseMenu, collisionAttack;
@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
     {
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
-        Changed = false;
     }
 
     void Update()

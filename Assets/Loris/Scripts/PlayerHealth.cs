@@ -5,18 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //public int maxHealth = 100;
-    //public int currentHealth;
-
     public float invincibilityTimeAfterHit = 3f;
     public float invincibilityFlashDelay = 0.2f;
     public bool isInvincible = false;
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
-    public int hp = 3;
+    public int hp;
     
-
     public AudioClip hitSound;
 
     public PlayerController playerController;
@@ -41,10 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Hurt();
-        }
+        
     }
 
     public void HealPlayer()
@@ -66,15 +59,11 @@ public class PlayerHealth : MonoBehaviour
         hearts[hp].GetComponent<Image>().color = Color.black;
         if(hp == 0)
         {
-            Died();
+            PlayerController.instance.Die();
         }
         
     }
 
-    public void Died()
-    {
-        PlayerController.instance.Die();
-    }
     /*public void TakeDamage()
     {
         if (!isInvincible)

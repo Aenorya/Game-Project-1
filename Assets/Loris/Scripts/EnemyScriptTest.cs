@@ -65,7 +65,6 @@ public class EnemyScriptTest : MonoBehaviour
             Invoke("FalseCollision", 0.5f);
             PlayerHealth.instance.Hurt();
         }
-        
     }
 
     void FalseCollision()

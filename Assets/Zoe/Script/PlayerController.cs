@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     public GameObject pauseMenu, collisionAttack;
     public static bool gameIsPaused = false;
 
+    public bool inContact=false;
+
     public static PlayerController instance;
 
     private void Awake()
@@ -58,11 +60,12 @@ public class PlayerController : MonoBehaviour
     {
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
+        inContact = false;
     }
 
     void Update()
     {
-        transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
+        transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0);
     }
 
     public void Die()
@@ -78,14 +81,15 @@ public class PlayerController : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && inContact)
         {
-            //WallButtonScript.instance.OnTriggerEnter2D(Collider2D collision);
+            WallButtonScript.instance.OnInteraction();
 
             Debug.Log("La touche action à été activé");
         } 
         else if (context.canceled)
         {
+            inContact = false;
 
             Debug.Log("La touche action a été relaché");
         }

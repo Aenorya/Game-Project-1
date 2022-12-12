@@ -32,7 +32,7 @@ public class WallButtonScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            OnInteraction();
+            PlayerController.instance.inContact = true;
         }
     }
 

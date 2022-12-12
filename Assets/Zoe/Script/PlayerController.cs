@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
-    public bool attackGround = false
+    public bool attackGround = false;
 
     public GameObject poing;
 

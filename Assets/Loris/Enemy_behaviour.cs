@@ -81,6 +81,18 @@ public class Enemy_behaviour : MonoBehaviour
             inRange = true;
             Flip(); 
         }
+        if (trig.CompareTag("Player"))
+        {
+            //Vector3 difference = transform.position - trig.transform.position;
+            Invoke("FalseCollision", 0.5f);
+            PlayerHealth.instance.Hurt();
+        }
+    }
+
+    void FalseCollision()
+    {
+        //targetCollision = false;
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
     void EnemyLogic()

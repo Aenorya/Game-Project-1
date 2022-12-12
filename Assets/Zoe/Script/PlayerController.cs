@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
     public GameObject pauseMenu, collisionAttack;
     public static bool gameIsPaused = false;
 
+    public bool inContact = false;
+    public bool attackGround = false;
+
+    public GameObject poing;
+
     public static PlayerController instance;
 
     private void Awake()
@@ -58,11 +63,13 @@ public class PlayerController : MonoBehaviour
     {
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
+        inContact = false;
+        attackGround = false;
     }
 
     void Update()
     {
-        transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0); 
+        transform.position += speed * Time.deltaTime * new Vector3(direction.x, 0, 0);
     }
 
     public void Die()
@@ -78,13 +85,15 @@ public class PlayerController : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && inContact)
         {
             WallButtonScript.instance.OnInteraction();
+
             Debug.Log("La touche action à été activé");
         } 
         else if (context.canceled)
         {
+            inContact = false;
 
             Debug.Log("La touche action a été relaché");
         }
@@ -93,16 +102,18 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
-        GetComponent<SpriteRenderer>().flipX = (direction.x < 0);
 
-        if (direction.x < 0.2)
+        if (direction.x < 0)
         {
-            
+            poing.transform.localPosition = new Vector2(-1.05f, -0.44f);
             CamAnimator.SetBool("CamSlide", true);
+            GetComponent<SpriteRenderer>().flipX = true;
         }
-        else if (direction.x > 0.2)
+        else if (direction.x > 0)
         {
+            poing.transform.localPosition = new Vector2(1.05f, -0.44f);
             CamAnimator.SetBool("CamSlide", false);
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
@@ -110,6 +121,11 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
+            if (attackGround)
+            {
+                animator.SetTrigger("GroundAttack");
+            }
+
             animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
@@ -118,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsAttacking", false);
             collisionAttack.SetActive(false);
-
+            attackGround = false;
         }
     }
 
@@ -202,7 +218,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("BreakableFloor"))
+        {
+            attackGround = true;
+        }
+
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox"))
+        {
+            isGrounded = true;
+        }
+        
         if (collision.gameObject.CompareTag("PickableObject"))
         {
             PickUpSyringe();

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 307081694410036508}
   - component: {fileID: 307081694410036509}
-  - component: {fileID: 307081694410036506}
   - component: {fileID: 307081694410036504}
+  - component: {fileID: 3722952703085674546}
+  - component: {fileID: 307081694410036506}
   m_Layer: 0
   m_Name: Destroyable Test
   m_TagString: Detroyables
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &307081694410036509
 SpriteRenderer:
@@ -86,20 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &307081694410036506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307081694410036505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Destroyable: {fileID: 307081694410036505}
-  boxCollider: {fileID: 307081694410036504}
 --- !u!61 &307081694410036504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,5 +111,45 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.02}
+  m_EdgeRadius: 0
+--- !u!61 &3722952703085674546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307081694410036505}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &307081694410036506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307081694410036505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destroyable: {fileID: 307081694410036505}
+  boxCollider: {fileID: 3722952703085674546}

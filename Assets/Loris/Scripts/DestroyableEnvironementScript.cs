@@ -6,7 +6,6 @@ public class DestroyableEnvironementScript : MonoBehaviour
 {
     public GameObject Destroyable;
     public BoxCollider2D boxCollider;
-    public PickableObject itemDrop;
 
     public static DestroyableEnvironementScript instance;
 
@@ -25,8 +24,6 @@ public class DestroyableEnvironementScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-            GetComponent<InventoryFinalVersion>().InstantiateLoot(dropPos);
             Destroy(Destroyable);
             boxCollider.enabled = false;
         }

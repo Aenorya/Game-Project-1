@@ -2150,12 +2150,7 @@ CircleCollider2D:
   m_Offset: {x: -0.01285696, y: 0.10077524}
   serializedVersion: 2
   m_Radius: 1.04248
---- !u!61 &2021724095 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 263701674310527458, guid: 3091eb9338b391f4bbe21f13d56f8ade, type: 3}
-  m_PrefabInstance: {fileID: 2090926452}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2021724099
+--- !u!114 &2021724103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2164,12 +2159,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021724093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
+  m_Script: {fileID: 11500000, guid: 29b57cb74549335499cf8e59b2776c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destroyable: {fileID: 2021724093}
-  boxCollider: {fileID: 2021724095}
-  itemDrop: {fileID: 11400000, guid: 4f11e22ebf0980b49ba16ca777742b2b, type: 2}
+--- !u!114 &2021724104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021724093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf73523f80f799428fe7efa855bdda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickables:
+  - {fileID: 11400000, guid: a502f33d0e6ed03429da8604aaf0cde3, type: 2}
+  countSyringe: 0
 --- !u!1001 &2090926452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2240,7 +2247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527462, guid: 3091eb9338b391f4bbe21f13d56f8ade, type: 3}
       propertyPath: m_TagString
-      value: CollisionZone
+      value: ReBox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

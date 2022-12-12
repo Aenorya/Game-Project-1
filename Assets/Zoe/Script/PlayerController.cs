@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
+    public bool attackGround = false
 
     public GameObject poing;
 
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
         inContact = false;
+        attackGround = false;
     }
 
     void Update()
@@ -119,6 +121,11 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
+            if (attackGround)
+            {
+                animator.SetTrigger("GroundAttack");
+            }
+
             animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
@@ -127,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsAttacking", false);
             collisionAttack.SetActive(false);
-
+            attackGround = false;
         }
     }
 
@@ -211,6 +218,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("BreakableFloor"))
+        {
+            attackGround = true;
+        }
+
         if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox"))
         {
             isGrounded = true;

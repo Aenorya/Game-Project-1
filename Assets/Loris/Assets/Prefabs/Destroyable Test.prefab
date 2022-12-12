@@ -152,4 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destroyable: {fileID: 307081694410036505}
-  boxCollider: {fileID: 307081694410036504}
+  boxCollider: {fileID: 3722952703085674546}

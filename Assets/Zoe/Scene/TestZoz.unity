@@ -1632,6 +1632,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1440634355, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+      propertyPath: m_Name
+      value: Poing
+      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074561, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1692,6 +1696,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 484663439}
+    - target: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+      propertyPath: poing
+      value: 
+      objectReference: {fileID: 1704297073}
     - target: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: goMessage
       value: 
@@ -1929,6 +1937,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1704297073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1440634355, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+  m_PrefabInstance: {fileID: 1456953630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774159372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,9 +2147,29 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3859197, y: 0}
+  m_Offset: {x: -0.01285696, y: 0.10077524}
   serializedVersion: 2
-  m_Radius: 4.0027523
+  m_Radius: 1.04248
+--- !u!61 &2021724095 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 263701674310527458, guid: 3091eb9338b391f4bbe21f13d56f8ade, type: 3}
+  m_PrefabInstance: {fileID: 2090926452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2021724099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021724093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destroyable: {fileID: 2021724093}
+  boxCollider: {fileID: 2021724095}
+  itemDrop: {fileID: 11400000, guid: 4f11e22ebf0980b49ba16ca777742b2b, type: 2}
 --- !u!1001 &2090926452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2203,7 +2236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527462, guid: 3091eb9338b391f4bbe21f13d56f8ade, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527462, guid: 3091eb9338b391f4bbe21f13d56f8ade, type: 3}
       propertyPath: m_TagString

@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         if (direction.x < 0.2)
         {
-            poing.transform.localPosition = new Vector2(-0.9f, -0.44f);
+            poing.transform.localPosition = new Vector2(-1.05f, -0.44f);
             CamAnimator.SetBool("CamSlide", true);
         }
         else if (direction.x > 0.2)

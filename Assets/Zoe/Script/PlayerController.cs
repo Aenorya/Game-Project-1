@@ -125,8 +125,11 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("GroundAttack");
             }
+            else
+            {
+                animator.SetBool("IsAttacking", true);
+            }
 
-            animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
         } 

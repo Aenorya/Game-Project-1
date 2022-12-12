@@ -268,7 +268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191932571
 GameObject:
@@ -796,6 +796,7 @@ MonoBehaviour:
   timer: 2
   leftLimit: {fileID: 136254550}
   rightLimit: {fileID: 446074001}
+  isAttacking: 0
 --- !u!1 &361425074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,7 +1070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470305477
 GameObject:
@@ -3474,6 +3475,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_Size.x
+      value: 0.65143013
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3097191
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.37085724
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.09028888
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260358074508720, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 483cae615cdf1724b93cc1c53c5cc813, type: 2}
     - target: {fileID: 2052260358074508723, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Name
       value: Skeleton
@@ -3488,7 +3517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3881,6 +3910,7 @@ MonoBehaviour:
   timer: 2
   leftLimit: {fileID: 136254550}
   rightLimit: {fileID: 446074001}
+  isAttacking: 0
 --- !u!1 &1876582210
 GameObject:
   m_ObjectHideFlags: 0

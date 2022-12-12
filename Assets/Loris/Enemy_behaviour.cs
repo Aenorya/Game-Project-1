@@ -19,6 +19,7 @@ public class Enemy_behaviour : MonoBehaviour
     public float timer; //Timer for cooldown between attacks
     public Transform leftLimit;
     public Transform rightLimit;
+    public bool isAttacking;
     #endregion
 
     #region Private Variables
@@ -37,6 +38,7 @@ public class Enemy_behaviour : MonoBehaviour
         SelectTarget();
         intTimer = timer; //Store the inital value of timer
         anim = GetComponent<Animator>();
+        isAttacking = false;
     }
 
     void Update()
@@ -81,18 +83,10 @@ public class Enemy_behaviour : MonoBehaviour
             inRange = true;
             Flip(); 
         }
-        if (trig.CompareTag("Player"))
+        if (trig.CompareTag("Player") && isAttacking)
         {
-            //Vector3 difference = transform.position - trig.transform.position;
-            Invoke("FalseCollision", 0.5f);
             PlayerHealth.instance.Hurt();
         }
-    }
-
-    void FalseCollision()
-    {
-        //targetCollision = false;
-        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
     void EnemyLogic()
@@ -129,11 +123,15 @@ public class Enemy_behaviour : MonoBehaviour
 
     void Attack()
     {
+        isAttacking = true;
+
         timer = intTimer; //Reset Timer when Player enter Attack Range
         attackMode = true; //To check if Enemy can still attack or not
 
-        anim.SetBool("canWalk", false);
+        //anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
+        Debug.Log("Attacked");
+        
     }
 
     void Cooldown()

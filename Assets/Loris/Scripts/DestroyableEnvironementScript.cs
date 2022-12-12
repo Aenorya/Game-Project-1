@@ -22,7 +22,7 @@ public class DestroyableEnvironementScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))//put tag "weapon"
+        if (collision.gameObject.CompareTag("Weapon"))
         {
             Destroy(Destroyable);
             boxCollider.enabled = false;

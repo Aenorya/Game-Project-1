@@ -13,9 +13,6 @@ public class EnemyScriptTest : MonoBehaviour
     public static float health = 5;
     private int hitStrength = 1;
 
-    public Sprite deathSprite;
-    public Sprite[] sprites;
-
     private CurrentSceneManager gameManager;
 
     private bool isDead = false;
@@ -37,8 +34,6 @@ public class EnemyScriptTest : MonoBehaviour
     void Start()
     {
         gameManager = GetComponent<CurrentSceneManager>();
-        int rnd = Random.Range(0, sprites.Length);
-        GetComponent<SpriteRenderer>().sprite = sprites[rnd];
         target = GameObject.Find("Player").transform;
     }
 
@@ -86,8 +81,6 @@ public class EnemyScriptTest : MonoBehaviour
         {
             isDead = true;
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            GetComponent<SpriteRenderer>().sprite = deathSprite;
-            GetComponent<SpriteRenderer>().sortingOrder = -1;
             //GetComponent<Collider2D>().enabled = false;
             Invoke("EnemyDeath", 0.5f);
         }

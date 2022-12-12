@@ -2038,6 +2038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1759408138}
+  capsuleCollider: {fileID: 0}
 --- !u!212 &663137579
 SpriteRenderer:
   m_ObjectHideFlags: 0

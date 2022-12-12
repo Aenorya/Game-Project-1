@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b46deb1ced84b4c9dc4d3c49c15fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 1759408138}
 --- !u!212 &663137579
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3579,6 +3579,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1759408138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
+  m_PrefabInstance: {fileID: 7663527946001750278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1874651260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4781,6 +4792,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3200582900438870602, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3200582900438870962, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
       propertyPath: m_Pivot.x
       value: 0

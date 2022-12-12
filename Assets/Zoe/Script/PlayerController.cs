@@ -80,7 +80,8 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            WallButtonScript.instance.OnInteraction();
+            //WallButtonScript.instance.OnTriggerEnter2D(Collider2D collision);
+
             Debug.Log("La touche action à été activé");
         } 
         else if (context.canceled)

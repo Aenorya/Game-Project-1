@@ -8,6 +8,7 @@ public class WallButtonScript : MonoBehaviour
 {
     //public BoxSpawn boxSpawn;
     public PlayerController playerController;
+    public Collider2D capsuleCollider;
 
 
     public static WallButtonScript instance;
@@ -24,6 +25,16 @@ public class WallButtonScript : MonoBehaviour
 
     public virtual void OnInteraction()
     {
-        BoxSpawn.instance.SpawnBox();
+            BoxSpawn.instance.SpawnBox(); 
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnInteraction();
+        }
+    }
+
+
 }

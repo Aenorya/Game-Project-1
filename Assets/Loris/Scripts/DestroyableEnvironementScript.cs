@@ -25,7 +25,7 @@ public class DestroyableEnvironementScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))//put tag "weapon"
         {
             Destroy(Destroyable);
-            DestroyableEnvironementScript.instance.boxCollider.enabled = false;
+            boxCollider.enabled = false;
         }
     }
 }

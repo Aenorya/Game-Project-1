@@ -13,9 +13,6 @@ public class EnemyScriptTest : MonoBehaviour
     public static float health = 5;
     private int hitStrength = 1;
 
-    public Sprite deathSprite;
-    public Sprite[] sprites;
-
     private CurrentSceneManager gameManager;
 
     private bool isDead = false;
@@ -37,8 +34,6 @@ public class EnemyScriptTest : MonoBehaviour
     void Start()
     {
         gameManager = GetComponent<CurrentSceneManager>();
-        int rnd = Random.Range(0, sprites.Length);
-        GetComponent<SpriteRenderer>().sprite = sprites[rnd];
         target = GameObject.Find("Player").transform;
     }
 
@@ -59,28 +54,6 @@ public class EnemyScriptTest : MonoBehaviour
         }
         transform.rotation = Quaternion.identity;
     }
-
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && !targetCollision)
-        {
-            Vector3 contactPoint = collision.contacts[0].point;
-            Vector3 center = collision.collider.bounds.center;
-
-            targetCollision = true;
-
-            bool right = contactPoint.x > center.x;
-            bool left = contactPoint.x < center.x;
-            bool top = contactPoint.y > center.y;
-            bool bottom = contactPoint.y < center.y;
-
-            if (right) GetComponent<Rigidbody2D>().AddForce(transform.right * thrust, ForceMode2D.Impulse);
-            if (left) GetComponent<Rigidbody2D>().AddForce(-transform.right * thrust, ForceMode2D.Impulse);
-            if (top) GetComponent<Rigidbody2D>().AddForce(transform.up * thrust, ForceMode2D.Impulse);
-            if (bottom) GetComponent<Rigidbody2D>().AddForce(-transform.up * thrust, ForceMode2D.Impulse);
-            Invoke("FalseCollision", 0.5f);
-        }
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -104,12 +77,10 @@ public class EnemyScriptTest : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0)
+        if (health == 0)
         {
             isDead = true;
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            GetComponent<SpriteRenderer>().sprite = deathSprite;
-            GetComponent<SpriteRenderer>().sortingOrder = -1;
             //GetComponent<Collider2D>().enabled = false;
             Invoke("EnemyDeath", 0.5f);
         }
@@ -118,7 +89,7 @@ public class EnemyScriptTest : MonoBehaviour
 
     void EnemyDeath()
     {
-        Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         GetComponent<InventoryFinalVersion>().InstantiateLoot(dropPos);
         //gameManager.SetMobCount(-1);
         Invoke("Destroy", 0.1f);

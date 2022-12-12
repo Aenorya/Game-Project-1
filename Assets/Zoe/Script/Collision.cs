@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
             EnemyScriptTest.instance.TakeDamage(PlayerController.damage);
-            Debug.Log(EnemyScriptTest.health);
+            //Debug.Log(EnemyScriptTest.health);
+        }
+        if (collision.gameObject.CompareTag("ReBox"))
+        {
+            BoxDrop.instance.HitBox(PlayerController.damage);
         }
     }
 }

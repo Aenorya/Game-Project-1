@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Attributes")]
     public float timeAttack;
-    public static float damage = 1;
+    public static int damage = 1;
     
     [Header("Syringe")]
     public int syringeCount = 3;
@@ -236,6 +236,11 @@ public class PlayerController : MonoBehaviour
             PickUpSyringe();
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            BasicEnemy.instance.TakeDamage(damage);
         }
     }
 

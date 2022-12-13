@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 483cae615cdf1724b93cc1c53c5cc813, type: 2}
     - target: {fileID: 2052260358074508723, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Name
-      value: Skeleton Variant
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508723, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Layer
@@ -232,29 +232,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3937387, y: 1.4615309}
   m_EdgeRadius: 0
---- !u!114 &195640481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356657511178505081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99dcd0f07d2ae1469e94adac64c7049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayCast: {fileID: 279987850614417756}
-  raycastMask:
-    serializedVersion: 2
-    m_Bits: 256
-  rayCastLength: 10
-  attackDistance: 1.5
-  moveSpeed: 2
-  timer: 2
-  leftLimit: {fileID: 0}
-  rightLimit: {fileID: 0}
-  isAttacking: 0
 --- !u!212 &3910401567075086299
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -296,7 +273,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 803d82f933441674abbf3b71b910f0c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ed83870e7e908f4db8b12e2abd3b268, type: 3}
   m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -307,3 +284,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &195640481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6356657511178505081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99dcd0f07d2ae1469e94adac64c7049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCast: {fileID: 279987850614417756}
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 256
+  rayCastLength: 10
+  attackDistance: 1.5
+  moveSpeed: 2
+  timer: 2
+  leftLimit: {fileID: 0}
+  rightLimit: {fileID: 0}
+  isAttacking: 0

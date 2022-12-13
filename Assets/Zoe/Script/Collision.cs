@@ -16,5 +16,10 @@ public class Collision : MonoBehaviour
         {
             BoxDrop.instance.HitBox(PlayerController.damage);
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            BasicEnemy.instance.TakeDamage(PlayerController.damage);
+        }
     }
 }

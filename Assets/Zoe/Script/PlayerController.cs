@@ -237,11 +237,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
         }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            BasicEnemy.instance.TakeDamage(damage);
-        }
     }
 
     public void PickUpSyringe()

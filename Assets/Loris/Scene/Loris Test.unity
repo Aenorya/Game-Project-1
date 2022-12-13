@@ -3575,21 +3575,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2052260357604154521, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.38778505
       objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.126031
+      value: 0.72135234
       objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.927
+      value: 0.7247
       objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154526, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3634,10 +3630,6 @@ PrefabInstance:
     - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Offset.y
       value: -0.031952634
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -5404,10 +5396,6 @@ PrefabInstance:
     - target: {fileID: 1440634358, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6000642757937539040, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074561, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Name

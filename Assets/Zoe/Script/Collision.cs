@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         /*if(collision.gameObject.CompareTag("Enemy"))
         {
@@ -16,5 +16,13 @@ public class Collision : MonoBehaviour
         {
             BoxDrop.instance.HitBox(PlayerController.damage);
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            BasicEnemy.instance.TakeDamage(PlayerController.damage);
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        
     }
 }

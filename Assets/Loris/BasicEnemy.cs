@@ -5,9 +5,22 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
-    public int MaxHealth = 10;
+    public int MaxHealth = 1;
     int currentHealth;
     public Animator animator;
+
+    public static BasicEnemy instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
+            return;
+        }
+        instance = this;
+    }
+
     void Start()
     {
         currentHealth = MaxHealth;
@@ -29,7 +42,7 @@ public class BasicEnemy : MonoBehaviour
         //GetComponent<Enemy_behaviour>().moveSpeed = 0; 
         GetComponent<Enemy_behaviour>().enabled = false;
         animator.Play("Dead");
-        yield return new WaitForSeconds(2.30f);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
 }

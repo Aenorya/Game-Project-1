@@ -5,7 +5,6 @@ using UnityEngine;
 public class Hit : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-    public int dega;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

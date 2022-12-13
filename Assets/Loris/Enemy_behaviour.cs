@@ -126,8 +126,6 @@ public class Enemy_behaviour : MonoBehaviour
 
         //anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
-        Debug.Log("Attacked");
-        
     }
 
     void Cooldown()

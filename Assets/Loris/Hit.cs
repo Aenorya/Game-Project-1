@@ -11,7 +11,7 @@ public class Hit : MonoBehaviour
         if(collision.transform.CompareTag("Player"))
         {
             playerHealth.Hurt();
+            Debug.Log("Attacked");
         }
     }
-
 }

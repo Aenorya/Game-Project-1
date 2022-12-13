@@ -8,6 +8,7 @@ public class BasicEnemy : MonoBehaviour
     public int MaxHealth = 1;
     int currentHealth;
     public Animator animator;
+    public GameObject skeleton;
 
     public static BasicEnemy instance;
 
@@ -43,6 +44,6 @@ public class BasicEnemy : MonoBehaviour
         GetComponent<Enemy_behaviour>().enabled = false;
         animator.Play("Dead");
         yield return new WaitForSeconds(0.1f);
-        Destroy(gameObject);
+        Destroy(skeleton);
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 //Code Zoe
-public class InventoryFinalVersion : MonoBehaviour
+public class Droper : MonoBehaviour
 {
     public PickableCollection pickables;
-    public int countSyringe;
+    //public int countSyringe;
 
     PickableObject GetDroppedPickObj()
     {
@@ -33,8 +33,10 @@ public class InventoryFinalVersion : MonoBehaviour
     public void InstantiateLoot(Vector3 PickObjSpawnPosition)
     {
         PickableObject droppedPickObjs = GetDroppedPickObj();
+        
         if (droppedPickObjs != null)
         {
+            Debug.Log("COUCOU G DROP D TRUKS");
             GameObject pickObjGameObject = Instantiate(droppedPickObjs.poPrefab, PickObjSpawnPosition, Quaternion.identity);
             pickObjGameObject.GetComponent<SpriteRenderer>().sprite = droppedPickObjs.poSprite;
         }

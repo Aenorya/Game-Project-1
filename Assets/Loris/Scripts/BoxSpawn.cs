@@ -20,6 +20,10 @@ public class BoxSpawn : MonoBehaviour
 
     public void SpawnBox()
     {
-        GameObject.FindGameObjectWithTag("ReBox").transform.position = transform.position;
+        GameObject box = GameObject.FindGameObjectWithTag("ReBox");
+        if (box)
+        {
+            box.transform.position = transform.position;
+        }
     }
 }

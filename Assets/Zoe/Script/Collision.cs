@@ -12,7 +12,7 @@ public class Collision : MonoBehaviour
             //Debug.Log(EnemyScriptTest.health);
         }*/
 
-        if (collision.gameObject.CompareTag("ReBox"))
+        if (collision.gameObject.CompareTag("Box"))
         {
             collision.transform.GetComponent<BoxDrop>().HitBox(PlayerController.damage);
         }

@@ -13,7 +13,7 @@ public class BoxDrop : MonoBehaviour
         if(fakeHealth == 0)
         {
             Vector3 dropPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-            GetComponent<InventoryFinalVersion>().InstantiateLoot(dropPos);
+            GetComponent<Droper>().InstantiateLoot(dropPos);
             Invoke("DestroyBox", 0.1f);
         }
     }

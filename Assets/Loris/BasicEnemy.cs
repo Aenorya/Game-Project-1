@@ -33,16 +33,16 @@ public class BasicEnemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            StartCoroutine(Die());
+            GetComponent<Enemy_behaviour>().enabled = false;
+            animator.Play("Dead");
+            Invoke("Die", 0.1f);
         }
     }
 
-    public IEnumerator Die()
+    public void Die()
     {
         //GetComponent<Enemy_behaviour>().moveSpeed = 0; 
-        GetComponent<Enemy_behaviour>().enabled = false;
-        animator.Play("Dead");
-        yield return new WaitForSeconds(0.1f);
+        GetComponent<Droper>().InstantiateLoot(transform.position);
         Destroy(gameObject);
     }
 }

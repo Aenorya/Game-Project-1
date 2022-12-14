@@ -5,19 +5,19 @@ using UnityEngine;
 public class TestParallax : MonoBehaviour
 {
     // Reference for camera in scene
-    public Camera cam;
+    public Camera sceneCamera;
 
     // Reference for player (Subject)
-    public Transform subject;
+    public Transform player;
 
     Vector2 startPosition;
     float startZ;
 
     // Distance that camera has moved from the original position of the sprite
-    Vector2 travel => (Vector2)cam.transform.position - startPosition;
+    Vector2 travel => (Vector2)sceneCamera.transform.position - startPosition;
 
-    float distanceFromSubject => transform.position.z - subject.position.z;
-    float clippingPlane => (cam.transform.position.z + (distanceFromSubject > 0 ? cam.farClipPlane : cam.nearClipPlane));
+    float distanceFromSubject => transform.position.z - player.position.z;
+    float clippingPlane => (sceneCamera.transform.position.z + (distanceFromSubject > 0 ? sceneCamera.farClipPlane : sceneCamera.nearClipPlane));
 
     float parallaxFactor => Mathf.Abs(distanceFromSubject) / clippingPlane;
 

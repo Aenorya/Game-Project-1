@@ -20,6 +20,7 @@ public class BasicEnemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            CountEnemy.instance.numberEnemy = CountEnemy.instance.numberEnemy - 1;
             animator.Play("Dead");
             Invoke("Die", 0.1f);
         }

@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 346416025}
   - component: {fileID: 346416027}
   - component: {fileID: 346416028}
+  - component: {fileID: 346416029}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Enemy
@@ -822,18 +823,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346416019}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 589f2714551d2a64b846793afc1f7f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 5
-  deathSprite: {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  sprites:
-  - {fileID: -4365678376696325385, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 3696329424477584276, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 2924033600936126985, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
 --- !u!95 &346416027
 Animator:
   serializedVersion: 4
@@ -844,7 +839,7 @@ Animator:
   m_GameObject: {fileID: 346416019}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48b17346023f7d847aefd7b0ad72d312, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1150db0431b0fcf4cb7ab89b115d316f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -866,9 +861,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf73523f80f799428fe7efa855bdda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickables:
-  - {fileID: 11400000, guid: 4f11e22ebf0980b49ba16ca777742b2b, type: 2}
+  pickables: {fileID: 11400000, guid: 07be51956f0103e42b04278911e32baa, type: 2}
   countSyringe: 0
+--- !u!114 &346416029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346416019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b789dcf9edc63409ca4bbe6175eda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 1
+  animator: {fileID: 346416027}
 --- !u!1 &420389297
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,8 +2515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf73523f80f799428fe7efa855bdda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickables:
-  - {fileID: 11400000, guid: a502f33d0e6ed03429da8604aaf0cde3, type: 2}
+  pickables: {fileID: 0}
   countSyringe: 0
 --- !u!1001 &2090926452
 PrefabInstance:

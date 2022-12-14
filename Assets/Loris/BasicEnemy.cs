@@ -9,16 +9,16 @@ public class BasicEnemy : MonoBehaviour
     int currentHealth;
     public Animator animator;
 
-    public static BasicEnemy instance;
+    //public static BasicEnemy instance;
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
-            return;
-        }
-        instance = this;
+        //if (instance != null)
+        //{
+        //    Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
+        //    return;
+        //}
+        //instance = this;
     }
 
     void Start()

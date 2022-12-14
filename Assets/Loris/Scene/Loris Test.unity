@@ -996,7 +996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c73b4f232d450419d3b4a3d14d96e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1759408140}
 --- !u!114 &374206385 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7111979486313313296, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
@@ -3548,17 +3547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1759408140 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7570479761144074569, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-  m_PrefabInstance: {fileID: 7663527946001750278}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759408137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2feac15c4c231ca46919245e000a3949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1811906089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3630,6 +3618,10 @@ PrefabInstance:
     - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Offset.y
       value: -0.031952634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2052260357604154527, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -4687,11 +4679,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2104663229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1440634355, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-  m_PrefabInstance: {fileID: 7663527946001750278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137489032
 GameObject:
   m_ObjectHideFlags: 0
@@ -5389,14 +5376,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1440634358, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440634358, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.05
-      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074561, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5457,14 +5436,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 1983088321}
-    - target: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: poing
-      value: 
-      objectReference: {fileID: 2104663229}
-    - target: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: menuPanel
-      value: 
-      objectReference: {fileID: 1420034868}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}

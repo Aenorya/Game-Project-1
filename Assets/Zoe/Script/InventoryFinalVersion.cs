@@ -6,18 +6,18 @@ using UnityEngine.Animations;
 //Code Zoe
 public class InventoryFinalVersion : MonoBehaviour
 {
-    public List<PickableObject> pickables = new List<PickableObject>();
+    public PickableCollection pickables;
     public int countSyringe;
 
     PickableObject GetDroppedPickObj()
     {
         int randomNumber = Random.Range(1, 101);
         List<PickableObject> possiblePickObjs = new List<PickableObject>(); ;
-        foreach (PickableObject pickObj in pickables)
+        foreach (DropRate pickObj in pickables.drops)
         {
-            if (randomNumber <= pickObj.dropChance)
+            if (randomNumber <= pickObj.rate)
             {
-                possiblePickObjs.Add(pickObj);
+                possiblePickObjs.Add(pickObj.pickable);
             }
         }
 
@@ -39,13 +39,13 @@ public class InventoryFinalVersion : MonoBehaviour
             pickObjGameObject.GetComponent<SpriteRenderer>().sprite = droppedPickObjs.poSprite;
         }
     }
-    public void AddSyringe(int count)
-    {
-        countSyringe += count;
-    }
+    //public void AddSyringe(int count)
+    //{
+    //    countSyringe += count;
+    //}
 
-    public void RemoveCoins(int count)
-    {
-        countSyringe -= count;
-    }
+    //public void RemoveCoins(int count)
+    //{
+    //    countSyringe -= count;
+    //}
 }

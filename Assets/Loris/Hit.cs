@@ -12,5 +12,4 @@ public class Hit : MonoBehaviour
             collision.transform.GetComponentInParent<PlayerHealth>().Hurt();
         }
     }
-
 }

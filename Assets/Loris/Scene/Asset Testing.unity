@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508723, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Name
-      value: Skeleton
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_RootOrder
@@ -305,19 +305,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761323031696209133, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Size.x
-      value: 1.7053785
+      value: 2.0289388
       objectReference: {fileID: 0}
     - target: {fileID: 7761323031696209133, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Size.y
-      value: 3.2282126
+      value: 3.1840906
       objectReference: {fileID: 0}
     - target: {fileID: 7761323031696209133, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Offset.x
-      value: 0.91419554
+      value: 1.1642195
       objectReference: {fileID: 0}
     - target: {fileID: 7761323031696209133, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Offset.y
-      value: 0.009393334
+      value: -0.0126675945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2167,7 +2167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 882590897, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Size.x
-      value: 1.4249493
+      value: 1.4531386
       objectReference: {fileID: 0}
     - target: {fileID: 882590897, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Size.y
@@ -2175,11 +2175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882590897, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Offset.x
-      value: 0.2233674
+      value: 0.23746192
       objectReference: {fileID: 0}
     - target: {fileID: 882590897, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_Offset.y
-      value: -0.03579092
+      value: -0.035791
       objectReference: {fileID: 0}
     - target: {fileID: 1440634355, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: m_IsActive

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e00b7c6a394275469617b56ec2d0bf7, type: 3}
+  m_Name: Syringe
+  m_EditorClassIdentifier: 
+  poSprite: {fileID: 21300000, guid: aff16017b15883c438ec2c2b51d6e457, type: 3}
+  poName: Seringue100
+  dropChance: 100
+  poPrefab: {fileID: 4144373992682029765, guid: c6e78dc49eeb70f40a161d81300f0f68, type: 3}

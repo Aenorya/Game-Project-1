@@ -9,18 +9,6 @@ public class BasicEnemy : MonoBehaviour
     int currentHealth;
     public Animator animator;
 
-    public static BasicEnemy instance;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
-            return;
-        }
-        instance = this;
-    }
-
     void Start()
     {
         currentHealth = MaxHealth;
@@ -30,19 +18,17 @@ public class BasicEnemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-
         if (currentHealth <= 0)
         {
-            StartCoroutine(Die());
+            CountEnemy.instance.numberEnemy = CountEnemy.instance.numberEnemy - 1;
+            animator.Play("Dead");
+            Invoke("Die", 0.1f);
         }
     }
 
-    public IEnumerator Die()
+    public void Die()
     {
-        //GetComponent<Enemy_behaviour>().moveSpeed = 0; 
-        GetComponent<Enemy_behaviour>().enabled = false;
-        animator.Play("Dead");
-        yield return new WaitForSeconds(0.1f);
+        GetComponent<Droper>().InstantiateLoot(transform.position);
         Destroy(gameObject);
     }
 }

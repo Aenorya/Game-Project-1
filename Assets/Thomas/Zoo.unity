@@ -913,7 +913,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788429}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: MainMenuButton
         m_Mode: 1
@@ -1183,6 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0b8748f12bc70478e346d812361fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!4 &151552775
 Transform:
   m_ObjectHideFlags: 0
@@ -1282,7 +1283,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788428}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -2240,7 +2241,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &374319542
 GameObject:
@@ -2992,7 +2993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788429}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: RetryButton
         m_Mode: 1
@@ -3286,7 +3287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788428}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -4156,16 +4157,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 547649520}
   playerCollider: {fileID: 547649523}
+  popUpMessage: {fileID: 0}
+  goMessage: {fileID: 0}
   jumpSpeed: 6
   speed: 5
-  menuPanel: {fileID: 489406783}
-  collisionAttack: {fileID: 594732602}
   animator: {fileID: 547649524}
   CamAnimator: {fileID: 1656366610}
   timeAttack: 0.5
   syringeCount: 0
-  Changed: 0
+  syringe: []
+  syringeScore: 0
+  noSyringe: {fileID: 0}
+  noNeedHeal: {fileID: 0}
   playerHealth: {fileID: 547649522}
+  pauseMenu: {fileID: 0}
+  collisionAttack: {fileID: 594732602}
+  inContact: 0
+  attackGround: 0
+  poing: {fileID: 0}
 --- !u!212 &547649527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5760,12 +5769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 5
-  deathSprite: {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  sprites:
-  - {fileID: -4365678376696325385, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 3696329424477584276, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 2924033600936126985, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
 --- !u!212 &737078990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6550,7 +6553,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788429}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -6722,7 +6725,7 @@ GameObject:
   - component: {fileID: 1029291381}
   m_Layer: 6
   m_Name: Tiles
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6973,6 +6976,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7111979486313313303, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1949798533, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
     - {fileID: 737803516, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
@@ -6980,68 +6987,6 @@ PrefabInstance:
     - {fileID: 2170111801934758580, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
---- !u!1 &1072788427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2170111801934758581, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
-  m_PrefabInstance: {fileID: 1072788426}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1072788428 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2170111801934758569, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
-  m_PrefabInstance: {fileID: 1072788426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072788427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31816ae0390ca94c85ed3fa5772f324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1072788429 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2170111801934758570, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
-  m_PrefabInstance: {fileID: 1072788426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072788427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2497bc7b6df19814cacfc3a3ad173135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1072788430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072788427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a309955726d9044a8559ab6c5c9f192, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsPickedUpInThisSceneCount: 0
-  respawnPoint: {x: 0, y: 0, z: 0}
-  levelToUnlock: 0
---- !u!114 &1072788431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072788427}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426db22c7191bcc468f4caed1c539717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playlist:
-  - {fileID: 8300000, guid: 972f9ffdc60e37344ae75f9528f82da3, type: 3}
-  - {fileID: 8300000, guid: cc98e4575b8fed9499fb179d37047c81, type: 3}
-  - {fileID: 8300000, guid: ab0975610a78d0e44b9e18439635b2cf, type: 3}
-  - {fileID: 8300000, guid: b2030666e2ff7d948b40c9c66db4e464, type: 3}
-  - {fileID: 8300000, guid: 2690a13f030e58d4d8e026f8fcfdcd17, type: 3}
-  audioSource: {fileID: 0}
-  soundEffectMixer: {fileID: -8203911855117899165, guid: f64a6984c18be4547b70d30dc8e3540c, type: 2}
 --- !u!1 &1088458286
 GameObject:
   m_ObjectHideFlags: 0
@@ -10849,7 +10794,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788428}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: CreditsScene
         m_Mode: 1
@@ -11576,7 +11521,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788429}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -11821,7 +11766,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072788428}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -12175,12 +12120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 7
-  deathSprite: {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  sprites:
-  - {fileID: -4365678376696325385, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 3696329424477584276, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: 2924033600936126985, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
-  - {fileID: -6056688053818895493, guid: 42ed6c23004c81f4e8814dd54e8ba7a9, type: 3}
 --- !u!50 &1983134587
 Rigidbody2D:
   serializedVersion: 4

@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer graphics;
     public List<GameObject> hearts;
+    public int maxHealth = 3;
     public int hp;
     
     public AudioClip hitSound;
@@ -18,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerController playerController;
     
     public static PlayerHealth instance;
+    
 
     private void Awake()
     {
@@ -32,7 +34,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        hp = 3;
+        hp = maxHealth;
+        HealthUI.instance.ChangeLife(1f);
     }
 
     void Update()
@@ -51,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
             hp ++;
             hearts[hp-1].GetComponent<Image>().color = Color.white;
         }
+        HealthUI.instance.ChangeLife((float)hp / maxHealth);
 
     }
     public void Hurt()
@@ -61,7 +65,7 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerController.instance.Die();
         }
-        
+        HealthUI.instance.ChangeLife((float)hp / maxHealth);
     }
 
     /*public void TakeDamage()

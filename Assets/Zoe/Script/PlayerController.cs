@@ -105,13 +105,13 @@ public class PlayerController : MonoBehaviour
 
         if (direction.x < 0)
         {
-            poing.transform.localPosition = new Vector2(-1.05f, -0.44f);
+            poing.transform.localPosition = new Vector2(-1.72f, 0.72f);
             CamAnimator.SetBool("CamSlide", true);
             GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (direction.x > 0)
         {
-            poing.transform.localPosition = new Vector2(1.05f, -0.44f);
+            poing.transform.localPosition = new Vector2(1.72f, 0.72f);
             CamAnimator.SetBool("CamSlide", false);
             GetComponent<SpriteRenderer>().flipX = false;
         }

@@ -117,7 +117,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""9c2fae7e-7431-44be-ab5a-d9edaf0a80da"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -335,87 +335,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Menu"",
-            ""id"": ""43bbcfa7-9e50-4b90-acd1-34215b56eaaf"",
-            ""actions"": [
-                {
-                    ""name"": ""Validation"",
-                    ""type"": ""Button"",
-                    ""id"": ""1b610d3c-4f13-4195-b861-7cd6edd9d8ad"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Nope/Return"",
-                    ""type"": ""Button"",
-                    ""id"": ""34bea90a-71bb-4521-8444-4fc060e2c689"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""99296d27-0d8a-410f-a5c8-36715b0179b9"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Validation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0a5e4f94-e045-4a2c-a5f8-41a612153156"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Validation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""da1ec7d0-640c-4800-88be-680173776996"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Validation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""708bf038-dfc4-44d5-b35a-8f748c37fcea"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nope/Return"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""12e6c928-86f5-4310-8bcd-c5964270871c"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nope/Return"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -429,10 +348,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         m_Player_PauseMenu = m_Player.FindAction("Pause Menu", throwIfNotFound: true);
         m_Player_UseSyringe = m_Player.FindAction("UseSyringe", throwIfNotFound: true);
         m_Player_HealthTest = m_Player.FindAction("HealthTest", throwIfNotFound: true);
-        // Menu
-        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_Validation = m_Menu.FindAction("Validation", throwIfNotFound: true);
-        m_Menu_NopeReturn = m_Menu.FindAction("Nope/Return", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -569,47 +484,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-
-    // Menu
-    private readonly InputActionMap m_Menu;
-    private IMenuActions m_MenuActionsCallbackInterface;
-    private readonly InputAction m_Menu_Validation;
-    private readonly InputAction m_Menu_NopeReturn;
-    public struct MenuActions
-    {
-        private @PlayerControllerClass m_Wrapper;
-        public MenuActions(@PlayerControllerClass wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Validation => m_Wrapper.m_Menu_Validation;
-        public InputAction @NopeReturn => m_Wrapper.m_Menu_NopeReturn;
-        public InputActionMap Get() { return m_Wrapper.m_Menu; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
-        public void SetCallbacks(IMenuActions instance)
-        {
-            if (m_Wrapper.m_MenuActionsCallbackInterface != null)
-            {
-                @Validation.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidation;
-                @Validation.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidation;
-                @Validation.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnValidation;
-                @NopeReturn.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnNopeReturn;
-                @NopeReturn.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnNopeReturn;
-                @NopeReturn.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnNopeReturn;
-            }
-            m_Wrapper.m_MenuActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @Validation.started += instance.OnValidation;
-                @Validation.performed += instance.OnValidation;
-                @Validation.canceled += instance.OnValidation;
-                @NopeReturn.started += instance.OnNopeReturn;
-                @NopeReturn.performed += instance.OnNopeReturn;
-                @NopeReturn.canceled += instance.OnNopeReturn;
-            }
-        }
-    }
-    public MenuActions @Menu => new MenuActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -619,10 +493,5 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnUseSyringe(InputAction.CallbackContext context);
         void OnHealthTest(InputAction.CallbackContext context);
-    }
-    public interface IMenuActions
-    {
-        void OnValidation(InputAction.CallbackContext context);
-        void OnNopeReturn(InputAction.CallbackContext context);
     }
 }

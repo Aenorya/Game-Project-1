@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7570479761144074565
 SpriteRenderer:
@@ -272,8 +272,8 @@ MonoBehaviour:
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}
   goMessage: {fileID: 0}
-  jumpSpeed: 9
-  speed: 12
+  jumpSpeed: 7
+  speed: 7
   animator: {fileID: 7570479761144074568}
   CamAnimator: {fileID: 7663527945589957800}
   timeAttack: 0.2
@@ -307,10 +307,6 @@ MonoBehaviour:
   invincibilityFlashDelay: 0.1
   isInvincible: 0
   graphics: {fileID: 7570479761144074565}
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   maxHealth: 3
   hp: 3
   hitSound: {fileID: 0}
@@ -323,7 +319,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7570479761144074561}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ee581c27830c8fe4885229579ad0f275, type: 2}
   m_CullingMode: 0

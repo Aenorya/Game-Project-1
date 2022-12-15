@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
             poing.transform.localPosition = new Vector2(-1.72f, 0.72f);
             CamAnimator.SetBool("CamSlide", true);
             GetComponent<SpriteRenderer>().flipX = true;
+            
         }
         else if (direction.x > 0)
         {

@@ -95,7 +95,7 @@
                 {
                     "name": "",
                     "id": "9c2fae7e-7431-44be-ab5a-d9edaf0a80da",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -309,87 +309,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "HealthTest",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Menu",
-            "id": "43bbcfa7-9e50-4b90-acd1-34215b56eaaf",
-            "actions": [
-                {
-                    "name": "Validation",
-                    "type": "Button",
-                    "id": "1b610d3c-4f13-4195-b861-7cd6edd9d8ad",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Nope/Return",
-                    "type": "Button",
-                    "id": "34bea90a-71bb-4521-8444-4fc060e2c689",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "99296d27-0d8a-410f-a5c8-36715b0179b9",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Validation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0a5e4f94-e045-4a2c-a5f8-41a612153156",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Validation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "da1ec7d0-640c-4800-88be-680173776996",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Validation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "708bf038-dfc4-44d5-b35a-8f748c37fcea",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Nope/Return",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "12e6c928-86f5-4310-8bcd-c5964270871c",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Nope/Return",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -8,9 +8,10 @@ public class PlayerHealth : MonoBehaviour
     public float invincibilityTimeAfterHit = 3f;
     public float invincibilityFlashDelay = 0.2f;
     public bool isInvincible = false;
+    public Animator lifeCligno;
 
     public SpriteRenderer graphics;
-    public int maxHealth = 3;
+    public int maxHealth = 4;
     public int hp;
     
     public AudioClip hitSound;
@@ -44,9 +45,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer()
     {
-        if(hp >= 3)
+        if(hp >= 4)
         {
-            hp = 3;
+            hp = 4;
         }
         else
         {
@@ -59,33 +60,20 @@ public class PlayerHealth : MonoBehaviour
     public void Hurt()
     {
         hp--;
+        HealthUI.instance.states[hp + 1].gameObject.SetActive(false);
+        HealthUI.instance.states[hp - 1].gameObject.SetActive(true);
         //hearts[hp].GetComponent<Image>().color = Color.black;
+        if(hp == 1)
+        {
+            lifeCligno.SetBool("Cligno", true);
+        }
         if(hp == 0)
         {
             PlayerController.instance.Die();
         }
         HealthUI.instance.ChangeLife((float)hp / maxHealth);
+
     }
-
-    /*public void TakeDamage()
-    {
-        if (!isInvincible)
-        {
-            AudioManager.instance.PlayClipAt(hitSound, transform.position);
-            healthBar.Hurt();
-
-            if(healthBar.hp <= 0)
-            {
-                Die();
-                return;
-            }
-
-            isInvincible = true;
-            StartCoroutine(InvincibilityFlash());
-            StartCoroutine(HandleInvincibilityDelay());
-        }
-    }*/
-
     public IEnumerator InvincibilityFlash()
     {
         while (isInvincible)

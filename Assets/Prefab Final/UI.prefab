@@ -1417,7 +1417,7 @@ RectTransform:
   - {fileID: 4193345609699783039}
   - {fileID: 3628551370028027960}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4021,13 +4021,14 @@ GameObject:
   - component: {fileID: 5427418960409412317}
   - component: {fileID: 5427418960409412307}
   - component: {fileID: 5427418960409412316}
+  - component: {fileID: 1219230012405262770}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5427418960409412317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4090,6 +4091,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1219230012405262770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427418960409412318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9ec055f83027f4facad4082795e6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstSelected: {fileID: 5427418959784396780}
 --- !u!1 &5427418960441978898
 GameObject:
   m_ObjectHideFlags: 0

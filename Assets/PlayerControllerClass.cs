@@ -117,7 +117,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""9c2fae7e-7431-44be-ab5a-d9edaf0a80da"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

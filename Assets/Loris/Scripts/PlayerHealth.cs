@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         hp = maxHealth;
-        HealthUI.instance.ChangeLife(1f);
+        //HealthUI.instance.ChangeLife(1f);
     }
 
     void Update()
@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
             hp ++;
             hearts[hp-1].GetComponent<Image>().color = Color.white;
         }
-        HealthUI.instance.ChangeLife((float)hp / maxHealth);
+        //HealthUI.instance.ChangeLife((float)hp / maxHealth);
 
     }
     public void Hurt()
@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerController.instance.Die();
         }
-        HealthUI.instance.ChangeLife((float)hp / maxHealth);
+        //HealthUI.instance.ChangeLife((float)hp / maxHealth);
     }
 
     /*public void TakeDamage()

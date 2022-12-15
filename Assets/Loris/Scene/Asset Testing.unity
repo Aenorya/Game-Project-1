@@ -484,16 +484,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5305061299268366586, guid: f70f6a3dec654f3478197cdfaa371a27, type: 3}
   m_PrefabInstance: {fileID: 5305061298639642070}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &628838624 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6359410622364066153, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
-  m_PrefabInstance: {fileID: 1508751502}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &697589774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3200582901307413067, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
-  m_PrefabInstance: {fileID: 1508751502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710141092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6359410620725483224, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
@@ -805,11 +795,6 @@ Transform:
   m_Father: {fileID: 1068428360}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &841866127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6359410622049970058, guid: 1851ecb81a093854d8b5dc831774cd76, type: 3}
-  m_PrefabInstance: {fileID: 1508751502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900051426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,18 +2356,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074569, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 697589774}
-    - target: {fileID: 7570479761144074569, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 628838624}
-    - target: {fileID: 7570479761144074569, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 841866127}
     - target: {fileID: 7570479761144074578, guid: c9b112e35d457d14f82aa6cf7e0736b4, type: 3}
       propertyPath: pauseMenu
       value: 

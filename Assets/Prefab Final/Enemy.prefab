@@ -290,10 +290,10 @@ MonoBehaviour:
   raycastMask:
     serializedVersion: 2
     m_Bits: 256
-  rayCastLength: 10
-  attackDistance: 8
+  rayCastLength: 6
+  attackDistance: 4
   moveSpeed: 4
-  timer: 2
+  timer: 1
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
   isAttacking: 0

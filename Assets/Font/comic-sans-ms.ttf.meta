@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c366e464d9113746b502becf39fef78
+guid: a84bd3f5dce2f534086f568cd6e774d3
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - New Space
+  - Comic Sans MS
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

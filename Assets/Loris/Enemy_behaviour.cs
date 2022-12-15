@@ -98,7 +98,7 @@ public class Enemy_behaviour : MonoBehaviour
 
     void Move()
     {
-        
+        anim.SetBool("canWalk", true);
 
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_attack"))
         {
@@ -199,9 +199,9 @@ public class Enemy_behaviour : MonoBehaviour
         transform.eulerAngles = rotation;
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackDistance);
-    }
+    }*/
 }

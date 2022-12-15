@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.Linq;
-using UnityEngine.EventSystems;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -15,11 +14,6 @@ public class SettingsMenu : MonoBehaviour
 
     public Slider musicSlider;
     public Slider soundSlider;
-
-    private void OnEnable()
-    {
-        EventSystem.current.SetSelectedGameObject(resolutionDropdown.gameObject);
-    }
 
     public void Start()
     {
@@ -49,7 +43,6 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        
 
         Screen.fullScreen = true;
     }
@@ -78,10 +71,5 @@ public class SettingsMenu : MonoBehaviour
     public void ClearSavedData()
     {
         PlayerPrefs.DeleteAll();
-    }
-
-    private void OnDisable()
-    {
-        EventSystem.current.SetSelectedGameObject(EventSystem.current.firstSelectedGameObject);
     }
 }

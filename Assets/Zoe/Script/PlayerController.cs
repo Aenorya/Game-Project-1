@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Physique Player")]
+    [Header("Physics Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
 

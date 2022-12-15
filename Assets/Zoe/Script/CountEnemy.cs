@@ -17,6 +17,6 @@ public class CountEnemy : MonoBehaviour
     
     void Update()
     {
-        textNbEnemy.text = "Enemy remaining : " + numberEnemy;
+        textNbEnemy.text = numberEnemy + " x";
     }
 }

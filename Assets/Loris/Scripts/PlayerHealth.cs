@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
     public bool isInvincible = false;
 
     public SpriteRenderer graphics;
-    public List<GameObject> hearts;
     public int maxHealth = 3;
     public int hp;
     
@@ -52,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             hp ++;
-            hearts[hp-1].GetComponent<Image>().color = Color.white;
+            //hearts[hp-1].GetComponent<Image>().color = Color.white;
         }
         HealthUI.instance.ChangeLife((float)hp / maxHealth);
 
@@ -60,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     public void Hurt()
     {
         hp--;
-        hearts[hp].GetComponent<Image>().color = Color.black;
+        //hearts[hp].GetComponent<Image>().color = Color.black;
         if(hp == 0)
         {
             PlayerController.instance.Die();

@@ -11,17 +11,17 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(gameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Paused();
-            }
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    if(gameIsPaused)
+        //    {
+        //        Resume();
+        //    }
+        //    else
+        //    {
+        //        Paused();
+        //    }
+        //}
     }
 
     //void Paused()

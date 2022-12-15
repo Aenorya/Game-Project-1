@@ -169,7 +169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 348195839, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: timer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 348195839, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: leftLimit
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 446074001}
     - target: {fileID: 348195839, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: rayCastLength
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 348195839, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: attackDistance
@@ -198,18 +198,6 @@ PrefabInstance:
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.332965
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.332965
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.332965
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalPosition.x
@@ -250,6 +238,18 @@ PrefabInstance:
     - target: {fileID: 2052260358074508726, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260358074508727, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165279989917321110, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165279989917321110, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

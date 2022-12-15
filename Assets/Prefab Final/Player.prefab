@@ -468,14 +468,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8c69997a-22fc-43ac-b555-8e27d38e5e58
     m_ActionName: Player/HealthTest[/Keyboard/h]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1b610d3c-4f13-4195-b861-7cd6edd9d8ad
-    m_ActionName: Menu/Validation[/Mouse/leftButton,/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 34bea90a-71bb-4521-8444-4fc060e2c689
-    m_ActionName: Menu/Nope/Return[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

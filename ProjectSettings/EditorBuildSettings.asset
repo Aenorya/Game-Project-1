@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Zoe/Scene/TestZoz.unity
     guid: fa16ff8d79867ad4982ad02720560a40
   - enabled: 1
-    path: Assets/Vrai LVL/Scene/Level_01.unity
+    path: Assets/Final Level/Scene/Level_01.unity
     guid: 538dc5e65b0b79241a04d3553e365ff6
   - enabled: 1
-    path: Assets/Vrai LVL/Scene/Level_02.unity
+    path: Assets/Final Level/Scene/Level_02.unity
     guid: 91ebc2ff62f4a79448ab763a3264fc93
   - enabled: 1
     path: Assets/Thomas/Zoo light.unity

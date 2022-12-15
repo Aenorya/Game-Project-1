@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: attackDistance
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2052260357604154521, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508723, guid: c106cf5c6912ed1439f743d05fc8c138, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1030,6 +1034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2096537359}
+  - {fileID: 751312886}
   - {fileID: 769752143}
   - {fileID: 1689231199}
   - {fileID: 1289906706}
@@ -1037,7 +1042,6 @@ Transform:
   - {fileID: 598413905}
   - {fileID: 804069465}
   - {fileID: 286312238}
-  - {fileID: 751312886}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

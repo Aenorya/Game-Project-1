@@ -238,8 +238,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Seringue");
             Destroy(collision.gameObject);
         }
-
-        
     }
 
     public void PickUpSyringe()

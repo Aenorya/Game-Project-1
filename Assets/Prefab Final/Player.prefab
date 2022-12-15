@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 7570479761144074568}
   - component: {fileID: 7570479761144074581}
   - component: {fileID: 882590898}
+  - component: {fileID: 882590897}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -505,6 +506,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &882590897
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.23540878, y: 0.010845423}
+  m_Size: {x: 2.3072968, y: 5.117101}
+  m_Direction: 0
 --- !u!1 &7570479762081479600
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7570479762081479600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -2.37, z: 0}
+  m_LocalPosition: {x: 0.22, y: -2.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

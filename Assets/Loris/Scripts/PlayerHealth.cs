@@ -59,33 +59,15 @@ public class PlayerHealth : MonoBehaviour
     public void Hurt()
     {
         hp--;
-        //hearts[hp].GetComponent<Image>().color = Color.black;
+        HealthUI.instance.states[hp + 1].gameObject.SetActive(false);
+        HealthUI.instance.states[hp].gameObject.SetActive(true);
         if(hp == 0)
         {
             PlayerController.instance.Die();
         }
         HealthUI.instance.ChangeLife((float)hp / maxHealth);
+
     }
-
-    /*public void TakeDamage()
-    {
-        if (!isInvincible)
-        {
-            AudioManager.instance.PlayClipAt(hitSound, transform.position);
-            healthBar.Hurt();
-
-            if(healthBar.hp <= 0)
-            {
-                Die();
-                return;
-            }
-
-            isInvincible = true;
-            StartCoroutine(InvincibilityFlash());
-            StartCoroutine(HandleInvincibilityDelay());
-        }
-    }*/
-
     public IEnumerator InvincibilityFlash()
     {
         while (isInvincible)

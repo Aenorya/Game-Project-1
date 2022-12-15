@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
         playerCollider.enabled = false;
-        GameOverManager.instance.OnPlayerDeath();
+        //GameOverManager.instance.OnPlayerDeath();
         Debug.Log("Player eliminated");
     }
 
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;

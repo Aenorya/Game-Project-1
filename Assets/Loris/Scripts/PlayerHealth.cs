@@ -61,7 +61,6 @@ public class PlayerHealth : MonoBehaviour
         hp--;
         HealthUI.instance.states[hp + 1].gameObject.SetActive(false);
         HealthUI.instance.states[hp].gameObject.SetActive(true);
-        //hearts[hp].GetComponent<Image>().color = Color.black;
         if(hp == 0)
         {
             PlayerController.instance.Die();

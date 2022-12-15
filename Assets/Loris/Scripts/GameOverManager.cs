@@ -14,7 +14,6 @@ public class GameOverManager : MonoBehaviour
             Debug.LogWarning("Il y a plus d'une instance de GameOverManager dans la scène");
             return;
         }
-
         instance = this;
     }
 
@@ -25,16 +24,12 @@ public class GameOverManager : MonoBehaviour
 
     public void RetryButton()
     {
-        //Inventory.instance.RemoveCoins(CurrentSceneManager.instance.coinsPickedUpInThisSceneCount);
-
         SceneManager.LoadScene("Loris Test");
-        //PlayerHealth.instance.Respawn();
         gameOverUI.SetActive(false);
     }
 
     public void MainMenuButton()
     {
-        //DontDestroyOnSceneLoad.RemoveFromDestroy();
         SceneManager.LoadScene("MainMenu");
     }
 

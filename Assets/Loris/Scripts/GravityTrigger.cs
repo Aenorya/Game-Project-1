@@ -9,14 +9,14 @@ public class GravityTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == rb)
+        if (collision.gameObject.name == "Player")
         {
             rb.gravityScale = grav;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == rb)
+        if (collision.gameObject.name == "Player")
         {
         rb.gravityScale = 1;
         }

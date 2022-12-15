@@ -6,7 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1061f8dd5fc960a488a75b7d796fa718
+  - enabled: 1
+    path: Assets/Loris/Scene/Asset Testing.unity
+    guid: 753398f3831fbe848920d8944dabdf0b
+  - enabled: 1
+    path: Assets/Zoe/Scene/TestZoz.unity
+    guid: fa16ff8d79867ad4982ad02720560a40
+  - enabled: 1
+    path: Assets/Vrai LVL/Scene/LVL 1 Tuto.unity
+    guid: 538dc5e65b0b79241a04d3553e365ff6
+  - enabled: 1
+    path: Assets/Vrai LVL/Scene/LVL 2.unity
+    guid: 91ebc2ff62f4a79448ab763a3264fc93
+  - enabled: 1
     path: Assets/Thomas/Zoo light.unity
     guid: 9790a5d266a5cb443aa1c63e2f3dc63f
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: a50b5a00071e3cc4e8ed6b8150e2e368
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8412100bb848f604ca64a3cfc36c457c, type: 2}

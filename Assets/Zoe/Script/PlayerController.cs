@@ -43,9 +43,12 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
+    public bool BombButtonIsPressed = false;
     public bool attackGround = false;
-
+    
     public GameObject poing;
+
+    public WallButtonScript wallButtonScript;
 
     public static PlayerController instance;
 
@@ -64,7 +67,8 @@ public class PlayerController : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
         inContact = false;
-        attackGround = false;
+        BombButtonIsPressed = false;
+        attackGround = false; 
     }
 
     void Update()
@@ -87,13 +91,20 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && inContact)
         {
-            WallButtonScript.instance.OnInteraction();
+            wallButtonScript.OnInteraction();
 
             Debug.Log("La touche action à été activé");
         } 
+        else if (context.performed && BombButtonIsPressed)
+        {
+            BombButtonScript.instance.NoBoom();
+
+            Debug.Log("wowie it works there is no boom");
+        }
         else if (context.canceled)
         {
             inContact = false;
+            BombButtonIsPressed = false;
 
             Debug.Log("La touche action a été relaché");
         }
@@ -220,6 +231,22 @@ public class PlayerController : MonoBehaviour
         noSyringe.SetActive(false);
     }
 
+    public void PickUpSyringe()
+    {
+
+        if (syringeCount <= 2)
+        {
+
+            syringeCount++;
+            syringe[syringeCount - 1].SetActive(true);
+        }
+        else if (syringeCount == 3)
+        {
+            Score.score = Score.score + syringeScore;
+        }
+        Debug.Log("Seringue = " + syringeCount);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("BreakableFloor"))
@@ -240,28 +267,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void PickUpSyringe()
-    {
-        
-        if(syringeCount <= 2)
-        {
-            
-            syringeCount++;
-            syringe[syringeCount-1].SetActive(true);
-        }
-        else if (syringeCount == 3)
-        {
-            Score.score = Score.score + syringeScore;
-        }
-        Debug.Log("Seringue = " + syringeCount);
-    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "CollisionZone")
         {
             Debug.Log("Dans la zone");
             goMessage.SetActive(true);
-            popUpMessage.text = ("Ok ?");
+            popUpMessage.text = ("Please help me");
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

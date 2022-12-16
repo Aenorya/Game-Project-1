@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -272,7 +272,7 @@ MonoBehaviour:
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}
   goMessage: {fileID: 0}
-  jumpSpeed: 17
+  jumpSpeed: 7
   speed: 7
   animator: {fileID: 7570479761144074568}
   CamAnimator: {fileID: 7663527945589957800}
@@ -289,8 +289,10 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   collisionAttack: {fileID: 1440634355}
   inContact: 0
+  BombButtonIsPressed: 0
   attackGround: 0
   poing: {fileID: 1440634355}
+  wallButtonScript: {fileID: 0}
 --- !u!114 &7570479761144074569
 MonoBehaviour:
   m_ObjectHideFlags: 0

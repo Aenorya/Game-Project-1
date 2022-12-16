@@ -14,7 +14,6 @@ public class Timer : MonoBehaviour
 
     [SerializeField] TMP_Text countdownText;
 
-
     private void Awake()
     {
         if (instance != null)
@@ -22,7 +21,6 @@ public class Timer : MonoBehaviour
             Debug.LogWarning("Il y a plus d'une instance de ShopManager dans la scène");
             return;
         }
-
         instance = this;
     }
 
@@ -36,7 +34,6 @@ public class Timer : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("00 : 00");
 
-
         if (currentTime <= 0)
         {
             currentTime = 0;
@@ -44,6 +41,12 @@ public class Timer : MonoBehaviour
             PlayerHealth.instance.Hurt();
             PlayerHealth.instance.Hurt();
             Debug.Log("Player is Kablewy");
+        }
+
+        if (PlayerController.instance.BombButtonIsPressed)
+        {
+            
+            Debug.Log("Timer stopped succecfully woohoo");
         }
     }
 }

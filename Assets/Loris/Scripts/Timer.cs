@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public float startingTime;
     public static Timer instance;
 
+    public bool BombButtonTimer;
+
     [SerializeField] TMP_Text countdownText;
 
     private void Awake()
@@ -31,8 +33,11 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("00 : 00");
+        if (BombButtonTimer == false)
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("00 : 00");
+        }
 
         if (currentTime <= 0)
         {
@@ -41,12 +46,6 @@ public class Timer : MonoBehaviour
             PlayerHealth.instance.Hurt();
             PlayerHealth.instance.Hurt();
             Debug.Log("Player is Kablewy");
-        }
-
-        if (PlayerController.instance.BombButtonIsPressed)
-        {
-            
-            Debug.Log("Timer stopped succecfully woohoo");
         }
     }
 }

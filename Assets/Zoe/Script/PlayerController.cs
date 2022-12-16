@@ -97,14 +97,13 @@ public class PlayerController : MonoBehaviour
         } 
         else if (context.performed && BombButtonIsPressed)
         {
-            BombButtonScript.instance.NoBoom();
+            Timer.instance.BombButtonTimer = true;
 
             Debug.Log("wowie it works there is no boom");
         }
         else if (context.canceled)
         {
             inContact = false;
-            BombButtonIsPressed = false;
 
             Debug.Log("La touche action a été relaché");
         }

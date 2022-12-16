@@ -16,11 +16,6 @@ public class BombButtonScript : MonoBehaviour
         instance = this;
     }
 
-    public void NoBoom()
-    {
-        Debug.Log("Hiiiiiiiiiiiii");
-    }
-
     public void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

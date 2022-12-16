@@ -10,19 +10,6 @@ public class WallButtonScript : MonoBehaviour
     public PlayerController playerController;
     public Collider2D capsuleCollider;
 
-
-    public static WallButtonScript instance;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance de Wall Button dans la scène");
-            return;
-        }
-        instance = this;
-    }
-
     public virtual void OnInteraction()
     {
             BoxSpawn.instance.SpawnBox(); 

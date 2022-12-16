@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3724013082901685517}
   - component: {fileID: 3273759948946725128}
   - component: {fileID: 3226834528624492460}
+  - component: {fileID: -7377929113189718221}
   m_Layer: 0
   m_Name: Boutons Bombe
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7043128, y: 0.59635925}
   m_EdgeRadius: 0
+--- !u!114 &-7377929113189718221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728136709208086047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e7527ae85780142b6fb77dcb6c361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

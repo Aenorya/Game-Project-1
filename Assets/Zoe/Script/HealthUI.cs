@@ -8,7 +8,6 @@ public class HealthUI : MonoBehaviour
     public Image filler;
     public Image[] states;
     public Gradient gradient;
-    
 
     public static HealthUI instance;
 
@@ -21,6 +20,5 @@ public class HealthUI : MonoBehaviour
     {
         filler.fillAmount = currentHP;
         filler.color = gradient.Evaluate(currentHP);
-
     }
 }

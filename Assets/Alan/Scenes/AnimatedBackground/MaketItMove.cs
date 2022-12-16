@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AnimatedBackground : MonoBehaviour
+public class MaketItMove : MonoBehaviour
 {
     [SerializeField] private RawImage m_rawImage;
     [SerializeField] private float m_x, m_y;

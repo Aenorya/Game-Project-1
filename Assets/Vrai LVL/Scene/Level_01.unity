@@ -2928,10 +2928,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1019453057}
   - {fileID: 1176403856}
   - {fileID: 1446421748}
   - {fileID: 1625701049}
-  - {fileID: 1019453057}
   m_Father: {fileID: 825106435}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4388,6 +4388,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1363447966}
+    - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
+      propertyPath: grav
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615467, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Name
       value: GravityTrigger

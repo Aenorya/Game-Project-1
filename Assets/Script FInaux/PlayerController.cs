@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
-    
+
     [Header("Animation")]
     public Animator animator;
     public Animator CamAnimator;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static int damage = 1;
-    
+
     [Header("Syringe")]
     public int syringeCount = 3;
     public List<GameObject> syringe;
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public bool inContact = false;
     public bool BombButtonIsPressed = false;
     public bool attackGround = false;
-    
+
     public GameObject poing;
 
     public WallButtonScript wallButtonScript;
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         syringeCount = 3;
         inContact = false;
         BombButtonIsPressed = false;
-        attackGround = false; 
+        attackGround = false;
     }
 
     void Update()
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
             wallButtonScript.OnInteraction();
 
             Debug.Log("La touche action à été activé");
-        } 
+        }
         else if (context.performed && BombButtonIsPressed)
         {
             Timer.instance.BombButtonTimer = true;
@@ -117,17 +117,26 @@ public class PlayerController : MonoBehaviour
         {
             poing.transform.localPosition = new Vector2(-1.72f, 0.72f);
             CamAnimator.SetBool("CamSlide", true);
+            animator.SetBool("Walk", true);
             GetComponent<SpriteRenderer>().flipX = true;
-            
         }
+        //else
+        //{
+        //    animator.SetBool("Walk", false);
+        //}
+
         else if (direction.x > 0)
         {
             poing.transform.localPosition = new Vector2(1.72f, 0.72f);
             CamAnimator.SetBool("CamSlide", false);
+            animator.SetBool("Walk", true);
             GetComponent<SpriteRenderer>().flipX = false;
         }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
     }
-
     public void Attack(InputAction.CallbackContext contexte)
     {
         if (contexte.performed)
@@ -143,7 +152,7 @@ public class PlayerController : MonoBehaviour
 
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
-        } 
+        }
         else if (contexte.canceled)
         {
             animator.SetBool("IsAttacking", false);
@@ -214,7 +223,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
             else if (syringeCount == 0)
-            { 
+            {
                 noSyringe.SetActive(true);
                 Invoke("TextSyringeHide", 3);
             }
@@ -257,7 +266,7 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        
+
         if (collision.gameObject.CompareTag("PickableObject"))
         {
             PickUpSyringe();

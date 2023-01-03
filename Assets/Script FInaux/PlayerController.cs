@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    BoxCollider2D boxCollider;
     [Header("Physics Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
@@ -45,8 +46,9 @@ public class PlayerController : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
-    public bool BombButtonIsPressed = false;
+    public bool bombButtonIsPressed = false;
     public bool attackGround = false;
+    public bool doorButtonIsPressed = false;
 
     public GameObject poing;
     public Image cameraDoor;
@@ -70,7 +72,7 @@ public class PlayerController : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
         syringeCount = 3;
         inContact = false;
-        BombButtonIsPressed = false;
+        bombButtonIsPressed = false;
         attackGround = false;
     }
 
@@ -98,17 +100,18 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log("La touche action à été activé");
         }
-        else if (context.performed && BombButtonIsPressed)
+        else if (context.performed && bombButtonIsPressed)
         {
             Timer.instance.BombButtonTimer = true;
 
             Debug.Log("wowie it works there is no boom");
         }
-        else if (context.performed && CompareTag("ButtonDoor"))
+        else if (context.performed && doorButtonIsPressed)
         {
             Debug.Log("Boutooooooooon");
-            openDoor.enabled = true;
-            cameraDoor.enabled = true;
+            boxCollider.enabled = false;
+            //openDoor.enabled = true;
+            //cameraDoor.enabled = true;
             Invoke("ResetCameraDoor", 1f); //Modifier par rapport au temps de l'anim
         }
         else if (context.canceled)

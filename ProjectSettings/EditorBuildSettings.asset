@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Final Level/Menu/MainMenu.unity
     guid: 1061f8dd5fc960a488a75b7d796fa718
   - enabled: 1
     path: Assets/Loris/Scene/Asset Testing.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Thomas/Zoo light.unity
     guid: 9790a5d266a5cb443aa1c63e2f3dc63f
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Final Level/Menu/Credits.unity
     guid: a50b5a00071e3cc4e8ed6b8150e2e368
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8412100bb848f604ca64a3cfc36c457c, type: 2}

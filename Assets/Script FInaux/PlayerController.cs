@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     public Animator animator;
     public Animator CamAnimator;
+    public Animator openDoor;
 
     [Header("Attack Attributes")]
     public float timeAttack;
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
     public bool attackGround = false;
 
     public GameObject poing;
+    public Image cameraDoor;
 
     public WallButtonScript wallButtonScript;
 
@@ -101,12 +104,24 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log("wowie it works there is no boom");
         }
+        else if (context.performed && CompareTag("ButtonDoor"))
+        {
+            Debug.Log("Boutooooooooon");
+            openDoor.enabled = true;
+            cameraDoor.enabled = true;
+            Invoke("ResetCameraDoor", 1f); //Modifier par rapport au temps de l'anim
+        }
         else if (context.canceled)
         {
             inContact = false;
 
             Debug.Log("La touche action a été relaché");
         }
+    }
+
+    void ResetCameraDoor()
+    {
+        cameraDoor.enabled = false;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -120,10 +135,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Walk", true);
             GetComponent<SpriteRenderer>().flipX = true;
         }
-        //else
-        //{
-        //    animator.SetBool("Walk", false);
-        //}
 
         else if (direction.x > 0)
         {
@@ -277,11 +288,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CollisionZone")
+        if (collision.gameObject.tag == "ButtonDoor")
         {
-            Debug.Log("Dans la zone");
             goMessage.SetActive(true);
-            popUpMessage.text = ("Please help me");
+            popUpMessage.text = ("Press E or X to push the button.");
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

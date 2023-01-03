@@ -8,9 +8,10 @@ public class ButtonDoorScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("PlayerNotTrigger"))
         {
-            PlayerController.instance.bombButtonIsPressed = true;
+            Debug.Log("Ca devient vrai");
+            PlayerController.instance.doorButtonIsPressed = true;
         }
     }
 }

@@ -20,7 +20,7 @@ public class BombButtonScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController.instance.doorButtonIsPressed = true;
+            PlayerController.instance.bombButtonIsPressed = true;
         }
     }
 }

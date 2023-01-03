@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    BoxCollider2D boxCollider;
+    public BoxCollider2D boxCollider;
     [Header("Physics Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;

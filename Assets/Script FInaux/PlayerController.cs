@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     public GameObject poing;
     public Image cameraDoor;
 
-    public WallButtonScript wallButtonScript;
+    public ButtonRespawnBox respawnButtonBox;
 
     public static PlayerController instance;
 
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && inContact)
         {
-            wallButtonScript.OnInteraction();
+            respawnButtonBox.OnInteraction();
 
             Debug.Log("La touche action à été activé");
         }
@@ -109,9 +109,9 @@ public class PlayerController : MonoBehaviour
         else if (context.performed && doorButtonIsPressed)
         {
             Debug.Log("Boutooooooooon");
-            boxCollider.enabled = false;
-            //openDoor.enabled = true;
-            //cameraDoor.enabled = true;
+            //boxCollider.enabled = false;
+            openDoor.enabled = true;
+            cameraDoor.enabled = true;
             Invoke("ResetCameraDoor", 1f); //Modifier par rapport au temps de l'anim
         }
         else if (context.canceled)

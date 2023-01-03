@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class WallButtonScript : MonoBehaviour
+public class ButtonRespawnBox : MonoBehaviour
 {
     //public BoxSpawn boxSpawn;
     public PlayerController playerController;

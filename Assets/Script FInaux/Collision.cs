@@ -10,9 +10,13 @@ public class Collision : MonoBehaviour
         {
             collision.transform.GetComponent<BoxDrop>().HitBox(PlayerController.damage);
         }
-        if (collision.gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.transform.GetComponent<BasicEnemy>().TakeDamage(PlayerController.damage);
+        }
+        else if (collision.gameObject.CompareTag("HitDoor"))
+        {
+            collision.transform.GetComponent<BreakableDoor>().HitDoor(PlayerController.damage);
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

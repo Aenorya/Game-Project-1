@@ -12,8 +12,8 @@ TagManager:
   - ReBox
   - Button Respawn
   - Detroyables
-  - CollisionZone
   - Floor
+  - ButtonDoor
   layers:
   - Default
   - TransparentFX

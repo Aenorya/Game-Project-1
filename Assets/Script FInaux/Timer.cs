@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
         if (BombButtonTimer == false)
         {
             currentTime -= 1 * Time.deltaTime;
-            countdownText.text = currentTime.ToString("00 : 00");
+            countdownText.text = currentTime.ToString("00 . 00");
         }
 
         if (currentTime <= 0)

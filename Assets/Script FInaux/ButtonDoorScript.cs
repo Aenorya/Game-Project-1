@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonDoorScript : MonoBehaviour
 {
-    public ButtonDoorScript instance;
+    public static ButtonDoorScript instance;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

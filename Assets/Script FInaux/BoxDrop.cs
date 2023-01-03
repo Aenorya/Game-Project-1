@@ -23,3 +23,4 @@ public class BoxDrop : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

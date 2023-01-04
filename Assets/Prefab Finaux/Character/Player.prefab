@@ -268,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   rb: {fileID: 882590898}
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}

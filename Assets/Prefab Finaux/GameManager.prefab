@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7111979486313313303}
-  - component: {fileID: 7111979486313313299}
-  - component: {fileID: 7111979486313313296}
-  - component: {fileID: 7111979486313313301}
-  - component: {fileID: 7111979486313313300}
+  - component: {fileID: 6380472880025710046}
+  - component: {fileID: 5589712741800994217}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -35,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7111979486313313299
+--- !u!114 &6380472880025710046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,55 +42,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7111979486313313298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2497bc7b6df19814cacfc3a3ad173135, type: 3}
+  m_Script: {fileID: 11500000, guid: 8baf94b153367264997646bcdc22871d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playlist: []
+  audioSource: {fileID: 0}
+  soundEffectMixer: {fileID: 0}
+--- !u!114 &5589712741800994217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111979486313313298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18eabb76dac7e8742bd8a8707ce33466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
---- !u!114 &7111979486313313296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111979486313313298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31816ae0390ca94c85ed3fa5772f324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
---- !u!114 &7111979486313313301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111979486313313298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426db22c7191bcc468f4caed1c539717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playlist:
-  - {fileID: 8300000, guid: 972f9ffdc60e37344ae75f9528f82da3, type: 3}
-  - {fileID: 8300000, guid: cc98e4575b8fed9499fb179d37047c81, type: 3}
-  - {fileID: 8300000, guid: ab0975610a78d0e44b9e18439635b2cf, type: 3}
-  - {fileID: 8300000, guid: b2030666e2ff7d948b40c9c66db4e464, type: 3}
-  - {fileID: 8300000, guid: 2690a13f030e58d4d8e026f8fcfdcd17, type: 3}
-  audioSource: {fileID: 0}
-  soundEffectMixer: {fileID: -8203911855117899165, guid: f64a6984c18be4547b70d30dc8e3540c, type: 2}
---- !u!114 &7111979486313313300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111979486313313298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a309955726d9044a8559ab6c5c9f192, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsPickedUpInThisSceneCount: 0
-  respawnPoint: {x: 0, y: 0, z: 0}
-  levelToUnlock: 0

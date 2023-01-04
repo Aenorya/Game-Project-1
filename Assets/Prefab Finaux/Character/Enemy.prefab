@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052260357604154521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9c73b4f232d450419d3b4a3d14d96e9, type: 3}
+  m_Script: {fileID: 11500000, guid: d26447e6434f62c48bc71387175bdaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2052260358074508723
@@ -163,7 +163,7 @@ Transform:
   - {fileID: 2052260359275321602}
   - {fileID: 5165279989917321110}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &2052260358074508727
 SpriteRenderer:
@@ -214,7 +214,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &7761323031696209133
@@ -283,17 +283,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052260358074508723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99dcd0f07d2ae1469e94adac64c7049, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c9248592d505264493be0d17172412c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rayCast: {fileID: 5165279989917321110}
   raycastMask:
     serializedVersion: 2
-    m_Bits: 256
-  rayCastLength: 9
-  attackDistance: 4
-  moveSpeed: 2
-  timer: 2
+    m_Bits: 0
+  rayCastLength: 7
+  attackDistance: 2
+  moveSpeed: 5
+  timer: 0
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
   isAttacking: 0
@@ -306,10 +306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052260358074508723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b789dcf9edc63409ca4bbe6175eda1, type: 3}
+  m_Script: {fileID: 11500000, guid: e57dd314df387eb4caa72110aa7b698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 2
+  MaxHealth: 1
   animator: {fileID: 2052260358074508720}
 --- !u!114 &348195850
 MonoBehaviour:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb1e3c274ed7874486ae20f3fc0904e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickables: {fileID: 11400000, guid: f80539ed3b425e242b12960eeb13fc49, type: 2}
+  pickables: {fileID: 11400000, guid: ff6c1699237801e43ada811a3830d71e, type: 2}
 --- !u!1 &2052260359275321661
 GameObject:
   m_ObjectHideFlags: 0

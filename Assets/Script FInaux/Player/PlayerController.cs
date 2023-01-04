@@ -154,14 +154,14 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
-            if (attackGround)
+            /*if (attackGround)
             {
                 animator.SetTrigger("GroundAttack");
-            }
-            else
-            {
+            }*/
+            //else
+            //{
                 animator.SetBool("IsAttacking", true);
-            }
+            //}
 
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);

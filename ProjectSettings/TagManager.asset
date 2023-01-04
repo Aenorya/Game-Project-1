@@ -51,6 +51,9 @@ TagManager:
   - name: Space
     uniqueID: 2034795139
     locked: 0
+  - name: Parallax
+    uniqueID: 3452517439
+    locked: 0
   - name: Background
     uniqueID: 3247257837
     locked: 0

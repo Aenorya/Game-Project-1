@@ -1074,11 +1074,6 @@ Transform:
   m_Father: {fileID: 1068428360}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!4 &1045717534 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5165279989917321110, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-  m_PrefabInstance: {fileID: 1077346354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1068428359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,14 +1122,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2052260357604154526, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508723, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_Icon
+    - target: {fileID: 1728377617, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: leftLimit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 136254550}
+    - target: {fileID: 1728377617, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: rightLimit
+      value: 
+      objectReference: {fileID: 446074001}
     - target: {fileID: 2052260358074508723, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1183,25 +1178,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508727, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 88fae1f50f706bf439788bec790d4c3d, type: 3}
-    - target: {fileID: 2052260358074508727, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260359275321602, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5165279989917321110, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-    - {fileID: 348195845, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
 --- !u!1 &1235701975
@@ -1607,34 +1584,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2017e6724565dcc439661b820fb00621, type: 3}
---- !u!1 &1728377616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2052260358074508723, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-  m_PrefabInstance: {fileID: 1077346354}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1728377617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728377616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9248592d505264493be0d17172412c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayCast: {fileID: 1045717534}
-  raycastMask:
-    serializedVersion: 2
-    m_Bits: 256
-  rayCastLength: 0
-  attackDistance: 0
-  moveSpeed: 0
-  timer: 0
-  leftLimit: {fileID: 136254550}
-  rightLimit: {fileID: 446074001}
-  isAttacking: 0
 --- !u!1001 &1937728877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1995,10 +1944,6 @@ PrefabInstance:
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
-      propertyPath: rb
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615467, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Name

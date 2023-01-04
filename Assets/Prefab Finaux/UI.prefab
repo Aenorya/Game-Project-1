@@ -448,8 +448,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
-  m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
+  m_sharedMaterial: {fileID: 3257244118144241182, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -637,9 +637,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5427418960409412318}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -844,8 +844,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
-  m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
+  m_sharedMaterial: {fileID: 3257244118144241182, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1070,9 +1070,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1219230012405262770}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1831,11 +1831,11 @@ GameObject:
   - component: {fileID: 5427418959148666049}
   - component: {fileID: 5427418959148666050}
   - component: {fileID: 5427418959148666051}
-  - component: {fileID: 1586215791217447110}
-  - component: {fileID: 5427418959148666060}
-  - component: {fileID: 5427418959148666061}
-  - component: {fileID: 636845542644116578}
-  - component: {fileID: 7810677282635628060}
+  - component: {fileID: 7087661661818957303}
+  - component: {fileID: 672441809605351318}
+  - component: {fileID: 6344810629021889861}
+  - component: {fileID: 3742674218448248528}
+  - component: {fileID: 8537977851527589065}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1864,7 +1864,7 @@ RectTransform:
   - {fileID: 3628551370028027960}
   - {fileID: 5427418960588802504}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1933,7 +1933,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1586215791217447110
+--- !u!114 &7087661661818957303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1942,11 +1942,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 5427418959148666062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31816ae0390ca94c85ed3fa5772f324, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b9fc68657adda2478f45989e3fa8567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 5427418960409412318}
---- !u!114 &5427418959148666060
+  filler: {fileID: 4696609885565472367}
+  states:
+  - {fileID: 5427418960109572070}
+  - {fileID: 5427418959757565001}
+  - {fileID: 5427418958637974798}
+  - {fileID: 5427418960339880867}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+--- !u!114 &672441809605351318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1955,55 +1989,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 5427418959148666062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad60c156871e66146a78ba599e8a1048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &5427418959148666061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418959148666062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingTime: 1000
-  BombButtonTimer: 0
-  countdownText: {fileID: 5427418959476073633}
---- !u!114 &636845542644116578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418959148666062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0bc68ec8e0d21b49be649d370ae078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberEnemy: 5
-  textNbEnemy: {fileID: 8481694924117110560}
---- !u!114 &7810677282635628060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418959148666062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124361fe45be9504badb83e92ad9095c, type: 3}
+  m_Script: {fileID: 11500000, guid: 486036898ad7b934a856be176f8dc3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 5427418958657526824}
+--- !u!114 &6344810629021889861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427418959148666062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199e44a54f4f8a5439916133eab15e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingTime: 500
+  BombButtonTimer: 0
+  countdownText: {fileID: 5427418959476073633}
+--- !u!114 &3742674218448248528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427418959148666062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00bd75eea79daa4080540780ff070f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberEnemy: 0
+  textNbEnemy: {fileID: 8481694924117110560}
+--- !u!114 &8537977851527589065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427418959148666062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18eabb76dac7e8742bd8a8707ce33466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 5427418960109986765}
 --- !u!1 &5427418959229632976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,8 +2495,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '00 : 00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
+  m_sharedMaterial: {fileID: 3257244118144241182, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2653,7 +2684,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8537977851527589065}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -2787,7 +2818,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8537977851527589065}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: MainMenuButton
         m_Mode: 1
@@ -2921,7 +2952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8537977851527589065}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: RetryButton
         m_Mode: 1
@@ -3055,9 +3086,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5427418959148666062}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: CreditsScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3895,7 +3926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.72156864}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3921,10 +3952,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5427418960409412318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d9ec055f83027f4facad4082795e6ae, type: 3}
+  m_Script: {fileID: 11500000, guid: c58fc77a69303de4d8b6044e0595e689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSelected: {fileID: 0}
+  pauseMenuUI: {fileID: 5427418960409412318}
 --- !u!1 &5427418960441978898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,7 +3965,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427418960441978897}
-  - component: {fileID: 4611708608981047701}
   m_Layer: 5
   m_Name: 'Life '
   m_TagString: Untagged
@@ -3966,53 +3996,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1093.6426, y: 398.7179}
   m_SizeDelta: {x: 706, y: 242}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &4611708608981047701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418960441978898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4415b47753af93d429a39c7efe6cf9ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filler: {fileID: 4696609885565472367}
-  states:
-  - {fileID: 5427418960339880867}
-  - {fileID: 5427418958637974798}
-  - {fileID: 5427418959757565001}
-  - {fileID: 5427418960109572070}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.8196079, g: 0, b: 0.023529414, a: 1}
-    key1: {r: 1, g: 0.4431373, b: 0, a: 1}
-    key2: {r: 1, g: 0.9686275, b: 0, a: 0}
-    key3: {r: 0.0852586, g: 1, b: 0, a: 0}
-    key4: {r: 0.0852586, g: 1, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 16384
-    ctime1: 32768
-    ctime2: 49151
-    ctime3: 65535
-    ctime4: 65535
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 4
-    m_NumAlphaKeys: 2
 --- !u!1 &5427418960448777835
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,7 +4236,7 @@ Animator:
   m_GameObject: {fileID: 5427418960588802505}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a5f6179bce802d4a9e37d6ba9f49974, type: 2}
+  m_Controller: {fileID: 9100000, guid: 308fb1518fe04be4b9c86947ff6d40e6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4275,7 +4258,7 @@ GameObject:
   - component: {fileID: 1951324305332566569}
   - component: {fileID: 5863643377559725603}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: 'Pause  text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4331,8 +4314,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PAUSE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
-  m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
+  m_sharedMaterial: {fileID: 3257244118144241182, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4601,8 +4584,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
-  m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
+  m_sharedMaterial: {fileID: 3257244118144241182, guid: 59ad0104ee7907348b1ae9f19d6a6441, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5062,9 +5045,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5427418960409412318}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5110,8 +5093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -141.43156, y: 427.6}
-  m_SizeDelta: {x: 601.9012, y: 193}
+  m_AnchoredPosition: {x: -139.46477, y: 401.19485}
+  m_SizeDelta: {x: 603.868, y: 186.4641}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7470934541765808916
 CanvasRenderer:

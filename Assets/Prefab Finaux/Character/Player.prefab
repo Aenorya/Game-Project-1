@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxCollider: {fileID: 0}
   rb: {fileID: 882590898}
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}
@@ -311,7 +312,7 @@ MonoBehaviour:
   invincibilityTimeAfterHit: 0.3
   invincibilityFlashDelay: 0.1
   isInvincible: 0
-  graphics: {fileID: 9015616812594532915}
+  graphics: {fileID: 0}
   maxHealth: 3
   hp: 3
   hitSound: {fileID: 0}

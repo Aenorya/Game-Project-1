@@ -55,7 +55,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Attack"",
+                    ""name"": ""Attack01"",
                     ""type"": ""Button"",
                     ""id"": ""94a5dbc3-6b54-4ad2-b397-4591d94c481d"",
                     ""expectedControlType"": ""Button"",
@@ -143,7 +143,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack"",
+                    ""action"": ""Attack01"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -154,7 +154,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack"",
+                    ""action"": ""Attack01"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -344,7 +344,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        m_Player_Attack01 = m_Player.FindAction("Attack01", throwIfNotFound: true);
         m_Player_PauseMenu = m_Player.FindAction("Pause Menu", throwIfNotFound: true);
         m_Player_UseSyringe = m_Player.FindAction("UseSyringe", throwIfNotFound: true);
         m_Player_HealthTest = m_Player.FindAction("HealthTest", throwIfNotFound: true);
@@ -410,7 +410,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Attack;
+    private readonly InputAction m_Player_Attack01;
     private readonly InputAction m_Player_PauseMenu;
     private readonly InputAction m_Player_UseSyringe;
     private readonly InputAction m_Player_HealthTest;
@@ -421,7 +421,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Attack => m_Wrapper.m_Player_Attack;
+        public InputAction @Attack01 => m_Wrapper.m_Player_Attack01;
         public InputAction @PauseMenu => m_Wrapper.m_Player_PauseMenu;
         public InputAction @UseSyringe => m_Wrapper.m_Player_UseSyringe;
         public InputAction @HealthTest => m_Wrapper.m_Player_HealthTest;
@@ -443,9 +443,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Attack01.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack01;
+                @Attack01.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack01;
+                @Attack01.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack01;
                 @PauseMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseMenu;
@@ -468,9 +468,9 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
+                @Attack01.started += instance.OnAttack01;
+                @Attack01.performed += instance.OnAttack01;
+                @Attack01.canceled += instance.OnAttack01;
                 @PauseMenu.started += instance.OnPauseMenu;
                 @PauseMenu.performed += instance.OnPauseMenu;
                 @PauseMenu.canceled += instance.OnPauseMenu;
@@ -489,7 +489,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
+        void OnAttack01(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnUseSyringe(InputAction.CallbackContext context);
         void OnHealthTest(InputAction.CallbackContext context);

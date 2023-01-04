@@ -273,6 +273,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
+--- !u!1 &199908474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5427418960109986765, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
+  m_PrefabInstance: {fileID: 199908473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286312235
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,18 +435,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 263701674310527457, guid: 6cea47055cd70764fa3d580407cffb0e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527457, guid: 6cea47055cd70764fa3d580407cffb0e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527457, guid: 6cea47055cd70764fa3d580407cffb0e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527457, guid: 6cea47055cd70764fa3d580407cffb0e, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527457, guid: 6cea47055cd70764fa3d580407cffb0e, type: 3}
@@ -1199,10 +1192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2052260358074508727, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
@@ -1546,21 +1535,9 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1647786260, guid: 2017e6724565dcc439661b820fb00621, type: 3}
-      propertyPath: m_Color.a
-      value: 0.85882354
-      objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 19.81088
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 32.160835
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2112,6 +2089,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5589712741800994217, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
+      propertyPath: gameOverUI
+      value: 
+      objectReference: {fileID: 199908474}
+    - target: {fileID: 6380472880025710046, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
+      propertyPath: soundEffectMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: f64a6984c18be4547b70d30dc8e3540c, type: 2}
     - target: {fileID: 7111979486313313296, guid: 65981d3c378f9544eb04b9328c727e29, type: 3}
       propertyPath: pauseMenuUI
       value: 

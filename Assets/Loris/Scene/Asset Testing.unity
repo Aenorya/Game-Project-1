@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &126010925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570479761144074561, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+  m_PrefabInstance: {fileID: 1937728877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &136254549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1847,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1296080070109015558, guid: 61f5f92656667e6419d7277733a50014, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 126010925}
     - target: {fileID: 1296080070109015559, guid: 61f5f92656667e6419d7277733a50014, type: 3}
       propertyPath: m_Name
       value: Respawn

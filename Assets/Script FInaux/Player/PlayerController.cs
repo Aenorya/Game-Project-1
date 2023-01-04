@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public BoxCollider2D boxCollider;
     [Header("Physics Player")]
     public Rigidbody2D rb;
     public CapsuleCollider2D playerCollider;
@@ -155,14 +154,14 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
-            if (attackGround)
+            /*if (attackGround)
             {
                 animator.SetTrigger("GroundAttack");
-            }
-            else
-            {
+            }*/
+            //else
+            //{
                 animator.SetBool("IsAttacking", true);
-            }
+            //}
 
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);

@@ -154,6 +154,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &137799553 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 882590898, guid: 2ccc7689512d6d043baac8afd48152e4, type: 3}
+  m_PrefabInstance: {fileID: 1040859504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286312235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1846,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 137799553}
     - target: {fileID: 4534739878067615467, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Name
       value: GravityTrigger

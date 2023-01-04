@@ -1617,22 +1617,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1440634356, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440634356, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440634356, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440634356, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074561, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1697,10 +1681,6 @@ PrefabInstance:
       propertyPath: popUpMessage
       value: 
       objectReference: {fileID: 15171060}
-    - target: {fileID: 9015616812594532915, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}

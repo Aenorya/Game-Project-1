@@ -172,12 +172,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7570479761144074566}
   - component: {fileID: 9015616812594532915}
-  - component: {fileID: 7570479761144074578}
-  - component: {fileID: 7570479761144074569}
   - component: {fileID: 7570479761144074568}
   - component: {fileID: 7570479761144074581}
   - component: {fileID: 882590898}
   - component: {fileID: 882590897}
+  - component: {fileID: 8720769828381018937}
+  - component: {fileID: 8794200418571457050}
+  - component: {fileID: 8710016862242842837}
+  - component: {fileID: 3678958966140915880}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,7 +204,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -256,66 +258,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7570479761144074578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570479761144074561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 882590898}
-  playerCollider: {fileID: 6000642757937539040}
-  popUpMessage: {fileID: 0}
-  goMessage: {fileID: 0}
-  jumpSpeed: 15
-  speed: 7
-  animator: {fileID: 7570479761144074568}
-  CamAnimator: {fileID: 7663527945589957800}
-  openDoor: {fileID: 0}
-  timeAttack: 0.2
-  syringeCount: 0
-  syringe:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  syringeScore: 100
-  noSyringe: {fileID: 0}
-  noNeedHeal: {fileID: 0}
-  playerHealth: {fileID: 7570479761144074569}
-  pauseMenu: {fileID: 0}
-  collisionAttack: {fileID: 1440634355}
-  inContact: 0
-  bombButtonIsPressed: 0
-  attackGround: 0
-  doorButtonIsPressed: 0
-  poing: {fileID: 1440634355}
-  cameraDoor: {fileID: 0}
-  respawnButtonBox: {fileID: 0}
---- !u!114 &7570479761144074569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570479761144074561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2feac15c4c231ca46919245e000a3949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invincibilityTimeAfterHit: 0.3
-  invincibilityFlashDelay: 0.1
-  isInvincible: 0
-  graphics: {fileID: 9015616812594532915}
-  maxHealth: 3
-  hp: 3
-  hitSound: {fileID: 0}
-  playerController: {fileID: 7570479761144074578}
 --- !u!95 &7570479761144074568
 Animator:
   serializedVersion: 4
@@ -363,7 +305,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -379,7 +321,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 0
@@ -395,7 +337,7 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -411,7 +353,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 0
@@ -427,7 +369,7 @@ MonoBehaviour:
     m_ActionName: Player/Attack01[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: PauseMenu
         m_Mode: 0
@@ -443,7 +385,7 @@ MonoBehaviour:
     m_ActionName: Player/Pause Menu[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: UseSyringe
         m_Mode: 0
@@ -459,7 +401,7 @@ MonoBehaviour:
     m_ActionName: Player/UseObject[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: HealthTest
         m_Mode: 0
@@ -515,6 +457,122 @@ CapsuleCollider2D:
   m_Offset: {x: 0.02484703, y: 0.061533928}
   m_Size: {x: 2.1310005, y: 5.015724}
   m_Direction: 0
+--- !u!114 &8720769828381018937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c11366e509547043974a89c35bd8c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 882590898}
+  playerCollider: {fileID: 882590897}
+  popUpMessage: {fileID: 0}
+  goMessage: {fileID: 0}
+  textTime: 0
+  jumpSpeed: 12
+  speed: 7
+  animator: {fileID: 7570479761144074568}
+  CamAnimator: {fileID: 7663527945589957800}
+  openDoor: {fileID: 0}
+  timeAttack: 0
+  syringeCount: 3
+  syringe: []
+  syringeScore: 0
+  noSyringe: {fileID: 0}
+  noNeedHeal: {fileID: 0}
+  playerHealth: {fileID: 8794200418571457050}
+  pauseMenu: {fileID: 0}
+  collisionAttack: {fileID: 1440634355}
+  inContact: 0
+  bombButtonIsPressed: 0
+  attackGround: 0
+  doorButtonIsPressed: 0
+  poing: {fileID: 1440634355}
+  cameraDoor: {fileID: 0}
+  respawnButtonBox: {fileID: 0}
+--- !u!114 &8794200418571457050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b54ed831b50b14790abe733f17687b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.2
+  isInvincible: 0
+  graphics: {fileID: 9015616812594532915}
+  maxHealth: 3
+  hp: 0
+  hitSound: {fileID: 0}
+  playerController: {fileID: 0}
+--- !u!114 &8710016862242842837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c11366e509547043974a89c35bd8c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 882590898}
+  playerCollider: {fileID: 882590897}
+  popUpMessage: {fileID: 0}
+  goMessage: {fileID: 0}
+  textTime: 0
+  jumpSpeed: 12
+  speed: 7
+  animator: {fileID: 7570479761144074568}
+  CamAnimator: {fileID: 7663527945589957800}
+  openDoor: {fileID: 0}
+  timeAttack: 0.2
+  syringeCount: 3
+  syringe: []
+  syringeScore: 0
+  noSyringe: {fileID: 0}
+  noNeedHeal: {fileID: 0}
+  playerHealth: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  collisionAttack: {fileID: 1440634355}
+  inContact: 0
+  bombButtonIsPressed: 0
+  attackGround: 0
+  doorButtonIsPressed: 0
+  poing: {fileID: 1440634355}
+  cameraDoor: {fileID: 0}
+  respawnButtonBox: {fileID: 0}
+--- !u!114 &3678958966140915880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570479761144074561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b54ed831b50b14790abe733f17687b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.2
+  isInvincible: 0
+  graphics: {fileID: 9015616812594532915}
+  maxHealth: 3
+  hp: 3
+  hitSound: {fileID: 0}
+  playerController: {fileID: 8710016862242842837}
 --- !u!1 &7570479762081479600
 GameObject:
   m_ObjectHideFlags: 0

@@ -17211,7 +17211,7 @@ PrefabInstance:
       objectReference: {fileID: 1875139428}
     - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: timeDeath
-      value: 0.85
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: breakFloor

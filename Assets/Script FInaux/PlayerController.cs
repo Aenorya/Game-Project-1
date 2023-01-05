@@ -279,7 +279,7 @@ public class PlayerController : MonoBehaviour
             attackGround = true;
         }
 
-        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox"))
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox") || collision.gameObject.CompareTag("BreakableFloor"))
         {
             isGrounded = true;
         }

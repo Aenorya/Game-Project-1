@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Other")]
     private bool isGrounded = false;
+    public string textInteract;
 
     private Vector2 direction;
     public PlayerHealth playerHealth;
@@ -302,7 +303,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "ButtonDoor")
         {
             goMessage.SetActive(true);
-            popUpMessage.text = ("Press E or X to push the button.");
+            popUpMessage.text = (textInteract);
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

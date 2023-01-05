@@ -617,7 +617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 752d4116a819d7a468a12ee67477a94d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c80aa5d29a6b8642ade7080333aa7e6, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -629,113 +629,112 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<SIZE=180><B>Dr. Carnage</B></SIZE>
+  m_Text: '<SIZE=180><B>Dr. Hofman</B></SIZE>
 
-    
 
-    <SIZE=65>Done by the
-    Team A of the 2-Game class in ArtFx</SIZE>
 
-    
+    <SIZE=65>Done by the Team A
+    of the 2-Game class in ArtFx</SIZE>
 
-    
 
-    
 
-    <SIZE=160><B>
-    The Team</B></SIZE>
 
-    
 
-    
 
-    <SIZE=120>- Game Designers -</SIZE>
 
-    
+    <SIZE=160><B> The Team</B></SIZE>
 
-    <SIZE=60><I>Thomas
-    A.
+
+
+
+
+    <SIZE=120>-
+    Game Designers -</SIZE>
+
+
+
+    <SIZE=60><I>Thomas A.
 
     Allan R.</I></SIZE>
 
-    
 
-    
 
-    <SIZE=120>- Gameplay Programmers
-    -</SIZE>
 
-    
+
+    <SIZE=120>-
+    Gameplay Programmers -</SIZE>
+
+
 
     <SIZE=60><I>Zoe C.
 
     Loris M..</I></SIZE>
 
-    
 
-    
+
+
 
     <SIZE=120>-
     Level Designer -</SIZE>
 
-    
+
 
     <SIZE=60><I>Robin M.</I></SIZE>
 
-    
 
-    
+
+
 
     <SIZE=120>-
     Animator -</SIZE>
 
-    
+
 
     <SIZE=60><I>Gaelle</I></SIZE>
 
-    
 
-    
 
-    <SIZE=120>-
-    Concept Artist -</SIZE>
 
-    
+
+    <SIZE=120>- Concept
+    Artist -</SIZE>
+
+
 
     <SIZE=60><I>Victor</I></SIZE>
 
-    
 
-    
 
-    <SIZE=120>-
-    Prop Artists -</SIZE>
 
-    
+
+    <SIZE=120>- Prop
+    Artists -</SIZE>
+
+
 
     <SIZE=60><I>Sacha
 
     Ambre</I></SIZE>
 
-    
 
-    
+
+
 
     <SIZE=120>-
     Environment Artist -</SIZE>
 
-    
+
 
     <SIZE=60><I>Emmalie</I></SIZE>
 
-    
 
-    
+
+
 
     <SIZE=120>-
     Character Design -</SIZE>
 
-    
+
 
     <SIZE=60><I>Linh
 
@@ -743,65 +742,65 @@ MonoBehaviour:
 
     Erwan</I></SIZE>
 
-    
 
-    
+
+
 
     <SIZE=120>-
     FX Artists -</SIZE>
 
-    
+
 
     <SIZE=60><I>Teodora
 
     Line</I></SIZE>
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
 
     <SIZE=120>-
     SPECIAL  THANKS -</SIZE>
 
-    
 
-    
+
+
 
     <SIZE=60>Play Testers
 
-    
 
-    <I>Team
-    B</I></SIZE>
 
-    
+    <I>Team B</I></SIZE>
 
-    <SIZE=60>We would like to thank the educational team
-    for their support.
+
+
+    <SIZE=60>We
+    would like to thank the educational team for their support.
 
     <I>Lionel Rico
 
-    Marie Legrand
+    Marie
+    Legrand
 
     Fred Adouard
 
-    Mathieu
-    Sancho</I>
+    Mathieu Sancho</I>
 
-    And finally a thanks to the ArtFx school for letting us realize
-    this project</SIZE>
+    And finally a thanks to
+    the ArtFx school for letting us realize this project</SIZE>
 
-    
 
-    
 
-    <SIZE=75><I>Thank you for playing  <3</I></SIZE>
+
+
+    <SIZE=75><I>Thank
+    you for playing  <3</I></SIZE>
 
 '
 --- !u!222 &2021327300

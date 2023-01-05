@@ -2595,6 +2595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light + Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 9210438652377287100, guid: 32c94e2c402a42d40802bdebfd27bf22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210438652377287100, guid: 32c94e2c402a42d40802bdebfd27bf22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.92
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 32c94e2c402a42d40802bdebfd27bf22, type: 3}

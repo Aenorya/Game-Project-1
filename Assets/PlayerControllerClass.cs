@@ -80,22 +80,13 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""HealthTest"",
-                    ""type"": ""Button"",
-                    ""id"": ""8c69997a-22fc-43ac-b555-8e27d38e5e58"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""0df79792-ad0e-4337-a66a-e2be10d1859d"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -117,7 +108,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""9c2fae7e-7431-44be-ab5a-d9edaf0a80da"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -304,7 +295,7 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""e4b72366-1530-40d7-9abc-4bb1c5d788ad"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -322,17 +313,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                     ""action"": ""UseSyringe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c0c8b685-6e97-4223-9ab9-34e183423ecd"",
-                    ""path"": ""<Keyboard>/h"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""HealthTest"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -347,7 +327,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         m_Player_Attack01 = m_Player.FindAction("Attack01", throwIfNotFound: true);
         m_Player_PauseMenu = m_Player.FindAction("Pause Menu", throwIfNotFound: true);
         m_Player_UseSyringe = m_Player.FindAction("UseSyringe", throwIfNotFound: true);
-        m_Player_HealthTest = m_Player.FindAction("HealthTest", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -413,7 +392,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
     private readonly InputAction m_Player_Attack01;
     private readonly InputAction m_Player_PauseMenu;
     private readonly InputAction m_Player_UseSyringe;
-    private readonly InputAction m_Player_HealthTest;
     public struct PlayerActions
     {
         private @PlayerControllerClass m_Wrapper;
@@ -424,7 +402,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         public InputAction @Attack01 => m_Wrapper.m_Player_Attack01;
         public InputAction @PauseMenu => m_Wrapper.m_Player_PauseMenu;
         public InputAction @UseSyringe => m_Wrapper.m_Player_UseSyringe;
-        public InputAction @HealthTest => m_Wrapper.m_Player_HealthTest;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -452,9 +429,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @UseSyringe.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
                 @UseSyringe.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
                 @UseSyringe.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseSyringe;
-                @HealthTest.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
-                @HealthTest.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
-                @HealthTest.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHealthTest;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -477,9 +451,6 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
                 @UseSyringe.started += instance.OnUseSyringe;
                 @UseSyringe.performed += instance.OnUseSyringe;
                 @UseSyringe.canceled += instance.OnUseSyringe;
-                @HealthTest.started += instance.OnHealthTest;
-                @HealthTest.performed += instance.OnHealthTest;
-                @HealthTest.canceled += instance.OnHealthTest;
             }
         }
     }
@@ -492,6 +463,5 @@ public partial class @PlayerControllerClass : IInputActionCollection2, IDisposab
         void OnAttack01(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnUseSyringe(InputAction.CallbackContext context);
-        void OnHealthTest(InputAction.CallbackContext context);
     }
 }

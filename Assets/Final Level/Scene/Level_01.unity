@@ -666,8 +666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &215130569
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,8 +973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &300327103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,8 +1403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &362116259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,8 +1611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &388286344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,8 +1936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &413670486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,7 +4913,7 @@ PrefabInstance:
     - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: rb
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1955581771}
     - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: grav
       value: 2
@@ -5750,8 +5740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &1329424422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,8 +6096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &1390565829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7149,8 +7135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &1659195892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7611,8 +7595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &1717189396
 GameObject:
   m_ObjectHideFlags: 0
@@ -9050,6 +9032,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+--- !u!50 &1955581771 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 882590898, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+  m_PrefabInstance: {fileID: 1955581770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1962664927
 GameObject:
   m_ObjectHideFlags: 0
@@ -9497,8 +9484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &2047824693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9692,7 +9677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057331399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -141.2, y: -5.6, z: 0}
+  m_LocalPosition: {x: -141.2, y: -5.7, z: 0}
   m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10297,8 +10282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
-  scenePlayer: {fileID: 0}
 --- !u!1 &2140803218
 GameObject:
   m_ObjectHideFlags: 0

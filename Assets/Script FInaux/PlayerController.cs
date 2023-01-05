@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     public bool doorButtonIsPressed = false;
 
     public GameObject poing;
-    public Image cameraDoor;
+    public RawImage cameraDoor;
 
     public ButtonRespawnBox respawnButtonBox;
 

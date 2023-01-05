@@ -455,8 +455,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72575227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7322, y: -14.2601, z: 4.9232106}
-  m_LocalScale: {x: 43.22756, y: 3.5375113, z: 1.0177}
+  m_LocalPosition: {x: -5.7322, y: -16.3886, z: 4.9232106}
+  m_LocalScale: {x: 43.22756, y: 7.7945523, z: 1.0177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1878966293}
@@ -6068,8 +6068,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750083073}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -89.3574, y: 1.1338, z: 4.607012}
-  m_LocalScale: {x: 22.571995, y: 22.718151, z: 1}
+  m_LocalPosition: {x: -89.3574, y: -0.569, z: 4.607012}
+  m_LocalScale: {x: 25.97811, y: 22.718151, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 429765960}
@@ -8007,8 +8007,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972639740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.8236, y: -16.63, z: 4.9232106}
-  m_LocalScale: {x: 2.6083255, y: 1, z: 1}
+  m_LocalPosition: {x: 46.8236, y: 6.1823, z: 4.9232106}
+  m_LocalScale: {x: 2.6083255, y: 5.224599, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1878966293}
@@ -9404,11 +9404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.9016
+      value: 30.246178
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.9016
+      value: 57.3889
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalScale.z
@@ -9416,11 +9416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 182.84
+      value: 160.4604
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.53
+      value: -4.2778
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9456,19 +9456,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615465, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Size.x
-      value: 15.157608
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615465, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Size.y
-      value: 30.465048
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615465, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Offset.x
-      value: -4.7729263
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615465, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_Offset.y
-      value: 11.633077
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615466, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: rb
@@ -13644,8 +13644,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717189396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.028, y: -13.304064, z: 4.9232106}
-  m_LocalScale: {x: 26.773472, y: 1.6254704, z: 1.0177}
+  m_LocalPosition: {x: 118.268, y: -16.9694, z: 4.9232106}
+  m_LocalScale: {x: 73.25222, y: 8.956376, z: 1.0177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1878966293}
@@ -15156,7 +15156,7 @@ GameObject:
   - component: {fileID: 1922008478}
   m_Layer: 0
   m_Name: LABO_Sol
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

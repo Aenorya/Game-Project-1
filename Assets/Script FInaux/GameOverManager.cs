@@ -25,14 +25,14 @@ public class GameOverManager : MonoBehaviour
 
     public void RetryButton()
     {
-        SceneManager.LoadScene("Loris Test");
+        SceneManager.LoadScene("Asset Testing");
         gameOverUI.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main_Menu");
     }
 
     public void QuitButton()

@@ -18,7 +18,7 @@ public class GravityTrigger : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-        rb.gravityScale = 1;
+        rb.gravityScale = 4.5f;
         }
     }
 }

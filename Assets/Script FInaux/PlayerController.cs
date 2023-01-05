@@ -201,8 +201,9 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded == true)
         {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
-            isGrounded = false;
             animator.SetBool("Jump", true);
+            isGrounded = false;
+            
 
             if (attackGround)
             {

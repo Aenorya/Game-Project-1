@@ -2008,9 +2008,9 @@ RectTransform:
   m_Children:
   - {fileID: 7145006819405677335}
   - {fileID: 5427418960109986764}
+  - {fileID: 5939443292423176265}
   - {fileID: 5427418960409412317}
   - {fileID: 5427418959352655465}
-  - {fileID: 5939443292423176265}
   - {fileID: 1547960979309642625}
   - {fileID: 4193345609699783039}
   - {fileID: 3628551370028027960}
@@ -4032,7 +4032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5427418960409412317
 RectTransform:
   m_ObjectHideFlags: 0

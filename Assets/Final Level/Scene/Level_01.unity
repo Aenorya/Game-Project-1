@@ -189,7 +189,7 @@ SpriteRenderer:
   m_Size: {x: 99.200005, y: 23.395313}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &6173385
@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &22354509
 PrefabInstance:
@@ -217,7 +217,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9210438651896295496, guid: 32c94e2c402a42d40802bdebfd27bf22, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9210438651896295496, guid: 32c94e2c402a42d40802bdebfd27bf22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -485,11 +485,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!20 &96382856 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7663527945589957804, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-  m_PrefabInstance: {fileID: 2091301283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &136228755
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +651,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &204666157
@@ -671,8 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &215130569
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +708,7 @@ Transform:
   - {fileID: 279795569}
   - {fileID: 370370945}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230440465
 GameObject:
@@ -965,7 +960,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &279795572
@@ -980,8 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &300327103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1392,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &360173971
@@ -1412,8 +1407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &362116259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,7 +1602,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &370370948
@@ -1622,8 +1617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &388286344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1929,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &405136844
@@ -1949,8 +1944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &413670486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2092,7 @@ Transform:
   - {fileID: 362116260}
   - {fileID: 1264258090}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449050625
 GameObject:
@@ -3106,7 +3101,7 @@ Transform:
   - {fileID: 825106435}
   - {fileID: 1878966293}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763629739
 GameObject:
@@ -3285,7 +3280,7 @@ SpriteRenderer:
   m_Size: {x: 99.200005, y: 23.395313}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &765869963
@@ -3301,7 +3296,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773157745
 GameObject:
@@ -3599,7 +3594,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &808197572
@@ -3615,7 +3610,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825106434
 GameObject:
@@ -3737,11 +3732,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &916703532 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-  m_PrefabInstance: {fileID: 2091301283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &959470272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,7 +4440,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1018954240
@@ -4466,7 +4456,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019453056
 GameObject:
@@ -4944,7 +4934,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4534739878067615464, guid: 2017e6724565dcc439661b820fb00621, type: 3}
       propertyPath: m_LocalScale.x
@@ -5913,7 +5903,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1316779323
@@ -5928,8 +5918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &1329424422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6271,7 +6261,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1377390765
@@ -6286,8 +6276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &1390565829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7262,7 +7252,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1657349999
@@ -7277,8 +7267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &1659195892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7724,7 +7714,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1696986251
@@ -7739,8 +7729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &1717189396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8029,7 +8019,7 @@ SpriteRenderer:
   m_Size: {x: 99.200005, y: 23.395313}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1735224881
@@ -8045,7 +8035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1764147208
 GameObject:
@@ -8651,7 +8641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5427418959148666048, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5427418959148666048, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9329,7 +9319,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2034834858
@@ -9344,8 +9334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &2047824693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9630,73 +9620,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &2091301283
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7570479761144074561, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -68.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570479761144074566, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663527945589957804, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: far clip plane
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663527945589957804, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
-      propertyPath: near clip plane
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: fabdcda4d6fa356489b48ea9ba554adc, type: 3}
 --- !u!1 &2095553911
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,7 +10119,7 @@ SpriteRenderer:
   m_Size: {x: 34, y: 9.164063}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2137646455
@@ -10211,8 +10134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21062e38ebfe67048b43616b5b5626f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 96382856}
-  scenePlayer: {fileID: 916703532}
+  sceneCamera: {fileID: 0}
+  scenePlayer: {fileID: 0}
 --- !u!1 &2140803218
 GameObject:
   m_ObjectHideFlags: 0

@@ -1986,6 +1986,7 @@ GameObject:
   - component: {fileID: 5427418959148666061}
   - component: {fileID: 636845542644116578}
   - component: {fileID: 7810677282635628060}
+  - component: {fileID: 662447229}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2109,7 +2110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 500
+  startingTime: 120
   BombButtonTimer: 0
   countdownText: {fileID: 5427418959476073633}
 --- !u!114 &636845542644116578
@@ -2139,6 +2140,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 5427418958657526824}
+--- !u!114 &662447229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427418959148666062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4415b47753af93d429a39c7efe6cf9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filler: {fileID: 4696609885565472367}
+  states:
+  - {fileID: 5427418960339880867}
+  - {fileID: 5427418958637974798}
+  - {fileID: 5427418959757565001}
+  - {fileID: 5427418960109572070}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.8196079, g: 0, b: 0.023529414, a: 1}
+    key1: {r: 1, g: 0.4431373, b: 0, a: 1}
+    key2: {r: 1, g: 0.9686275, b: 0, a: 0}
+    key3: {r: 0.0852586, g: 1, b: 0, a: 0}
+    key4: {r: 0.0852586, g: 1, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16384
+    ctime1: 32768
+    ctime2: 49151
+    ctime3: 65535
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
 --- !u!1 &5427418959229632976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4069,7 +4117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427418960441978897}
-  - component: {fileID: 4611708608981047701}
   m_Layer: 5
   m_Name: 'Life '
   m_TagString: Untagged
@@ -4101,53 +4148,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1093.6426, y: 398.7179}
   m_SizeDelta: {x: 706, y: 242}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &4611708608981047701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418960441978898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4415b47753af93d429a39c7efe6cf9ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filler: {fileID: 4696609885565472367}
-  states:
-  - {fileID: 5427418960339880867}
-  - {fileID: 5427418958637974798}
-  - {fileID: 5427418959757565001}
-  - {fileID: 5427418960109572070}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.8196079, g: 0, b: 0.023529414, a: 1}
-    key1: {r: 1, g: 0.4431373, b: 0, a: 1}
-    key2: {r: 1, g: 0.9686275, b: 0, a: 0}
-    key3: {r: 0.0852586, g: 1, b: 0, a: 0}
-    key4: {r: 0.0852586, g: 1, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 16384
-    ctime1: 32768
-    ctime2: 49151
-    ctime3: 65535
-    ctime4: 65535
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 4
-    m_NumAlphaKeys: 2
 --- !u!1 &5427418960448777835
 GameObject:
   m_ObjectHideFlags: 0

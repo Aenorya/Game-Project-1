@@ -20,12 +20,14 @@ public class GameOverManager : MonoBehaviour
     public void OnPlayerDeath()
     {
         gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void RetryButton()
     {
         SceneManager.LoadScene("Loris Test");
         gameOverUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void MainMenuButton()

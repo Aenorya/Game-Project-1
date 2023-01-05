@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float timeAttack;
     public static int damage = 1;
     public float timeJump;
+    public float timeDeath;
 
     [Header("Syringe")]
     public int syringeCount = 3;
@@ -91,8 +92,13 @@ public class PlayerController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector3.zero;
         playerCollider.enabled = false;
-        //GameOverManager.instance.OnPlayerDeath();
+        Invoke("DeathPlayer", timeDeath);
         Debug.Log("Player eliminated");
+    }
+
+    public void DeathPlayer()
+    {
+        GameOverManager.instance.OnPlayerDeath();
     }
 
     public void Interact(InputAction.CallbackContext context)

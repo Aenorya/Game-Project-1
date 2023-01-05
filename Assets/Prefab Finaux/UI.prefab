@@ -1983,7 +1983,6 @@ GameObject:
   - component: {fileID: 5427418959148666050}
   - component: {fileID: 5427418959148666051}
   - component: {fileID: 1586215791217447110}
-  - component: {fileID: 5427418959148666060}
   - component: {fileID: 5427418959148666061}
   - component: {fileID: 636845542644116578}
   - component: {fileID: 7810677282635628060}
@@ -2098,22 +2097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 5427418960409412318}
---- !u!114 &5427418959148666060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427418959148666062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad60c156871e66146a78ba599e8a1048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &5427418959148666061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 65
+  startingTime: 500
   BombButtonTimer: 0
   countdownText: {fileID: 5427418959476073633}
 --- !u!114 &636845542644116578

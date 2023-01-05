@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
     public float speed = 5;
+    public float speedLess;
 
     [Header("Animation")]
     public Animator animator;
@@ -158,11 +159,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
+            speed = speed - speedLess;
         }
         else if (contexte.canceled)
         {
             animator.SetBool("IsAttacking", false);
             collisionAttack.SetActive(false);
+            speed = speed + speedLess;
             attackGround = false;
         }
     }

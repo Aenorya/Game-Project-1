@@ -679,10 +679,10 @@ RectTransform:
   m_Children:
   - {fileID: 1566473363}
   - {fileID: 495501159}
-  - {fileID: 530001753}
   - {fileID: 1701559087}
   - {fileID: 585931373}
   - {fileID: 2021033594}
+  - {fileID: 530001753}
   - {fileID: 1688430671}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1152,6 +1152,18 @@ PrefabInstance:
     - target: {fileID: 1418070318131516801, guid: b499abadec474fe4ab59a14c8e202a80, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418070318252142363, guid: b499abadec474fe4ab59a14c8e202a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1117764517}
+    - target: {fileID: 1418070318252142363, guid: b499abadec474fe4ab59a14c8e202a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseSettingsWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418070318252142363, guid: b499abadec474fe4ab59a14c8e202a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1418070318252142364, guid: b499abadec474fe4ab59a14c8e202a80, type: 3}
       propertyPath: m_AnchoredPosition.x

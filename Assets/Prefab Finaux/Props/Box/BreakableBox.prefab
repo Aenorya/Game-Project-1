@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1597919312325720295}
   - component: {fileID: 3630635219278167259}
   - component: {fileID: 1157037477653956522}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BreakableBox
   m_TagString: Detroyables
   m_Icon: {fileID: 0}

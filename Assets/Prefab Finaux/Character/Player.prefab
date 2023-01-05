@@ -159,8 +159,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15013504, y: 0.015737057}
-  m_Size: {x: 1.6477318, y: 4.9982157}
+  m_Offset: {x: 0.3166008, y: 0.03494239}
+  m_Size: {x: 2.8974476, y: 5.0366263}
   m_Direction: 0
 --- !u!1 &7570479761144074561
 GameObject:
@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feac15c4c231ca46919245e000a3949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibilityTimeAfterHit: 0.3
+  invincibilityTimeAfterHit: 0.2
   invincibilityFlashDelay: 0.1
   isInvincible: 0
   graphics: {fileID: 9015616812594532915}

@@ -5,8 +5,8 @@ using UnityEngine;
 public class BoxDrop : MonoBehaviour
 {
     private float fakeHealth = 1;
+    public GameObject box;
 
-    
     public void HitBox(float amount)
     {
         fakeHealth -= amount;
@@ -18,9 +18,11 @@ public class BoxDrop : MonoBehaviour
         }
     }
 
-    public void DestroyBox()
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Weapon")
+        {
+            Destroy(box);
+        }
     }
 }
-

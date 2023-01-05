@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 263701674310527456}
   - component: {fileID: 263701674310527463}
   - component: {fileID: 263701674310527458}
-  - component: {fileID: 6279010086479991912}
   - component: {fileID: 3630635219278167259}
+  - component: {fileID: 1157037477653956522}
   m_Layer: 0
   m_Name: BreakableBox
-  m_TagString: ReBox
+  m_TagString: Detroyables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &263701674310527456
 SpriteRenderer:
@@ -135,18 +135,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.879536, y: 4.6352687}
   m_EdgeRadius: 0
---- !u!114 &6279010086479991912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263701674310527462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b57cb74549335499cf8e59b2776c41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3630635219278167259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickables: {fileID: 11400000, guid: 4b3a4921b6684244fbbf99966384da51, type: 2}
+--- !u!114 &1157037477653956522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263701674310527462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destroyable: {fileID: 263701674310527462}

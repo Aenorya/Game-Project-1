@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 882590897}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: PlayerNotTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -272,6 +272,7 @@ MonoBehaviour:
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}
   goMessage: {fileID: 0}
+  timeTextHide: 0
   jumpSpeed: 15
   speed: 7
   animator: {fileID: 7570479761144074568}
@@ -459,10 +460,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4c6cb595-d9db-4f92-bfcb-af390cf279fd
     m_ActionName: Player/UseObject[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8c69997a-22fc-43ac-b555-8e27d38e5e58
-    m_ActionName: Player/HealthTest[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

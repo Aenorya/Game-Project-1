@@ -15,6 +15,7 @@ TagManager:
   - Floor
   - ButtonDoor
   - BreakableFloor
+  - PlayerNotTrigger
   layers:
   - Default
   - TransparentFX

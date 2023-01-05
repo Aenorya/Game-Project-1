@@ -275,6 +275,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507796442}
   m_CullTransparentMesh: 1
+--- !u!1 &527239716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527239717}
+  - component: {fileID: 527239718}
+  m_Layer: 0
+  m_Name: fond test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527239717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527239716}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -970.6, y: -540, z: 0}
+  m_LocalScale: {x: 2.1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 792891515}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &527239718
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527239716}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 95b8446c51a83fb498db6da4fcc34773, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &535290775
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,12 +417,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hofmann started to see blurred, started to have a fever, he felt dizzy.
-    Hofmann had the impression that he was transforming. Alien started to run away
-    from Hofmann when he wanted to catch him. As he left, the Alien started to activate
-    the self-destruct protocol of the ship...
-
-'
+  m_text: "As Hofmann\u2019s vision became blurry and purple, he felt dizzy. He felt
+    like something was changing.His body began to shift and change, his muscles growing,
+    doubled in size. Noticing the transformation of Hofmann\u2019s physique, the
+    alien started running in fear. Before escaping entirely, the alien activated
+    the ship's self-destruct protocol and freed his kin from the ship's cells, forming
+    an army with his people\u2026\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
   m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
@@ -347,7 +431,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 3289650
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -365,8 +449,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34
-  m_fontSizeBase: 34
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -681,6 +765,7 @@ RectTransform:
   - {fileID: 1026773727}
   - {fileID: 190556378}
   - {fileID: 721427830}
+  - {fileID: 527239717}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -741,7 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89279246, g: 0.9150943, b: 0.51366144, a: 1}
+  m_Color: {r: 0.37535164, g: 0.3773585, b: 0.33641866, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -901,8 +986,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'An alien grabbed Hofmann''s arm and a merciless struggle began. Hofmann
-    tries to struggle as best he can, but the alien has the upper hand. Alien pulls
-    Hofmann towards him but he injects the contents of his syringe into him by mistake...
+    fought back as best he could but the alien got the upper hand. It pulled the
+    scientist towards itself, but, with a last attempt to retaliate, Hoffman swung
+    his syringe at the enemy. Caught in the action, he accidentally injected its
+    contents into his own arm by mistake...
 
 '
   m_isRightToLeft: 0
@@ -913,7 +1000,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 3289650
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1115,9 +1202,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'In a galaxy far, far away. A scientist named Hofmann decided to experiment
-    on aliens, to transform them into weapons of mass destruction. But one day during
-    an experiment ...
+  m_text: 'In a galaxy far, far away. A scientist named Hofmann was conducting experiments
+    on aliens, turning them into weapons of mass destruction. Until one day during
+    an experiment...
 
 '
   m_isRightToLeft: 0
@@ -1128,7 +1215,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 3289650
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1372,9 +1459,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "HofMann felt stronger, filled with rage against the aliens. That now he
-    wants to kill all the aliens that are loose in his ship, and to stop the bombs
-    before they explode.  \n"
+  m_text: "Hofmann felt stronger, filled with rage against the aliens. Suddenly he
+    felt like destroying all the aliens that were loose in his ship, and defusing
+    the bombs before they detonated and destroyed the vessel in its entirety.  \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
   m_sharedMaterial: {fileID: -5244937317069813111, guid: fd3c71f4c345a47488712a82fe54ca5a, type: 2}
@@ -1383,7 +1470,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4264702514
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

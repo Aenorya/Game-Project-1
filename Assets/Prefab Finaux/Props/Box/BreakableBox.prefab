@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 263701674310527463}
   - component: {fileID: 263701674310527458}
   - component: {fileID: 6279010086479991912}
+  - component: {fileID: 3630635219278167259}
   m_Layer: 0
   m_Name: BreakableBox
   m_TagString: ReBox
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &263701674310527456
 SpriteRenderer:
@@ -146,3 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b57cb74549335499cf8e59b2776c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3630635219278167259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263701674310527462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb1e3c274ed7874486ae20f3fc0904e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickables: {fileID: 11400000, guid: 4b3a4921b6684244fbbf99966384da51, type: 2}

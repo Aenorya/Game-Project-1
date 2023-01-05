@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static int damage = 1;
+    public static int timeJump;
 
     [Header("Syringe")]
     public int syringeCount = 3;
@@ -41,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 direction;
     public PlayerHealth playerHealth;
-    public GameObject pauseMenu, collisionAttack;
+    public GameObject pauseMenu, collisionAttack, breakFloor;
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
@@ -154,15 +156,7 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
-            if (attackGround)
-            {
-                animator.SetTrigger("GroundAttack");
-            }
-            else
-            {
-                animator.SetBool("IsAttacking", true);
-            }
-
+            animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
             Invoke("ResetAttack", timeAttack);
         }
@@ -214,7 +208,22 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
             isGrounded = false;
+            animator.SetBool("Jump", true);
+
+            if (attackGround)
+            {
+                Invoke("BreakFloor", timeJump);
+            }
         }
+        else if (context.canceled)
+        {
+            animator.SetBool("Jump", false);
+        }
+    }
+
+    void BreakFloor()
+    {
+        Destroy(breakFloor);
     }
 
     public void UseSyringe(InputAction.CallbackContext context)

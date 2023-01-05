@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4225789035106160284}
   - component: {fileID: 6072309567167293575}
   - component: {fileID: 3367886622773740908}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: porte fermee destroyable
   m_TagString: Detroyables
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4225789035106160275
 SpriteRenderer:
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02429533, y: -0.024294615}
+  m_Offset: {x: 0.02954483, y: -0.024294615}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1729479, y: 5.6980042}
+  m_Size: {x: 1.1624451, y: 5.6980042}
   m_EdgeRadius: 0
 --- !u!61 &6072309567167293575
 BoxCollider2D:
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.042007446, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -137,7 +137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 5.72}
+  m_Size: {x: 1.6168747, y: 5.72}
   m_EdgeRadius: 0
 --- !u!114 &3367886622773740908
 MonoBehaviour:

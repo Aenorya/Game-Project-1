@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00036621, y: -3785.7}
-  m_SizeDelta: {x: 1920, y: 1625.54}
+  m_AnchoredPosition: {x: 0.00036621, y: -2691}
+  m_SizeDelta: {x: 1920, y: 1242.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259042892
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf6bc585f7f9a6344b283332ed815b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7fac3b4feb353b40ae4cd08345a9557, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -617,7 +617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 752d4116a819d7a468a12ee67477a94d, type: 3}
+    m_Font: {fileID: 12800000, guid: 9c80aa5d29a6b8642ade7080333aa7e6, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -629,12 +629,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<SIZE=180><B>Dr. Carnage</B></SIZE>
+  m_Text: '<SIZE=180><B>Dr. Hofman : The Origin</B></SIZE>
 
     
 
-    <SIZE=65>Done by the
-    Team A of the 2-Game class in ArtFx</SIZE>
+    
+
+    <SIZE=65>Done
+    by the Team A of the 2-Game class in ArtFx</SIZE>
+
+    
 
     
 
@@ -654,22 +658,22 @@ MonoBehaviour:
     
 
     <SIZE=60><I>Thomas
-    A.
+    Abate
 
-    Allan R.</I></SIZE>
-
-    
+    Alan Rostami</I></SIZE>
 
     
 
-    <SIZE=120>- Gameplay Programmers
-    -</SIZE>
+    
+
+    <SIZE=120>- Gameplay
+    Programmers -</SIZE>
 
     
 
-    <SIZE=60><I>Zoe C.
+    <SIZE=60><I>Zoe Chervaux
 
-    Loris M..</I></SIZE>
+    Loris Moreau</I></SIZE>
 
     
 
@@ -680,7 +684,7 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Robin M.</I></SIZE>
+    <SIZE=60><I>Robin Morales</I></SIZE>
 
     
 
@@ -691,7 +695,7 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Gaelle</I></SIZE>
+    <SIZE=60><I>Gaelle Petit</I></SIZE>
 
     
 
@@ -702,7 +706,7 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Victor</I></SIZE>
+    <SIZE=60><I>Victor Dalbin</I></SIZE>
 
     
 
@@ -713,9 +717,9 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Sacha
+    <SIZE=60><I>Sacha Baron
 
-    Ambre</I></SIZE>
+    Ambre Pawlak</I></SIZE>
 
     
 
@@ -726,7 +730,7 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Emmalie</I></SIZE>
+    <SIZE=60><I>Emmalie Kling</I></SIZE>
 
     
 
@@ -737,24 +741,27 @@ MonoBehaviour:
 
     
 
-    <SIZE=60><I>Linh
+    <SIZE=60><I>Ha Truc Linh Nguyen
 
     Luka
+    Lespinasse
 
-    Erwan</I></SIZE>
-
-    
-
-    
-
-    <SIZE=120>-
-    FX Artists -</SIZE>
+    Erwan Mounier</I></SIZE>
 
     
 
-    <SIZE=60><I>Teodora
+    
 
-    Line</I></SIZE>
+    <SIZE=120>- FX
+    Artists -</SIZE>
+
+    
+
+    <SIZE=60><I>Teodora Dan
+
+    Line Bonnet</I></SIZE>
+
+    
 
     
 
@@ -773,35 +780,58 @@ MonoBehaviour:
 
     
 
+    
+
+    
+
     <SIZE=60>Play Testers
 
     
 
-    <I>Team
-    B</I></SIZE>
+    
+
+    <I>members
+    of the Team B</I></SIZE>
 
     
 
-    <SIZE=60>We would like to thank the educational team
-    for their support.
+    
+
+    <SIZE=60>We would like to thank
+    the educational team for their support.
+
+    
 
     <I>Lionel Rico
 
-    Marie Legrand
+    Marie
+    Legrand
 
     Fred Adouard
 
-    Mathieu
-    Sancho</I>
+    Mathieu Sancho</I>
 
-    And finally a thanks to the ArtFx school for letting us realize
-    this project</SIZE>
+    
+
+    And finally
+    a thanks to the ArtFx school for letting us realize this project</SIZE>
 
     
 
     
 
-    <SIZE=75><I>Thank you for playing  <3</I></SIZE>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <SIZE=75><I>Thank
+    you for playing  <3</I></SIZE>
 
 '
 --- !u!222 &2021327300

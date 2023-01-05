@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level_01");
+        SceneManager.LoadScene("Asset Testing");
     }
 
     public void SettingsButton()

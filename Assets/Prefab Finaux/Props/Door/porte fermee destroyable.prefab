@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 4225789035106160274}
   - component: {fileID: 4225789035106160275}
   - component: {fileID: 4225789035106160284}
-  - component: {fileID: 4225789035106160273}
-  m_Layer: 0
-  m_Name: porte fermee h24
-  m_TagString: Untagged
+  - component: {fileID: 6072309567167293575}
+  - component: {fileID: 3367886622773740908}
+  m_Layer: 10
+  m_Name: porte fermee destroyable
+  m_TagString: Detroyables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
+    oldSize: {x: 1.2, y: 5.72}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,23 +113,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1729479, y: 5.6980042}
   m_EdgeRadius: 0
---- !u!95 &4225789035106160273
-Animator:
-  serializedVersion: 4
+--- !u!61 &6072309567167293575
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4225789035106160285}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 5.72}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 5.72}
+  m_EdgeRadius: 0
+--- !u!114 &3367886622773740908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225789035106160285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26369662fc95d44b84126dcaa15f38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destroyable: {fileID: 4225789035106160285}

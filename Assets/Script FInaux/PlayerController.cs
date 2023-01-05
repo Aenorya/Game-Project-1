@@ -201,18 +201,13 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded == true)
         {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
-            animator.SetBool("Jump", true);
             isGrounded = false;
-            
+            animator.SetBool("Jump", true);
 
-            if (attackGround)
-            {
-                Invoke("BreakFloor", timeJump);
-            }
-            if(isGrounded == false)
-            {
-                animator.SetBool("Jump", false);
-            }
+           if (attackGround)
+           {
+               Invoke("BreakFloor", timeJump);
+           }
         }
     }
 
@@ -282,6 +277,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox") || collision.gameObject.CompareTag("BreakableFloor"))
         {
             isGrounded = true;
+            animator.SetBool("Jump", false);
         }
 
         if (collision.gameObject.CompareTag("PickableObject"))

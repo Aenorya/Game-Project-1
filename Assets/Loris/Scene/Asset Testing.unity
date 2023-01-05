@@ -2438,10 +2438,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallButton
       objectReference: {fileID: 0}
-    - target: {fileID: 6385016832865098197, guid: f70f6a3dec654f3478197cdfaa371a27, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f70f6a3dec654f3478197cdfaa371a27, type: 3}
@@ -2620,12 +2616,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4955
+      objectReference: {fileID: 0}
+    - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4955
+      objectReference: {fileID: 0}
+    - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -77.8
+      value: -95.4
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.1
+      value: -35.5
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2688,11 +2692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7738364401902417502, guid: a7d00adadec66f546a56df00f45a62c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -91.99
+      value: -88.69
       objectReference: {fileID: 0}
     - target: {fileID: 7738364401902417502, guid: a7d00adadec66f546a56df00f45a62c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.33
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 7738364401902417502, guid: a7d00adadec66f546a56df00f45a62c1, type: 3}
       propertyPath: m_LocalPosition.z

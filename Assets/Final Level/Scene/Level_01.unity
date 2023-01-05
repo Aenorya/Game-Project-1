@@ -11847,6 +11847,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2133420399273828872, guid: 579924446af670640994248505fb562e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d9461ac47fe1dd4791030d2de1dda63, type: 2}
     - target: {fileID: 2133420399273828873, guid: 579924446af670640994248505fb562e, type: 3}
       propertyPath: m_Name
       value: Door with button

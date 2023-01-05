@@ -1592,8 +1592,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096537357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.039121, y: 2.5094, z: 0}
-  m_LocalScale: {x: 0.008932574, y: 0.25225818, z: 1}
+  m_LocalPosition: {x: 0.043424, y: 2.7337, z: 0}
+  m_LocalScale: {x: 0.009, y: 0.27, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1068428360}
@@ -2124,6 +2124,14 @@ PrefabInstance:
     - target: {fileID: 2052260358074508726, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052260358074508727, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f38aac6d9a92874fb3416b3defb1a7f, type: 3}
+    - target: {fileID: 2052260358074508727, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

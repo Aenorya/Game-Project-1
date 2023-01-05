@@ -111,7 +111,6 @@ public class PlayerController : MonoBehaviour
         else if (context.performed && doorButtonIsPressed)
         {
             Debug.Log("Boutooooooooon");
-            //boxCollider.enabled = false;
             openDoor.enabled = true;
             cameraDoor.enabled = true;
             Invoke("ResetCameraDoor", 1f); //Modifier par rapport au temps de l'anim

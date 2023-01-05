@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5305061299268366586}
   - component: {fileID: 5305061299268366589}
-  - component: {fileID: 5305061299268366587}
   - component: {fileID: 5305061298639642073}
+  - component: {fileID: 6385016832865098197}
   m_Layer: 0
   m_Name: WallButton
   m_TagString: Button Respawn
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5305061299268366590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.89, y: -2.7, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1839442556, guid: f1cc790dc0f53ea428521746c657cfab, type: 3}
   m_Color: {r: 0.45882353, g: 0.45882353, b: 0.45882353, a: 1}
   m_FlipX: 0
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5305061299268366587
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305061299268366590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.9030311, y: -0.03326428}
-  m_Size: {x: 4.7658534, y: 3.9801316}
-  m_Direction: 1
 --- !u!114 &5305061298639642073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,4 +99,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
-  capsuleCollider: {fileID: 5305061299268366587}
+  capsuleCollider: {fileID: 6385016832865098197}
+--- !u!58 &6385016832865098197
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305061299268366590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2

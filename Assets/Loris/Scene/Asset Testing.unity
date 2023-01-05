@@ -2161,11 +2161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074566, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.9
+      value: 14.87
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074566, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074566, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2199,10 +2199,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7570479761144074568, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: openDoor
       value: 
       objectReference: {fileID: 628023467}
+    - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+      propertyPath: timeDeath
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: breakFloor
       value: 
@@ -2438,6 +2446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5427418960109986765, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5761061880803513625, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2572,13 +2584,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: timer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: leftLimit
       value: 
       objectReference: {fileID: 136254550}
     - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: moveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: rightLimit
       value: 
       objectReference: {fileID: 446074001}
+    - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: rayCastLength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 348195839, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
+      propertyPath: attackDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508723, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -2589,7 +2617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.98
+      value: 18.93
       objectReference: {fileID: 0}
     - target: {fileID: 2052260358074508726, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_LocalPosition.y

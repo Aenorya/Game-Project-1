@@ -19,9 +19,13 @@ public class PauseMenu : MonoBehaviour
         PlayerController.instance.Resume();
         SceneManager.LoadScene("MainMenu");
     }
-    public void CreditsScene()
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void ResumeGame()
     {
         PlayerController.instance.Resume();
-        SceneManager.LoadScene("Credits");
     }
 }

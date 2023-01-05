@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -278,6 +278,7 @@ MonoBehaviour:
   CamAnimator: {fileID: 7663527945589957800}
   openDoor: {fileID: 0}
   timeAttack: 0.2
+  timeJump: 0.65
   syringeCount: 0
   syringe:
   - {fileID: 0}
@@ -289,6 +290,7 @@ MonoBehaviour:
   playerHealth: {fileID: 7570479761144074569}
   pauseMenu: {fileID: 0}
   collisionAttack: {fileID: 1440634355}
+  breakFloor: {fileID: 0}
   inContact: 0
   bombButtonIsPressed: 0
   attackGround: 0

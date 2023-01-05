@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header("PopMess")]
     public TextMeshProUGUI popUpMessage;
     public GameObject goMessage;
+    public float timeTextHide;
 
     [Header("Speed Attributes")]
     public float jumpSpeed = 5;
@@ -231,13 +232,13 @@ public class PlayerController : MonoBehaviour
                 else if (playerHealth.hp == 3)
                 {
                     noNeedHeal.SetActive(true);
-                    Invoke("TextHealHide", 3);
+                    Invoke("TextHealHide", timeTextHide);
                 }
             }
             else if (syringeCount == 0)
             {
                 noSyringe.SetActive(true);
-                Invoke("TextSyringeHide", 3);
+                Invoke("TextSyringeHide", timeTextHide);
             }
         }
     }

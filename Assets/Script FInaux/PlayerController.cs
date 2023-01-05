@@ -158,7 +158,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
-            Invoke("ResetAttack", timeAttack);
         }
         else if (contexte.canceled)
         {
@@ -166,11 +165,6 @@ public class PlayerController : MonoBehaviour
             collisionAttack.SetActive(false);
             attackGround = false;
         }
-    }
-
-    private void ResetAttack()
-    {
-        collisionAttack.SetActive(false);
     }
 
     public void PauseMenu(InputAction.CallbackContext context)

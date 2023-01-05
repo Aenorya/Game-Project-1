@@ -1885,6 +1885,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7144661300064852831, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
   m_PrefabInstance: {fileID: 7450104653405886020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &307081694461463838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7144661300064852826, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
+  m_PrefabInstance: {fileID: 7450104653405886020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &307081694539004161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2068,9 +2073,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+      propertyPath: timeJump
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 147730598}
+    - target: {fileID: 7570479761144074578, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
+      propertyPath: breakFloor
+      value: 
+      objectReference: {fileID: 307081694461463838}
     - target: {fileID: 9015616812594532915, guid: 9630fb5f6a61d8841ab7faa92869b95a, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

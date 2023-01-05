@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static int damage = 1;
-    public static int timeJump;
+    public float timeJump;
 
     [Header("Syringe")]
     public int syringeCount = 3;

@@ -217,7 +217,7 @@ RectTransform:
   - {fileID: 6359410622211544893}
   - {fileID: 6359410621556318846}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTime: 120
+  BombButtonTimer: 0
   countdownText: {fileID: 6359410621981769558}
 --- !u!1 &3200582901307413067
 GameObject:
@@ -351,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 41.399902, y: 412}
+  m_AnchoredPosition: {x: 39, y: 500}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3200582901307413062
@@ -2728,7 +2729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 174.27008, y: 412}
+  m_AnchoredPosition: {x: 171.87018, y: 500}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359410622049970063
@@ -3111,7 +3112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 105.348206, y: 412}
+  m_AnchoredPosition: {x: 102.9483, y: 500}
   m_SizeDelta: {x: 60.3955, y: 58.7552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359410622364066158

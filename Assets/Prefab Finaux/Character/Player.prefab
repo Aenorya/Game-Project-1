@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7663527945589957805}
   - {fileID: 6696805809053659964}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9015616812594532915
 SpriteRenderer:
@@ -268,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a548f4999e900428666073afcbfcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   rb: {fileID: 882590898}
   playerCollider: {fileID: 6000642757937539040}
   popUpMessage: {fileID: 0}
@@ -312,7 +311,7 @@ MonoBehaviour:
   invincibilityTimeAfterHit: 0.3
   invincibilityFlashDelay: 0.1
   isInvincible: 0
-  graphics: {fileID: 0}
+  graphics: {fileID: 9015616812594532915}
   maxHealth: 3
   hp: 3
   hitSound: {fileID: 0}
@@ -459,19 +458,7 @@ MonoBehaviour:
     m_ActionId: 4c6cb595-d9db-4f92-bfcb-af390cf279fd
     m_ActionName: Player/UseObject[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7570479761144074578}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: HealthTest
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 8c69997a-22fc-43ac-b555-8e27d38e5e58
     m_ActionName: Player/HealthTest[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0

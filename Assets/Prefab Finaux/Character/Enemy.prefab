@@ -163,7 +163,7 @@ Transform:
   - {fileID: 2052260359275321602}
   - {fileID: 5165279989917321110}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &2052260358074508727
 SpriteRenderer:
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f8d61a0b386fef5489af9d5be9b32bc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88fae1f50f706bf439788bec790d4c3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -264,7 +264,7 @@ Animator:
   m_GameObject: {fileID: 2052260358074508723}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9d500e48af2e4d4e9c80edf02338321, type: 2}
+  m_Controller: {fileID: 9100000, guid: f5538e354494a8d41875f95ee433da1d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb1e3c274ed7874486ae20f3fc0904e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickables: {fileID: 11400000, guid: 07be51956f0103e42b04278911e32baa, type: 2}
+  pickables: {fileID: 11400000, guid: ff6c1699237801e43ada811a3830d71e, type: 2}
 --- !u!1 &2052260359275321661
 GameObject:
   m_ObjectHideFlags: 0

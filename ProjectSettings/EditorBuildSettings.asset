@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Final Level/Menu/MainMenu.unity
+    path: Assets/Final Level/Menu/Menu/Main_Menu.unity
     guid: 2f2f586bd89a76749947f720eb7ecaef
   - enabled: 1
     path: Assets/Loris/Scene/Asset Testing.unity

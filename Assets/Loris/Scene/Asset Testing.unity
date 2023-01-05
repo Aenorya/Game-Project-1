@@ -2533,14 +2533,6 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527457, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
       propertyPath: m_LocalPosition.x
       value: -111.6
       objectReference: {fileID: 0}
@@ -2580,17 +2572,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527458, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 263701674310527462, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
       propertyPath: m_Name
       value: BreakableBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 263701674310527462, guid: 9ea2da4c7b2ecf7419a204fa23508602, type: 3}
-      propertyPath: m_TagString
-      value: Detroyables
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

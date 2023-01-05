@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Attributes")]
     public float timeAttack;
     public static int damage = 1;
+    public float timeJump;
 
     [Header("Syringe")]
     public int syringeCount = 3;
@@ -41,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 direction;
     public PlayerHealth playerHealth;
-    public GameObject pauseMenu, collisionAttack;
+    public GameObject pauseMenu, collisionAttack, breakFloor;
     public static bool gameIsPaused = false;
 
     public bool inContact = false;
@@ -154,17 +156,8 @@ public class PlayerController : MonoBehaviour
     {
         if (contexte.performed)
         {
-            if (attackGround)
-            {
-                animator.SetTrigger("GroundAttack");
-            }
-            else
-            {
-                animator.SetBool("IsAttacking", true);
-            }
-
+            animator.SetBool("IsAttacking", true);
             collisionAttack.SetActive(true);
-            Invoke("ResetAttack", timeAttack);
         }
         else if (contexte.canceled)
         {
@@ -172,11 +165,6 @@ public class PlayerController : MonoBehaviour
             collisionAttack.SetActive(false);
             attackGround = false;
         }
-    }
-
-    private void ResetAttack()
-    {
-        collisionAttack.SetActive(false);
     }
 
     public void PauseMenu(InputAction.CallbackContext context)
@@ -213,8 +201,24 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded == true)
         {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
+            animator.SetBool("Jump", true);
             isGrounded = false;
+            
+
+            if (attackGround)
+            {
+                Invoke("BreakFloor", timeJump);
+            }
+            if(isGrounded == false)
+            {
+                animator.SetBool("Jump", false);
+            }
         }
+    }
+
+    void BreakFloor()
+    {
+        Destroy(breakFloor);
     }
 
     public void UseSyringe(InputAction.CallbackContext context)
@@ -275,7 +279,7 @@ public class PlayerController : MonoBehaviour
             attackGround = true;
         }
 
-        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox"))
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("ReBox") || collision.gameObject.CompareTag("BreakableFloor"))
         {
             isGrounded = true;
         }

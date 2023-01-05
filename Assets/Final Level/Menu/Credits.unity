@@ -629,210 +629,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<SIZE=180><B>Dr. Hofman : The Origin</B></SIZE>
-
-
-
-
-
-    <SIZE=65>Done
-    by the Team A of the 2-Game class in ArtFx</SIZE>
-
-
-
-
-
-
-
-
-
-    <SIZE=160><B>
-    The Team</B></SIZE>
-
-
-
-
-
-    <SIZE=120>- Game Designers -</SIZE>
-
-
-
-    <SIZE=60><I>Thomas
-    Abate
-
-    Alan Rostami</I></SIZE>
-
-
-
-
-
-    <SIZE=120>- Gameplay Programmers
-    -</SIZE>
-
-
-
-    <SIZE=60><I>Zoe Chervaux
-
-    Loris Moreau</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Level Designer -</SIZE>
-
-
-
-    <SIZE=60><I>Robin Morales</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Animator -</SIZE>
-
-
-
-    <SIZE=60><I>Gaelle Petit</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Concept Artist -</SIZE>
-
-
-
-    <SIZE=60><I>Victor Dalbin</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Prop Artists -</SIZE>
-
-
-
-    <SIZE=60><I>Sacha Baron
-
-    Ambre Pawlak</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Environment Artist -</SIZE>
-
-
-
-    <SIZE=60><I>Emmalie Kling</I></SIZE>
-
-
-
-
-
-    <SIZE=120>-
-    Character Design -</SIZE>
-
-
-
-    <SIZE=60><I>Ha Truc Linh Nguyen
-
-    Luka Lespinasse
-
-    Erwan
-    Mounier</I></SIZE>
-
-
-
-
-
-    <SIZE=120>- FX Artists -</SIZE>
-
-
-
-    <SIZE=60><I>Teodora
-    Dan
-
-    Line Bonnet</I></SIZE>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <SIZE=120>- SPECIAL  THANKS
-    -</SIZE>
-
-
-
-
-
-
-
-
-
-    <SIZE=60>Play Testers
-
-
-
-
-
-    <I>members of the Team B</I></SIZE>
-
-
-
-
-
-    <SIZE=60>We
-    would like to thank the educational team for their support.
-
-
-
-    <I>Lionel
-    Rico
-
-    Marie Legrand
-
-    Fred Adouard
-
-    Mathieu Sancho</I>
-
-
-
-    And
-    finally a thanks to the ArtFx school for letting us realize this project</SIZE>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <SIZE=75><I>Thank
-    you for playing  <3</I></SIZE>
-
-'
+  m_Text: "<SIZE=180><B>Dr. Hofman \nvs \nThe Alien Robots</B></SIZE>\n\n\n\n\n<SIZE=65>Done
+    by the Team A of the 2-Game class in ArtFx</SIZE>\n\n\n\n\n\n\n\n\n<SIZE=160><B>
+    The Team</B></SIZE>\n\n\n\n\n<SIZE=120>- Game Designers -</SIZE>\n\n\n<SIZE=60><I>Thomas
+    Abate\nAlan Rostami</I></SIZE>\n\n\n\n\n<SIZE=120>- Gameplay Programmers -</SIZE>\n\n\n<SIZE=60><I>Zoe
+    Chervaux\nLoris Moreau</I></SIZE>\n\n\n\n\n<SIZE=120>- Level Designer -</SIZE>\n\n\n<SIZE=60><I>Robin
+    Morales</I></SIZE>\n\n\n\n\n<SIZE=120>- Animator -</SIZE>\n\n\n<SIZE=60><I>Gaelle
+    Petit</I></SIZE>\n\n\n\n\n<SIZE=120>- Concept Artist -</SIZE>\n\n\n<SIZE=60><I>Victor
+    Dalbin</I></SIZE>\n\n\n\n\n<SIZE=120>- Prop Artists -</SIZE>\n\n\n<SIZE=60><I>Sacha
+    Baron\nAmbre Pawlak</I></SIZE>\n\n\n\n\n<SIZE=120>- Environment Artist -</SIZE>\n\n\n<SIZE=60><I>Emmalie
+    Kling</I></SIZE>\n\n\n\n\n<SIZE=120>- Character Design -</SIZE>\n\n\n<SIZE=60><I>Ha
+    Truc Linh Nguyen\nLuka Lespinasse\nErwan Mounier</I></SIZE>\n\n\n\n\n<SIZE=120>-
+    FX Artists -</SIZE>\n\n\n<SIZE=60><I>Teodora Dan\nLine Bonnet</I></SIZE>\n\n\n\n\n\n\n\n\n\n\n\n\n<SIZE=120>-
+    SPECIAL  THANKS -</SIZE>\n\n\n\n\n\n\n\n\n<SIZE=60>Play Testers\n\n\n\n\n<I>members
+    of the Team B</I></SIZE>\n\n\n\n\n<SIZE=60>We would like to thank the educational
+    team for their support.\n\n\n<I>Lionel Rico\nMarie Legrand\nFred Adouard\nMathieu
+    Sancho</I>\n\n\nAnd finally a thanks to the ArtFx school for letting us realize
+    this project</SIZE>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<SIZE=75><I>Thank you for playing 
+    <3</I></SIZE>\n"
 --- !u!222 &2021327300
 CanvasRenderer:
   m_ObjectHideFlags: 0

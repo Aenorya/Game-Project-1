@@ -209,10 +209,10 @@ public class PlayerController : MonoBehaviour
             {
                 Invoke("BreakFloor", timeJump);
             }
-        }
-        else if (context.canceled)
-        {
-            animator.SetBool("Jump", false);
+            if(isGrounded == false)
+            {
+                animator.SetBool("Jump", false);
+            }
         }
     }
 

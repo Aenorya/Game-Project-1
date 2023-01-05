@@ -2194,10 +2194,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LvlChange
       objectReference: {fileID: 0}
-    - target: {fileID: 211982210070781340, guid: 47dd41ac9d1829a4cb592f3fed256948, type: 3}
-      propertyPath: sceneName
-      value: Credits
-      objectReference: {fileID: 0}
     - target: {fileID: 211982210070781342, guid: 47dd41ac9d1829a4cb592f3fed256948, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2613,6 +2609,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5427418960409412316, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427418960409412318, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5761061880803513625, guid: 13dce4337e0945a4a8eb56ba83001d89, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2801,14 +2805,6 @@ PrefabInstance:
     - target: {fileID: 2052260358074508726, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260359275321603, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_Size.x
-      value: 8.51247
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052260359275321603, guid: 7ce46151d5fddea43bcf60bc677ce200, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.38301957
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

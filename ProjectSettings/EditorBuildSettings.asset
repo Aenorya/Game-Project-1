@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Final Level/Menu/Menu/Main_Menu.unity
     guid: 2f2f586bd89a76749947f720eb7ecaef
   - enabled: 1
+    path: Assets/Final Level/Menu/Anim paralax/paralax.unity
+    guid: b285abcbfbda304478c4614e0b50f575
+  - enabled: 1
     path: Assets/Final Level/Scene/Level_01.unity
     guid: 538dc5e65b0b79241a04d3553e365ff6
   - enabled: 1

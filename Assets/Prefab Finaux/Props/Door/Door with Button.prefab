@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2133420399273828879}
   - component: {fileID: 2133420399273828872}
   - component: {fileID: 6953442792823790941}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Door with button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2133420399273828879
 SpriteRenderer:
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 2133420399273828873}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5bb23fa030e2a5d44a2b81089014fde6, type: 2}
+  m_Controller: {fileID: 9100000, guid: c961c3768c7985d42a904be4ed94b9db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

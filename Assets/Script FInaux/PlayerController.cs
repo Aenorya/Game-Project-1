@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -99,7 +100,8 @@ public class PlayerController : MonoBehaviour
 
     public void DeathPlayer()
     {
-        GameOverManager.instance.OnPlayerDeath();
+        //GameOverManager.instance.OnPlayerDeath();
+        SceneManager.LoadScene("Main_Menu");
     }
 
     public void Interact(InputAction.CallbackContext context)

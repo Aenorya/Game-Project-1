@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981590465206535990}
   - component: {fileID: 3365715781149248850}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fracture_sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4129211692086307565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0404, y: 1.261, z: -9.409618}
-  m_LocalScale: {x: 0.1, y: 0.71, z: 1}
+  m_LocalScale: {x: 0.16250001, y: 0.71, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7144661300064852831}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7144661300064852827}
   - component: {fileID: 6110966294088896113}
   - component: {fileID: 7144661300064852825}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Destroyable floor 1
   m_TagString: BreakableFloor
   m_Icon: {fileID: 0}
@@ -111,14 +111,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7144661300064852826}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -162.4, y: -6.8434, z: 9.409618}
-  m_LocalScale: {x: 20.420912, y: 1.0728154, z: 1}
+  m_LocalScale: {x: 9.536989, y: 1.0728154, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1981590465206535990}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7144661300064852830
 SpriteRenderer:
@@ -211,7 +211,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03444594}
+  m_Offset: {x: 0, y: -0.00786297}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -222,7 +222,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9311081}
+  m_Size: {x: 1, y: 0.984274}
   m_EdgeRadius: 0
 --- !u!114 &7144661300064852825
 MonoBehaviour:

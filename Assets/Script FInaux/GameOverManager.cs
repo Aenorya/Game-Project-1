@@ -25,7 +25,7 @@ public class GameOverManager : MonoBehaviour
 
     public void RetryButton()
     {
-        SceneManager.LoadScene("Asset Testing");
+        SceneManager.LoadScene("Level_01");
         gameOverUI.SetActive(false);
         Time.timeScale = 1;
     }

@@ -7,6 +7,6 @@ public class Paralaxtovlv01 : MonoBehaviour
 {
     public void LoadLevel_01()
     {
-        SceneManager.LoadScene("Level_01");
+        SceneManager.LoadScene("Main_Menu");
     }
 }

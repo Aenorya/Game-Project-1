@@ -3898,6 +3898,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.16250001
       objectReference: {fileID: 0}
+    - target: {fileID: 4129211692086307565, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6110966294088896113, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
       propertyPath: m_Size.y
       value: 0.984274
@@ -3909,6 +3913,14 @@ PrefabInstance:
     - target: {fileID: 7144661300064852826, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
       propertyPath: m_Name
       value: Destroyable floor 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144661300064852826, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144661300064852826, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 7144661300064852830, guid: b787f07ea6810f344b649f3ad74bf5ff, type: 3}
       propertyPath: m_Color.b

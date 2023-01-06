@@ -20,8 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Final Level/Menu/Credits.unity
     guid: c7c74569cd767d946a24966941199f0f
-  - enabled: 1
-    path: Assets/Loris/Scene/Asset Testing.unity
-    guid: 753398f3831fbe848920d8944dabdf0b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8412100bb848f604ca64a3cfc36c457c, type: 2}

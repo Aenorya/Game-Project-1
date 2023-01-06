@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792c1873a376804ba1f1e68fa54b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 240
+  startingTime: 120
   BombButtonTimer: 0
   countdownText: {fileID: 5427418959476073633}
 --- !u!114 &636845542644116578

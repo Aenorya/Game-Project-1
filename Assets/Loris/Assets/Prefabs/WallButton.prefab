@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5305061299268366586}
   - component: {fileID: 5305061299268366589}
-  - component: {fileID: 5305061299268366591}
-  - component: {fileID: 5305061299268366587}
+  - component: {fileID: 5305061298639642073}
+  - component: {fileID: 6385016832865098197}
   m_Layer: 0
   m_Name: WallButton
   m_TagString: Button Respawn
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5305061299268366589
 SpriteRenderer:
@@ -74,19 +74,19 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -1839442556, guid: f1cc790dc0f53ea428521746c657cfab, type: 3}
+  m_Color: {r: 0.45882353, g: 0.45882353, b: 0.45882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.74, y: 3.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5305061299268366591
+--- !u!114 &5305061298639642073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,13 +95,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5305061299268366590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b46deb1ced84b4c9dc4d3c49c15fd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d9915215a7e3b74c96ee456d2569e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
-  capsuleCollider: {fileID: 5305061299268366587}
---- !u!70 &5305061299268366587
-CapsuleCollider2D:
+  capsuleCollider: {fileID: 6385016832865098197}
+--- !u!58 &6385016832865098197
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,6 +113,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4, y: 0}
-  m_Size: {x: 1.7, y: 1}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2

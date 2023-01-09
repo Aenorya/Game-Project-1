@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Attack01",
                     "type": "Button",
                     "id": "94a5dbc3-6b54-4ad2-b397-4591d94c481d",
                     "expectedControlType": "Button",
@@ -58,22 +58,13 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "HealthTest",
-                    "type": "Button",
-                    "id": "8c69997a-22fc-43ac-b555-8e27d38e5e58",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "0df79792-ad0e-4337-a66a-e2be10d1859d",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -95,7 +86,7 @@
                 {
                     "name": "",
                     "id": "9c2fae7e-7431-44be-ab5a-d9edaf0a80da",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -121,7 +112,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Attack01",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -132,7 +123,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Attack01",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -282,7 +273,7 @@
                 {
                     "name": "",
                     "id": "e4b72366-1530-40d7-9abc-4bb1c5d788ad",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -298,17 +289,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "UseSyringe",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c0c8b685-6e97-4223-9ab9-34e183423ecd",
-                    "path": "<Keyboard>/h",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HealthTest",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

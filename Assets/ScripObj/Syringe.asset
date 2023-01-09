@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poSprite: {fileID: 21300000, guid: aff16017b15883c438ec2c2b51d6e457, type: 3}
   poName: Seringue100
-  dropChance: 100
-  poPrefab: {fileID: 4144373992682029765, guid: c6e78dc49eeb70f40a161d81300f0f68, type: 3}
+  poPrefab: {fileID: 4144373992682029765, guid: a892292ecd7e241449dfa90b17690455, type: 3}

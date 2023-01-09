@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drops:
   - rate: 100
-    pickable: {fileID: 11400000, guid: a502f33d0e6ed03429da8604aaf0cde3, type: 2}
+    pickable: {fileID: 11400000, guid: 1e46fdebf40ffed4c84ef4899dce62bb, type: 2}
